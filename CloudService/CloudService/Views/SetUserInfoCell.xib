@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="77.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="真实姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtY-jf-6mD">
-                        <rect key="frame" x="8" y="13" width="100" height="47"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="真实姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtY-jf-6mD">
+                        <rect key="frame" x="16" y="8" width="120" height="61.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="LQY-K6-Si0"/>
                         </constraints>
@@ -25,32 +25,33 @@
                         <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzp-ED-hhq">
-                        <rect key="frame" x="108" y="13" width="168" height="62"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzp-ED-hhq">
+                        <rect key="frame" x="136" y="8" width="107.5" height="61.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljp-EF-QNi">
-                        <rect key="frame" x="275" y="13" width="47" height="47"/>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H2Y-Hb-TBc">
+                        <rect key="frame" x="243.5" y="8" width="61.5" height="61.5"/>
+                        <color key="backgroundColor" red="1" green="0.26188047339999998" blue="0.28042493629999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="ljp-EF-QNi" secondAttribute="height" multiplier="31:31" id="Y3s-de-exV"/>
+                            <constraint firstAttribute="width" secondItem="H2Y-Hb-TBc" secondAttribute="height" id="Yyr-bT-23k"/>
                         </constraints>
-                    </button>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ljp-EF-QNi" firstAttribute="top" secondItem="bzp-ED-hhq" secondAttribute="top" id="0iW-95-rks"/>
                     <constraint firstItem="LtY-jf-6mD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="5RR-7l-6vo"/>
                     <constraint firstItem="LtY-jf-6mD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Cje-pc-eRD"/>
                     <constraint firstItem="LtY-jf-6mD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="K6F-0S-keU"/>
-                    <constraint firstItem="ljp-EF-QNi" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="10" id="L3t-xx-PLR"/>
-                    <constraint firstItem="ljp-EF-QNi" firstAttribute="bottom" secondItem="bzp-ED-hhq" secondAttribute="bottom" id="Qas-6j-vXv"/>
+                    <constraint firstItem="H2Y-Hb-TBc" firstAttribute="bottom" secondItem="bzp-ED-hhq" secondAttribute="bottom" id="OTC-1q-IhH"/>
                     <constraint firstItem="LtY-jf-6mD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="TzO-g4-61e"/>
                     <constraint firstItem="bzp-ED-hhq" firstAttribute="top" secondItem="LtY-jf-6mD" secondAttribute="top" id="WYC-dh-qB4"/>
-                    <constraint firstItem="ljp-EF-QNi" firstAttribute="leading" secondItem="bzp-ED-hhq" secondAttribute="trailing" id="aL0-dP-BcU"/>
                     <constraint firstItem="bzp-ED-hhq" firstAttribute="leading" secondItem="LtY-jf-6mD" secondAttribute="trailing" id="eZE-nE-uf2"/>
                     <constraint firstAttribute="bottomMargin" secondItem="LtY-jf-6mD" secondAttribute="bottom" id="gAq-qB-ThZ"/>
+                    <constraint firstItem="H2Y-Hb-TBc" firstAttribute="top" secondItem="bzp-ED-hhq" secondAttribute="top" id="n5p-QT-ck6"/>
+                    <constraint firstItem="H2Y-Hb-TBc" firstAttribute="leading" secondItem="bzp-ED-hhq" secondAttribute="trailing" id="ouZ-XN-vpv"/>
                     <constraint firstItem="bzp-ED-hhq" firstAttribute="bottom" secondItem="LtY-jf-6mD" secondAttribute="bottom" id="u40-mx-bqj"/>
+                    <constraint firstAttribute="trailing" secondItem="H2Y-Hb-TBc" secondAttribute="trailing" constant="15" id="wVA-eK-CrV"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
@@ -60,7 +61,7 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="imageBtn" destination="ljp-EF-QNi" id="ryW-Sm-EKr"/>
+                <outlet property="imageBtn" destination="H2Y-Hb-TBc" id="h6u-Yo-vvq"/>
                 <outlet property="label" destination="LtY-jf-6mD" id="drb-aB-QBZ"/>
                 <outlet property="textFiled" destination="bzp-ED-hhq" id="P9G-V8-bnf"/>
             </connections>

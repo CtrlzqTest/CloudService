@@ -21,9 +21,17 @@
     //设置状态栏为白色
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    // 注册通知
+    [self registerNotifications];
+    return YES;
+}
+
+- (void)registerNotifications {
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginToMenu) name:LoginToMenuViewNotice object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logOut) name:LogOutViewNotice object:nil];
-    return YES;
+    
 }
 
 - (void)loginToMenu {

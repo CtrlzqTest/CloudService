@@ -55,6 +55,7 @@ static NSString *cell_id = @"personalCell";
 }
 
 - (void)setupViews {
+    
     // 注册Cell
     [self.tableView registerNib:[UINib nibWithNibName:@"PersonalViewCell" bundle:nil] forCellReuseIdentifier:cell_id];
     

@@ -88,19 +88,39 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    SetUserInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"setUserInfoCell" forIndexPath:indexPath];
-    cell.textFiled.enabled = NO;
-    if (indexPath.section == 0) {
-        cell.label.text = _keyArray[indexPath.row];
-        cell.textFiled.text = _valueArray[indexPath.row];
-        cell.textFiled.textAlignment = NSTextAlignmentRight;
-        [cell.textFiled mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(cell).with.offset(-20);
-        }];
-    }else {
-        cell.label.text = @"修改密码";
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        SetUserInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"setUserInfoCell" forIndexPath:indexPath];
+        cell.textFiled.hidden = YES;
+        cell.label.text = @"头像";
+        cell.imageBtn.backgroundColor = [UIColor redColor];
+        return cell;
+    }else if(indexPath.section == 1) {
+        static NSString *cell_ID = @"cell_Pwd";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_ID];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cell_ID];
+            cell.textLabel.textColor = [UIColor colorWithWhite:0.600 alpha:1.000];
+            cell.textLabel.font = [UIFont systemFontOfSize:14.0];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        cell.textLabel.text = @"修改密码";
+        return cell;
+    }else{
+        static NSString *cell_ID = @"cell_ID";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_ID];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cell_ID];
+            cell.textLabel.textColor = [UIColor colorWithWhite:0.600 alpha:1.000];
+            cell.detailTextLabel.textColor = [UIColor blackColor];
+            cell.textLabel.font = [UIFont systemFontOfSize:14.0];
+            cell.detailTextLabel.font = [UIFont systemFontOfSize:14.0];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        cell.textLabel.text = _keyArray[indexPath.row];
+        cell.detailTextLabel.text = _valueArray[indexPath.row];
+        return cell;
     }
-    return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

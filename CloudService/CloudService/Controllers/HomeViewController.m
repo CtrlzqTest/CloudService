@@ -29,10 +29,7 @@ static NSString *cell_id = @"menuCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
-    self.collectionView.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
-    [self.collectionView registerNib:[UINib nibWithNibName:@"HomeCollectionCell" bundle:nil] forCellWithReuseIdentifier:cell_id];
-    
+//    [self.tabBarController.tabBar setBackgroundColor:[UIColor blackColor]];
     [self initData];
     [self setupViews];
 }
@@ -52,6 +49,10 @@ static NSString *cell_id = @"menuCell";
 }
 
 - (void)setupViews {
+    
+    self.view.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
+    self.collectionView.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"HomeCollectionCell" bundle:nil] forCellWithReuseIdentifier:cell_id];
     
     CGFloat inset = 8;
     UICollectionViewFlowLayout *flowLayOut = [[UICollectionViewFlowLayout alloc] init];
