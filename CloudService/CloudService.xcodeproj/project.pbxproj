@@ -73,6 +73,8 @@
 		F094B59E1C8000E500A2312D /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F094B59C1C8000E500A2312D /* HomeCollectionCell.xib */; };
 		F094B5A31C80223400A2312D /* PersonalViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F094B5A11C80223400A2312D /* PersonalViewCell.m */; };
 		F094B5A41C80223400A2312D /* PersonalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F094B5A21C80223400A2312D /* PersonalViewCell.xib */; };
+		F09A5F8F1A55BEDD008D4963 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F09A5F8D1A55BEDD008D4963 /* HomeHeaderView.m */; };
+		F09A5F901A55BEDD008D4963 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F09A5F8E1A55BEDD008D4963 /* HomeHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -199,6 +201,9 @@
 		F094B5A01C80223400A2312D /* PersonalViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewCell.h; sourceTree = "<group>"; };
 		F094B5A11C80223400A2312D /* PersonalViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewCell.m; sourceTree = "<group>"; };
 		F094B5A21C80223400A2312D /* PersonalViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalViewCell.xib; sourceTree = "<group>"; };
+		F09A5F8C1A55BEDD008D4963 /* HomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
+		F09A5F8D1A55BEDD008D4963 /* HomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
+		F09A5F8E1A55BEDD008D4963 /* HomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -563,6 +568,9 @@
 				F094B59A1C8000E500A2312D /* HomeCollectionCell.h */,
 				F094B59B1C8000E500A2312D /* HomeCollectionCell.m */,
 				F094B59C1C8000E500A2312D /* HomeCollectionCell.xib */,
+				F09A5F8C1A55BEDD008D4963 /* HomeHeaderView.h */,
+				F09A5F8D1A55BEDD008D4963 /* HomeHeaderView.m */,
+				F09A5F8E1A55BEDD008D4963 /* HomeHeaderView.xib */,
 			);
 			name = "HomeViews(首页)";
 			sourceTree = "<group>";
@@ -645,6 +653,7 @@
 			files = (
 				63ADFBE71C7EAC52000D3164 /* ResultTableViewCell.xib in Resources */,
 				63C54E331C7C2F96007CE8CA /* OrderManagerCell.xib in Resources */,
+				F09A5F901A55BEDD008D4963 /* HomeHeaderView.xib in Resources */,
 				F094B59E1C8000E500A2312D /* HomeCollectionCell.xib in Resources */,
 				F06DDBB21C7DAFE300C862A1 /* title-back.png in Resources */,
 				F019C9DC1C7C061100E73A2C /* ceshi.png in Resources */,
@@ -746,6 +755,7 @@
 				F094B59D1C8000E500A2312D /* HomeCollectionCell.m in Sources */,
 				63C07B9B1C7B14BB0084581F /* MHAsiNetworkHandler.m in Sources */,
 				F094B5991C7FF8D600A2312D /* ZQScrollPageView.m in Sources */,
+				F09A5F8F1A55BEDD008D4963 /* HomeHeaderView.m in Sources */,
 				F01A616D1C7D860E008CBBD5 /* LoginInputView.m in Sources */,
 				F019C9E21C7C685700E73A2C /* RegisterSucViewController.m in Sources */,
 				63C07B9D1C7B14BB0084581F /* MHNetworkManager.m in Sources */,

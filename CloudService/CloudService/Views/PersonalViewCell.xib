@@ -17,8 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KRi-FU-Q1E">
-                        <rect key="frame" x="13" y="13" width="42" height="42"/>
-                        <color key="backgroundColor" red="1" green="0.17007582060000001" blue="0.18900344620000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="13" y="8" width="51.5" height="51.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="KRi-FU-Q1E" secondAttribute="height" id="uBG-L7-CP0"/>
                         </constraints>
@@ -28,27 +27,27 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="b55-KV-jCW"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oHg-za-B8E">
-                        <rect key="frame" x="265" y="13" width="42" height="42"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="details-arrow1" translatesAutoresizingMaskIntoConstraints="NO" id="oHg-za-B8E">
+                        <rect key="frame" x="255.5" y="8" width="51.5" height="51.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="oHg-za-B8E" secondAttribute="height" id="ZqJ-Nh-BUI"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="KRi-FU-Q1E" secondAttribute="bottom" constant="5" id="1Iz-WA-F9c"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="KRi-FU-Q1E" secondAttribute="bottom" id="1Iz-WA-F9c"/>
                     <constraint firstItem="oHg-za-B8E" firstAttribute="width" secondItem="oHg-za-B8E" secondAttribute="height" id="AxW-TC-Oyc"/>
-                    <constraint firstItem="KRi-FU-Q1E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="Gmh-vQ-CLo"/>
+                    <constraint firstItem="KRi-FU-Q1E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Gmh-vQ-CLo"/>
                     <constraint firstAttribute="trailingMargin" secondItem="oHg-za-B8E" secondAttribute="trailing" constant="5" id="eKO-z5-wZV"/>
                     <constraint firstItem="KRi-FU-Q1E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="fbr-zM-10Q"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="oHg-za-B8E" secondAttribute="bottom" constant="5" id="gsC-Vp-K24"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="oHg-za-B8E" secondAttribute="bottom" id="gsC-Vp-K24"/>
                     <constraint firstItem="wko-MS-SYK" firstAttribute="leading" secondItem="KRi-FU-Q1E" secondAttribute="trailing" constant="8" id="jqe-Vb-hpz"/>
                     <constraint firstItem="wko-MS-SYK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mMm-IU-Eys"/>
-                    <constraint firstItem="oHg-za-B8E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="obY-dm-Jaj"/>
+                    <constraint firstItem="oHg-za-B8E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="obY-dm-Jaj"/>
                     <constraint firstItem="oHg-za-B8E" firstAttribute="leading" secondItem="wko-MS-SYK" secondAttribute="trailing" constant="8" id="z8j-eA-UsW"/>
                 </constraints>
                 <variation key="default">
@@ -61,7 +60,10 @@
                 <outlet property="titleImage" destination="KRi-FU-Q1E" id="Les-fu-O8B"/>
                 <outlet property="titleLabel" destination="wko-MS-SYK" id="E3Y-7C-Alh"/>
             </connections>
-            <point key="canvasLocation" x="359" y="260"/>
+            <point key="canvasLocation" x="346" y="256"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="details-arrow1" width="25" height="25"/>
+    </resources>
 </document>

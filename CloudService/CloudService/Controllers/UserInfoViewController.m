@@ -63,7 +63,11 @@
         SetUserInfoViewController *setUserInfoVC = [storyBoard instantiateViewControllerWithIdentifier:@"setUserInfo"];
         _isTosetUserInfo = YES;
         [weakSelf.navigationController pushViewController:setUserInfoVC animated:YES];
+    }];    
+    [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 25, 25) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
+        [weakSelf.navigationController popViewControllerAnimated:YES];
     }];
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain    ];
     self.tableView.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
     self.tableView.tableFooterView = [[UIView alloc] init];

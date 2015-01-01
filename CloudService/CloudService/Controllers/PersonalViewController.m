@@ -43,14 +43,14 @@ static NSString *cell_id = @"personalCell";
     _dataArray = [NSArray arrayWithObjects:array1,array2,array3, nil];
     
     _dataDict = [NSMutableDictionary dictionary];
-    [_dataDict setValue:@"" forKey:array1[0]];
-    [_dataDict setValue:@"" forKey:array1[1]];
-    [_dataDict setValue:@"" forKey:array1[2]];
-    [_dataDict setValue:@"" forKey:array1[3]];
-    [_dataDict setValue:@"" forKey:array1[4]];
-    [_dataDict setValue:@"" forKey:array2[0]];
-    [_dataDict setValue:@"" forKey:array3[0]];
-    [_dataDict setValue:@"" forKey:array3[1]];
+    [_dataDict setValue:@"user-icon1" forKey:array1[0]];
+    [_dataDict setValue:@"user-icon2" forKey:array1[1]];
+    [_dataDict setValue:@"user-icon3" forKey:array1[2]];
+    [_dataDict setValue:@"user-icon4" forKey:array1[3]];
+    [_dataDict setValue:@"user-icon5" forKey:array1[4]];
+    [_dataDict setValue:@"user-icon6" forKey:array2[0]];
+    [_dataDict setValue:@"user-icon7" forKey:array3[0]];
+    [_dataDict setValue:@"user-icon8" forKey:array3[1]];
     
 }
 
@@ -127,6 +127,7 @@ static NSString *cell_id = @"personalCell";
     
     PersonalViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id forIndexPath:indexPath];
     cell.titleLabel.text = [_dataArray[indexPath.section] objectAtIndex:indexPath.row];
+    cell.titleImage.image = [UIImage imageNamed:[_dataDict valueForKey:[_dataArray[indexPath.section] objectAtIndex:indexPath.row]]];
     return cell;
 }
 

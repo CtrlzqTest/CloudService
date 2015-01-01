@@ -6,8 +6,8 @@
 //  Copyright © 2015年 zhangqiang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface SetNewPwdViewController : UIViewController
+@interface SetNewPwdViewController : BaseViewController
 
 @end
