@@ -74,6 +74,10 @@ static NSString *cell_id = @"menuCell";
     [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return _dataKeyArray.count;
 }

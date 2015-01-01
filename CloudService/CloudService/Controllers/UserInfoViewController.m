@@ -33,13 +33,13 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     _isTosetUserInfo = NO;
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     if (!_isTosetUserInfo) {
-        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        [self.navigationController setNavigationBarHidden:YES animated:animated];
     }
     
 }
@@ -133,8 +133,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
-        
+    if (indexPath.section == 1) {
+        [self performSegueWithIdentifier:@"verifyCode_push" sender:self];
+        _isTosetUserInfo = YES;
     }
 }
 

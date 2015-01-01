@@ -71,16 +71,14 @@ static NSString *cell_id = @"personalCell";
 }
 
 - (void)tapHeadicon {
-//    UserInfoViewController *userVC = [[UserInfoViewController alloc] init];
     [self performSegueWithIdentifier:@"userinfoVC" sender:self];
-//    [self.navigationController pushViewController:userVC animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
     self.tabBarController.title = @"个人中心";
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -90,7 +88,7 @@ static NSString *cell_id = @"personalCell";
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {

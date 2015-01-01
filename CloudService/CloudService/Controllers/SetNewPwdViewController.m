@@ -1,34 +1,36 @@
 //
-//  VerifyCodeViewController.m
+//  SetNewPwdViewController.m
 //  CloudService
 //
 //  Created by zhangqiang on 15/1/1.
 //  Copyright © 2015年 zhangqiang. All rights reserved.
 //
 
-#import "VerifyCodeViewController.h"
+#import "SetNewPwdViewController.h"
 
-@interface VerifyCodeViewController ()
+@interface SetNewPwdViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextField *pwdTextWord;
+@property (weak, nonatomic) IBOutlet UITextField *pwdTextFiled;
+@property (weak, nonatomic) IBOutlet UITextField *enSurePwdTextFiled;
 
 @end
 
-@implementation VerifyCodeViewController
+@implementation SetNewPwdViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"验证原始密码";
+    self.title = @"设置新密码";
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+- (IBAction)resetPwdAction:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
-- (IBAction)nextStepActopn:(id)sender {
-    
-    [self performSegueWithIdentifier:@"setNewPwd_push" sender:self];
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.tabBarController.navigationController setNavigationBarHidden:YES animated:YES];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

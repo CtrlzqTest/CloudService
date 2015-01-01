@@ -54,6 +54,7 @@
 		F0292BE31C7B015200A810A9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BD61C7B015200A810A9 /* User.m */; };
 		F0292BE41C7B015200A810A9 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BDB1C7B015200A810A9 /* Utility.m */; };
 		F059AA791A55822E0008D7BD /* VerifyCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F059AA781A55822E0008D7BD /* VerifyCodeViewController.m */; };
+		F059AA7C1A55903B0008D7BD /* SetNewPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F059AA7B1A55903B0008D7BD /* SetNewPwdViewController.m */; };
 		F06DDBA21C7DAAE900C862A1 /* CreatOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDB9D1C7DAAE900C862A1 /* CreatOrderViewController.m */; };
 		F06DDBA41C7DAAE900C862A1 /* SearchOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBA11C7DAAE900C862A1 /* SearchOrderViewController.m */; };
 		F06DDBA91C7DAB7400C862A1 /* AYCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBA61C7DAB7400C862A1 /* AYCButton.m */; };
@@ -165,6 +166,8 @@
 		F0292BDB1C7B015200A810A9 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		F059AA771A55822E0008D7BD /* VerifyCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyCodeViewController.h; sourceTree = "<group>"; };
 		F059AA781A55822E0008D7BD /* VerifyCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyCodeViewController.m; sourceTree = "<group>"; };
+		F059AA7A1A55903B0008D7BD /* SetNewPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNewPwdViewController.h; sourceTree = "<group>"; };
+		F059AA7B1A55903B0008D7BD /* SetNewPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNewPwdViewController.m; sourceTree = "<group>"; };
 		F06DDB9C1C7DAAE900C862A1 /* CreatOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatOrderViewController.h; sourceTree = "<group>"; };
 		F06DDB9D1C7DAAE900C862A1 /* CreatOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatOrderViewController.m; sourceTree = "<group>"; };
 		F06DDBA01C7DAAE900C862A1 /* SearchOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchOrderViewController.h; sourceTree = "<group>"; };
@@ -339,6 +342,8 @@
 				F07FF9E21C8189E200EB1BB1 /* UserInfoViewController.m */,
 				F059AA771A55822E0008D7BD /* VerifyCodeViewController.h */,
 				F059AA781A55822E0008D7BD /* VerifyCodeViewController.m */,
+				F059AA7A1A55903B0008D7BD /* SetNewPwdViewController.h */,
+				F059AA7B1A55903B0008D7BD /* SetNewPwdViewController.m */,
 			);
 			name = "PersonalController(个人中心)";
 			sourceTree = "<group>";
@@ -729,6 +734,7 @@
 				F06DDBB01C7DACDE00C862A1 /* OrderManagerViewController.m in Sources */,
 				6383656A1C7DB8BA001A10C4 /* HZQDatePickerView.m in Sources */,
 				63C2FB9B1C80237E00D48B8C /* AppointmentViewController.m in Sources */,
+				F059AA7C1A55903B0008D7BD /* SetNewPwdViewController.m in Sources */,
 				63C07BAB1C7B15C10084581F /* HelperUtil.m in Sources */,
 				F01A61601C7D3D3E008CBBD5 /* SetUserInfoCell.m in Sources */,
 				63ADFBE11C7E8E8F000D3164 /* OrderInfoViewController.m in Sources */,
