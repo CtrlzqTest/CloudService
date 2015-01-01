@@ -72,6 +72,7 @@ static NSString *cell_id = @"menuCell";
                                                             colorWithHexString:@"277FD9"];
     self.tabBarController.title = @"首页";
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+    self.tabBarController.navigationItem.rightBarButtonItem = nil;
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
