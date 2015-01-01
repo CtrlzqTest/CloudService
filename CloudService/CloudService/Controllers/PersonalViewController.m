@@ -85,6 +85,7 @@ static NSString *cell_id = @"personalCell";
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -94,6 +95,7 @@ static NSString *cell_id = @"personalCell";
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

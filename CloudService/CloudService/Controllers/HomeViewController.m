@@ -71,6 +71,7 @@ static NSString *cell_id = @"menuCell";
     self.navigationController.navigationBar.barTintColor = [HelperUtil
                                                             colorWithHexString:@"277FD9"];
     self.tabBarController.title = @"首页";
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

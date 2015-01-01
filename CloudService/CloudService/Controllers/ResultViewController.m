@@ -22,6 +22,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     self.tabBarController.title = @"业绩查询";
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 #pragma mark pageView
