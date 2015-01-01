@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="moG-sH-JKE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="moG-sH-JKE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -48,14 +48,14 @@
                                 <rect key="frame" x="31" y="205" width="313" height="105"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名/手机号码/邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iJO-FG-2Ad">
-                                        <rect key="frame" x="10" y="0.0" width="293" height="52.5"/>
+                                        <rect key="frame" x="10" y="0.0" width="293" height="53"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rmt-vQ-TTC">
-                                        <rect key="frame" x="10" y="52" width="293" height="52.5"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rmt-vQ-TTC">
+                                        <rect key="frame" x="10" y="52" width="293" height="53"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -824,7 +824,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQW-HY-y8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1357.5" y="-1071.5"/>
+            <point key="canvasLocation" x="1281.5" y="-1599.5"/>
         </scene>
         <!--订单管理-->
         <scene sceneID="En5-ls-5mo">
@@ -1001,7 +1001,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5iS-I2-iuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830.5" y="-507.5"/>
+            <point key="canvasLocation" x="1932.5" y="-517.5"/>
+        </scene>
+        <!--我的客户-->
+        <scene sceneID="cw4-cx-GMB">
+            <objects>
+                <viewController title="我的客户" id="Pp4-nm-jZd" customClass="MyClientViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ITv-0D-E2s"/>
+                        <viewControllerLayoutGuide type="bottom" id="cmw-7s-PYS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xxq-AO-HD1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="请输入关键词进行搜索" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35M-mE-y8y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8V5-JM-VpR">
+                                <rect key="frame" x="0.0" y="44" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tUt-Qw-OdF"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="azA-T9-zXt" kind="push" identifier="creatClient" id="ZgM-Ik-4vH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z5H-dG-SrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845.5" y="-1118.5"/>
         </scene>
         <!--个人中心-->
         <scene sceneID="kog-Di-h4W">
@@ -1232,14 +1265,14 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3Y-xk-aDy" userLabel="topLineview">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
                                         <color key="backgroundColor" red="0.72496448863636365" green="0.72496448863636365" blue="0.72496448863636365" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="DSp-8w-E3Z"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eg9-lp-hrV" userLabel="bottomLineview">
-                                        <rect key="frame" x="0.0" y="59.5" width="375" height="0.5"/>
+                                        <rect key="frame" x="0.0" y="60" width="375" height="0.0"/>
                                         <color key="backgroundColor" red="0.72496448859999996" green="0.72496448859999996" blue="0.72496448859999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="0.5" id="NyI-XB-Mvm"/>
@@ -1316,33 +1349,33 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="110"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ckh-WB-5BV" userLabel="LineView_top">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
                                         <color key="backgroundColor" red="0.7811119002525253" green="0.7811119002525253" blue="0.7811119002525253" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="Ajr-xd-jzC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHl-M5-imT" userLabel="LineView_mid">
-                                        <rect key="frame" x="15" y="55" width="345" height="0.5"/>
+                                        <rect key="frame" x="15" y="55" width="345" height="1"/>
                                         <color key="backgroundColor" red="0.78111190029999999" green="0.78111190029999999" blue="0.78111190029999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="ibD-4f-2CG"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siT-0V-xhf" userLabel="LineView_bottom">
-                                        <rect key="frame" x="0.0" y="109" width="375" height="0.5"/>
+                                        <rect key="frame" x="0.0" y="109" width="375" height="1"/>
                                         <color key="backgroundColor" red="0.78111190029999999" green="0.78111190029999999" blue="0.78111190029999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="EBm-QK-nzc"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EV0-Iv-TmN">
-                                        <rect key="frame" x="20" y="10" width="335" height="34.5"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EV0-Iv-TmN">
+                                        <rect key="frame" x="20" y="10" width="335" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAf-ea-Q6O">
-                                        <rect key="frame" x="20" y="65" width="335" height="33.5"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yAf-ea-Q6O">
+                                        <rect key="frame" x="20" y="65" width="335" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -1575,17 +1608,51 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="save:" destination="T6I-5O-g6L" eventType="touchUpInside" id="4Ar-32-JEF"/>
+                                    <segue destination="RT6-86-P7R" kind="push" id="nMs-kY-evH"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="创建订单" id="AA9-Z5-t5w"/>
+                    <navigationItem key="navigationItem" title="创建客户" id="AA9-Z5-t5w"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAN-tt-IbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1843.5" y="-1271.5"/>
+            <point key="canvasLocation" x="2329.5" y="-1874.5"/>
+        </scene>
+        <!--立即报价-->
+        <scene sceneID="iak-uT-QYf">
+            <objects>
+                <viewController title="立即报价" id="RT6-86-P7R" customClass="OfferViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DNE-KM-hLq"/>
+                        <viewControllerLayoutGuide type="bottom" id="HIl-jL-MCg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aTg-UI-xCC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Iug-ao-o50">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RT6-86-P7R" id="GaX-d0-rU8"/>
+                                    <outlet property="delegate" destination="RT6-86-P7R" id="fZ0-WP-3rD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AAC-bF-6F5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="Iug-ao-o50" id="nYf-An-qjC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMY-0K-Qh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2891" y="-1887"/>
         </scene>
     </scenes>
     <resources>

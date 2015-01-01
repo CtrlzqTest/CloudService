@@ -44,7 +44,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.title=@"订单搜索";
 
-    [self.tabBarController setRightImageBarButtonItemWithFrame:CGRectMake(0, 0, 30, 30) image:@"title-search" selectImage:@"title-search_" action:^(AYCButton *button) {
+    [self setRightImageBarButtonItemWithFrame:CGRectMake(0, 0, 30, 30) image:@"title-search" selectImage:@"title-search_" action:^(AYCButton *button) {
         if (isOpen) {
             [self upMenu];
         }else {

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		637533B01C83F64100A12932 /* details-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 637533AF1C83F64100A12932 /* details-icon.png */; };
+		637533B31C8411C800A12932 /* MyClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637533B21C8411C800A12932 /* MyClientViewController.m */; };
+		637533B61C842E2000A12932 /* OfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637533B51C842E2000A12932 /* OfferViewController.m */; };
+		637533BB1C84321500A12932 /* OfferTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 637533B91C84321500A12932 /* OfferTableViewCell.m */; };
+		637533BC1C84321500A12932 /* OfferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637533BA1C84321500A12932 /* OfferTableViewCell.xib */; };
 		6383656A1C7DB8BA001A10C4 /* HZQDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 638365641C7DB8BA001A10C4 /* HZQDatePickerView.m */; };
 		6383656B1C7DB8BA001A10C4 /* HZQDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638365651C7DB8BA001A10C4 /* HZQDatePickerView.xib */; };
 		6383656C1C7DB8BA001A10C4 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 638365671C7DB8BA001A10C4 /* UIColor+HexString.m */; };
@@ -79,6 +83,13 @@
 
 /* Begin PBXFileReference section */
 		637533AF1C83F64100A12932 /* details-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "details-icon.png"; sourceTree = "<group>"; };
+		637533B11C8411C800A12932 /* MyClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClientViewController.h; sourceTree = "<group>"; };
+		637533B21C8411C800A12932 /* MyClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClientViewController.m; sourceTree = "<group>"; };
+		637533B41C842E2000A12932 /* OfferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferViewController.h; sourceTree = "<group>"; };
+		637533B51C842E2000A12932 /* OfferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferViewController.m; sourceTree = "<group>"; };
+		637533B81C84321500A12932 /* OfferTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfferTableViewCell.h; sourceTree = "<group>"; };
+		637533B91C84321500A12932 /* OfferTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfferTableViewCell.m; sourceTree = "<group>"; };
+		637533BA1C84321500A12932 /* OfferTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferTableViewCell.xib; sourceTree = "<group>"; };
 		638365631C7DB8BA001A10C4 /* HZQDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZQDatePickerView.h; sourceTree = "<group>"; };
 		638365641C7DB8BA001A10C4 /* HZQDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZQDatePickerView.m; sourceTree = "<group>"; };
 		638365651C7DB8BA001A10C4 /* HZQDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZQDatePickerView.xib; sourceTree = "<group>"; };
@@ -227,6 +238,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		637533B71C8431F800A12932 /* OfferCell */ = {
+			isa = PBXGroup;
+			children = (
+				637533B81C84321500A12932 /* OfferTableViewCell.h */,
+				637533B91C84321500A12932 /* OfferTableViewCell.m */,
+				637533BA1C84321500A12932 /* OfferTableViewCell.xib */,
+			);
+			name = OfferCell;
+			sourceTree = "<group>";
+		};
 		6383655E1C7DB8BA001A10C4 /* HZQDatePickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +346,10 @@
 			children = (
 				63C54E391C7C359A007CE8CA /* HomeViewController.h */,
 				63C54E3A1C7C359A007CE8CA /* HomeViewController.m */,
+				637533B11C8411C800A12932 /* MyClientViewController.h */,
+				637533B21C8411C800A12932 /* MyClientViewController.m */,
+				637533B41C842E2000A12932 /* OfferViewController.h */,
+				637533B51C842E2000A12932 /* OfferViewController.m */,
 			);
 			name = "HomeController(首页)";
 			sourceTree = "<group>";
@@ -553,6 +578,7 @@
 		F0292BDD1C7B015200A810A9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				637533B71C8431F800A12932 /* OfferCell */,
 				F094B59F1C8021EB00A2312D /* PersonalViews(个人中心) */,
 				F094B58E1C7FE96500A2312D /* HomeViews(首页) */,
 				63ADFBE21C7EAA88000D3164 /* ResultCell */,
@@ -664,6 +690,7 @@
 				F07FF9D81C8146D800EB1BB1 /* ResetPhonePopView.xib in Resources */,
 				F094B5A41C80223400A2312D /* PersonalViewCell.xib in Resources */,
 				F01A61611C7D3D3E008CBBD5 /* SetUserInfoCell.xib in Resources */,
+				637533BC1C84321500A12932 /* OfferTableViewCell.xib in Resources */,
 				6383656B1C7DB8BA001A10C4 /* HZQDatePickerView.xib in Resources */,
 				F0292BB81C7B00CD00A810A9 /* Main.storyboard in Resources */,
 				63C54E351C7C312F007CE8CA /* line_solid.png in Resources */,
@@ -738,6 +765,7 @@
 				F019C9E51C7C7BB700E73A2C /* SetUserInfoViewController.m in Sources */,
 				63C54E3B1C7C359A007CE8CA /* HomeViewController.m in Sources */,
 				F07FF9DB1C815BF600EB1BB1 /* MyTeamViewController.m in Sources */,
+				637533BB1C84321500A12932 /* OfferTableViewCell.m in Sources */,
 				63C2FB941C7FEC9500D48B8C /* OrderInfoTableViewCell.m in Sources */,
 				63C07B9A1C7B14BB0084581F /* MBProgressHUD+Add.m in Sources */,
 				63C07BA81C7B15C10084581F /* NSArray+AYCUnicode.m in Sources */,
@@ -750,6 +778,8 @@
 				F059AA7C1A55903B0008D7BD /* SetNewPwdViewController.m in Sources */,
 				63C07BAB1C7B15C10084581F /* HelperUtil.m in Sources */,
 				F01A61601C7D3D3E008CBBD5 /* SetUserInfoCell.m in Sources */,
+				637533B61C842E2000A12932 /* OfferViewController.m in Sources */,
+				637533B31C8411C800A12932 /* MyClientViewController.m in Sources */,
 				63ADFBE11C7E8E8F000D3164 /* OrderInfoViewController.m in Sources */,
 				63ADFBE61C7EAC52000D3164 /* ResultTableViewCell.m in Sources */,
 				F094B59D1C8000E500A2312D /* HomeCollectionCell.m in Sources */,

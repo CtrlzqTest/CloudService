@@ -47,6 +47,9 @@ static NSString *headerView_ID = @"headerView";
     [_dataDict setValue:@"积分明细查询" forKey:_dataKeyArray[5]];
 
 }
+- (IBAction)my:(id)sender {
+    [self performSegueWithIdentifier:@"my" sender:self];
+}
 
 - (void)setupViews {
     
@@ -65,6 +68,7 @@ static NSString *headerView_ID = @"headerView";
     self.collectionView.collectionViewLayout = flowLayOut;
     
 }
+
 
 - (void)viewWillAppear:(BOOL)animated {
     
