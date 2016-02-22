@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63C07B9A1C7B14BB0084581F /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07B8C1C7B14BB0084581F /* MBProgressHUD+Add.m */; };
+		63C07B9B1C7B14BB0084581F /* MHAsiNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07B911C7B14BB0084581F /* MHAsiNetworkHandler.m */; };
+		63C07B9C1C7B14BB0084581F /* MHAsiNetworkItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07B931C7B14BB0084581F /* MHAsiNetworkItem.m */; };
+		63C07B9D1C7B14BB0084581F /* MHNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07B961C7B14BB0084581F /* MHNetworkManager.m */; };
+		63C07B9E1C7B14BB0084581F /* MHUploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07B991C7B14BB0084581F /* MHUploadParam.m */; };
+		63C07BA81C7B15C10084581F /* NSArray+AYCUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07BA11C7B15C10084581F /* NSArray+AYCUnicode.m */; };
+		63C07BA91C7B15C10084581F /* NSDictionary+AYCUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07BA31C7B15C10084581F /* NSDictionary+AYCUnicode.m */; };
+		63C07BAA1C7B15C10084581F /* NSObject+AYCUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07BA51C7B15C10084581F /* NSObject+AYCUnicode.m */; };
+		63C07BAB1C7B15C10084581F /* HelperUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07BA71C7B15C10084581F /* HelperUtil.m */; };
 		91A97CA728DD2D371997D3F7 /* libPods-CloudService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D96943D8DC951CBCC61FF495 /* libPods-CloudService.a */; };
 		F0292BAF1C7B00CD00A810A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BAE1C7B00CD00A810A9 /* main.m */; };
 		F0292BB21C7B00CD00A810A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BB11C7B00CD00A810A9 /* AppDelegate.m */; };
@@ -22,6 +31,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63C07B8B1C7B14BB0084581F /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		63C07B8C1C7B14BB0084581F /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		63C07B8E1C7B14BB0084581F /* MHAsiNetworkDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHAsiNetworkDefine.h; sourceTree = "<group>"; };
+		63C07B8F1C7B14BB0084581F /* MHAsiNetworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHAsiNetworkDelegate.h; sourceTree = "<group>"; };
+		63C07B901C7B14BB0084581F /* MHAsiNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHAsiNetworkHandler.h; sourceTree = "<group>"; };
+		63C07B911C7B14BB0084581F /* MHAsiNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHAsiNetworkHandler.m; sourceTree = "<group>"; };
+		63C07B921C7B14BB0084581F /* MHAsiNetworkItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHAsiNetworkItem.h; sourceTree = "<group>"; };
+		63C07B931C7B14BB0084581F /* MHAsiNetworkItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHAsiNetworkItem.m; sourceTree = "<group>"; };
+		63C07B951C7B14BB0084581F /* MHNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHNetworkManager.h; sourceTree = "<group>"; };
+		63C07B961C7B14BB0084581F /* MHNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHNetworkManager.m; sourceTree = "<group>"; };
+		63C07B971C7B14BB0084581F /* MHNetwrok.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHNetwrok.h; sourceTree = "<group>"; };
+		63C07B981C7B14BB0084581F /* MHUploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHUploadParam.h; sourceTree = "<group>"; };
+		63C07B991C7B14BB0084581F /* MHUploadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHUploadParam.m; sourceTree = "<group>"; };
+		63C07BA01C7B15C10084581F /* NSArray+AYCUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+AYCUnicode.h"; sourceTree = "<group>"; };
+		63C07BA11C7B15C10084581F /* NSArray+AYCUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+AYCUnicode.m"; sourceTree = "<group>"; };
+		63C07BA21C7B15C10084581F /* NSDictionary+AYCUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AYCUnicode.h"; sourceTree = "<group>"; };
+		63C07BA31C7B15C10084581F /* NSDictionary+AYCUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AYCUnicode.m"; sourceTree = "<group>"; };
+		63C07BA41C7B15C10084581F /* NSObject+AYCUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AYCUnicode.h"; sourceTree = "<group>"; };
+		63C07BA51C7B15C10084581F /* NSObject+AYCUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AYCUnicode.m"; sourceTree = "<group>"; };
+		63C07BA61C7B15C10084581F /* HelperUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperUtil.h; sourceTree = "<group>"; };
+		63C07BA71C7B15C10084581F /* HelperUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelperUtil.m; sourceTree = "<group>"; };
 		8080CD2CAEE01D9CB60C40F6 /* Pods-CloudService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudService.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CloudService/Pods-CloudService.debug.xcconfig"; sourceTree = "<group>"; };
 		AA863A4D44EB33149F738225 /* Pods-CloudService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudService.release.xcconfig"; path = "Pods/Target Support Files/Pods-CloudService/Pods-CloudService.release.xcconfig"; sourceTree = "<group>"; };
 		D96943D8DC951CBCC61FF495 /* libPods-CloudService.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloudService.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +98,37 @@
 				AA863A4D44EB33149F738225 /* Pods-CloudService.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		63C07B8D1C7B14BB0084581F /* NetwrokHandle */ = {
+			isa = PBXGroup;
+			children = (
+				63C07B8E1C7B14BB0084581F /* MHAsiNetworkDefine.h */,
+				63C07B8F1C7B14BB0084581F /* MHAsiNetworkDelegate.h */,
+				63C07B901C7B14BB0084581F /* MHAsiNetworkHandler.h */,
+				63C07B911C7B14BB0084581F /* MHAsiNetworkHandler.m */,
+				63C07B921C7B14BB0084581F /* MHAsiNetworkItem.h */,
+				63C07B931C7B14BB0084581F /* MHAsiNetworkItem.m */,
+				63C07B951C7B14BB0084581F /* MHNetworkManager.h */,
+				63C07B961C7B14BB0084581F /* MHNetworkManager.m */,
+				63C07B971C7B14BB0084581F /* MHNetwrok.h */,
+				63C07B981C7B14BB0084581F /* MHUploadParam.h */,
+				63C07B991C7B14BB0084581F /* MHUploadParam.m */,
+			);
+			path = NetwrokHandle;
+			sourceTree = "<group>";
+		};
+		63C07B9F1C7B15C00084581F /* AYCUnicode */ = {
+			isa = PBXGroup;
+			children = (
+				63C07BA01C7B15C10084581F /* NSArray+AYCUnicode.h */,
+				63C07BA11C7B15C10084581F /* NSArray+AYCUnicode.m */,
+				63C07BA21C7B15C10084581F /* NSDictionary+AYCUnicode.h */,
+				63C07BA31C7B15C10084581F /* NSDictionary+AYCUnicode.m */,
+				63C07BA41C7B15C10084581F /* NSObject+AYCUnicode.h */,
+				63C07BA51C7B15C10084581F /* NSObject+AYCUnicode.m */,
+			);
+			path = AYCUnicode;
 			sourceTree = "<group>";
 		};
 		A6CD7BDAF137CB5E4056C631 /* Frameworks */ = {
@@ -170,6 +231,9 @@
 		F0292BD31C7B015200A810A9 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				63C07B8B1C7B14BB0084581F /* MBProgressHUD+Add.h */,
+				63C07B8C1C7B14BB0084581F /* MBProgressHUD+Add.m */,
+				63C07B8D1C7B14BB0084581F /* NetwrokHandle */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -195,6 +259,9 @@
 			children = (
 				F0292BDA1C7B015200A810A9 /* Utility.h */,
 				F0292BDB1C7B015200A810A9 /* Utility.m */,
+				63C07B9F1C7B15C00084581F /* AYCUnicode */,
+				63C07BA61C7B15C10084581F /* HelperUtil.h */,
+				63C07BA71C7B15C10084581F /* HelperUtil.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -338,9 +405,18 @@
 				F0292BE41C7B015200A810A9 /* Utility.m in Sources */,
 				F0292BE31C7B015200A810A9 /* User.m in Sources */,
 				F0292BE01C7B015200A810A9 /* BaseNaviViewController.m in Sources */,
+				63C07B9A1C7B14BB0084581F /* MBProgressHUD+Add.m in Sources */,
 				F0292BB51C7B00CD00A810A9 /* ViewController.m in Sources */,
+				63C07BA81C7B15C10084581F /* NSArray+AYCUnicode.m in Sources */,
+				63C07BAA1C7B15C10084581F /* NSObject+AYCUnicode.m in Sources */,
+				63C07BAB1C7B15C10084581F /* HelperUtil.m in Sources */,
+				63C07B9B1C7B14BB0084581F /* MHAsiNetworkHandler.m in Sources */,
+				63C07B9D1C7B14BB0084581F /* MHNetworkManager.m in Sources */,
 				F0292BE11C7B015200A810A9 /* BaseTabBarViewController.m in Sources */,
+				63C07B9E1C7B14BB0084581F /* MHUploadParam.m in Sources */,
+				63C07BA91C7B15C10084581F /* NSDictionary+AYCUnicode.m in Sources */,
 				F0292BB21C7B00CD00A810A9 /* AppDelegate.m in Sources */,
+				63C07B9C1C7B14BB0084581F /* MHAsiNetworkItem.m in Sources */,
 				F0292BAF1C7B00CD00A810A9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
