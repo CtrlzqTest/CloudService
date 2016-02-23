@@ -8,8 +8,10 @@ target 'CloudService' do
 pod 'AFNetworking'
 pod 'MBProgressHUD'
 pod 'Masonry'
-pod ‘IQKeyboardManager’
+pod 'IQKeyboardManager'
 pod 'MJExtension'
+pod 'MJRefresh'
+pod 'LazyPageScrollView'
 
 end
 

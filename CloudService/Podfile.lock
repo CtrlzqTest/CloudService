@@ -15,22 +15,28 @@ PODS:
   - AFNetworking/UIKit (3.0.2):
     - AFNetworking/NSURLSession
   - IQKeyboardManager (3.3.4)
+  - LazyPageScrollView (1.1)
   - Masonry (0.6.3)
   - MBProgressHUD (0.9.1)
   - MJExtension (3.0.7)
+  - MJRefresh (3.1.0)
 
 DEPENDENCIES:
   - AFNetworking
   - IQKeyboardManager
+  - LazyPageScrollView
   - Masonry
   - MBProgressHUD
   - MJExtension
+  - MJRefresh
 
 SPEC CHECKSUMS:
   AFNetworking: 2f30b7db399a405b12b24e049c654f108fc8c54d
   IQKeyboardManager: ac803e61e5b50efae6b3aeedd95a02c7c7d3b2b3
+  LazyPageScrollView: 98e3f9981443e5f49d4136440399966f6118dd92
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MJExtension: 290cc966f0f849b12b6391a38e296e0004ae8e5e
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
 
 COCOAPODS: 0.39.0
