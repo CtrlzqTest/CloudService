@@ -37,10 +37,10 @@
    
     [_pageView enableTabBottomLine:YES LineHeight:2 LineColor:[UIColor blueColor] LineBottomGap:4 ExtraWidth:15];
     [_pageView enableBreakLine:YES Width:2 TopMargin:0 BottomMargin:0 Color:[UIColor purpleColor]];
-    [_pageView setTitleStyle:[UIFont systemFontOfSize:16] SelFont:[UIFont systemFontOfSize:16] Color:[UIColor blackColor] SelColor:[UIColor blueColor]];
-    [_pageView generate:^(UIButton *firstTitleControl, UIView *viewTitleEffect) {
-        
-    }];
+//    [_pageView setTitleStyle:[UIFont systemFontOfSize:16] SelFont:[UIFont systemFontOfSize:16] Color:[UIColor blackColor] SelColor:[UIColor blueColor]];
+//    [_pageView generate:^(UIButton *firstTitleControl, UIView *viewTitleEffect) {
+//        
+//    }];
 }
 
 - (void)LazyPageScrollViewPageChange:(LazyPageScrollView *)pageScrollView Index:(NSInteger)index PreIndex:(NSInteger)preIndex TitleEffectView:(UIView *)viewTitleEffect SelControl:(UIButton *)selBtn {
