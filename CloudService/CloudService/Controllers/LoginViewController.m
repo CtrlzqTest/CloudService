@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "RestAPI.h"
 
 @interface LoginViewController ()
 
@@ -29,6 +30,7 @@
 }
 
 - (void)setupView {
+    
     self.inputView.layer.cornerRadius = 5;
     self.inputView.clipsToBounds = YES;
     

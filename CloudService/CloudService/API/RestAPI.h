@@ -40,7 +40,14 @@
 
 static NSString *const ZQdidChangeLoginStateNotication = @"didChangeLoginNotication";    // 登录成功
 
+/**
+ *  StoryboardSugerID
+ */
+static NSString *const LoginToMenuView = @"loginToMenu";
 
+static NSString *const RegisterSuccess = @"registerSuccess";
+
+static NSString *const RegisterToMenuView = @"registerToMenuView";
 
 /**************************************************************************************/
 
