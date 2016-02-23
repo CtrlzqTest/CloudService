@@ -42,6 +42,7 @@
 // 登录
 - (IBAction)loginAction:(id)sender {
     
+    [self performSegueWithIdentifier:@"login" sender:self];
     
 }
 
