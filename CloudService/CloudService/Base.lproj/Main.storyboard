@@ -177,7 +177,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="DRu-8S-KMC"/>
-                    <navigationItem key="navigationItem" id="nfR-qK-uD8"/>
+                    <navigationItem key="navigationItem" title="首页" id="nfR-qK-uD8"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQW-HY-y8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,7 +204,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="pF1-o9-cab"/>
-                    <navigationItem key="navigationItem" id="4R5-gg-bDG"/>
+                    <navigationItem key="navigationItem" title="订单管理" id="4R5-gg-bDG"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="pageView" destination="2fE-ZY-gNK" id="xcD-0b-61R"/>
@@ -228,7 +228,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="uw4-yg-oo8"/>
-                    <navigationItem key="navigationItem" id="KMz-Uf-fpm"/>
+                    <navigationItem key="navigationItem" title="个人中心" id="KMz-Uf-fpm"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aH7-vn-Ake" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -249,7 +249,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="业绩查询" id="Up9-H6-Fb5"/>
-                    <navigationItem key="navigationItem" id="i4f-qx-mWQ"/>
+                    <navigationItem key="navigationItem" title="业绩查询" id="i4f-qx-mWQ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8og-qv-kWh" userLabel="First Responder" sceneMemberID="firstResponder"/>

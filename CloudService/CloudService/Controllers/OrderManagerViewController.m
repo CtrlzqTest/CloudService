@@ -8,6 +8,7 @@
 
 #import "OrderManagerViewController.h"
 #import "OrderManagerCell.h"
+#import <MJRefresh.h>
 
 @interface OrderManagerViewController ()<LazyPageScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
@@ -25,6 +26,27 @@
     _pageView.delegate=self;
     [_pageView initTab:YES Gap:44 TabHeight:44 VerticalDistance:0 BkColor:[HelperUtil colorWithHexString:@"#F4F4F4"]];
     UITableView *tableView = [[UITableView alloc] init];
+    // 下拉刷新
+    tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            // 结束刷新
+            [tableView.mj_header endRefreshing];
+        });
+    }];
+    
+    // 设置自动切换透明度(在导航栏下面自动隐藏)
+    tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+    // 上拉刷新
+    tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            // 结束刷新
+            [tableView.mj_footer endRefreshing];
+        });
+    }];
+
     tableView.tag = 100;
     tableView.delegate = self;
     tableView.dataSource = self;
