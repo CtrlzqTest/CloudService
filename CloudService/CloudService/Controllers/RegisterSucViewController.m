@@ -1,40 +1,32 @@
 //
-//  RegisterViewController.m
+//  RegisterSucViewController.m
 //  CloudService
 //
 //  Created by zhangqiang on 16/2/23.
 //  Copyright © 2016年 zhangqiang. All rights reserved.
 //
 
-#import "RegisterViewController.h"
-#import "RestAPI.h"
+#import "RegisterSucViewController.h"
 
-@interface RegisterViewController ()
+@interface RegisterSucViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *inputBtn;
+@property (weak, nonatomic) IBOutlet UIButton *pushMenuBtn;
+
 
 @end
 
-@implementation RegisterViewController
+@implementation RegisterSucViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-}
-
-// 注册
-- (IBAction)registerAction:(id)sender {
-    
-    [self performSegueWithIdentifier:RegisterSuccess sender:self];
     
 }
 
-// 定位按钮
-- (IBAction)locateAction:(id)sender {
+
+- (IBAction)gotoMenuAction:(id)sender {
     
+    [self performSegueWithIdentifier:RegisterToMenuView sender:self];
     
 }
 

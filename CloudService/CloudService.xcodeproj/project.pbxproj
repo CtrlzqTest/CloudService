@@ -27,6 +27,7 @@
 		F019C9D61C7BFD7900E73A2C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F019C9D51C7BFD7900E73A2C /* LoginViewController.m */; };
 		F019C9D91C7BFD8D00E73A2C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F019C9D81C7BFD8D00E73A2C /* RegisterViewController.m */; };
 		F019C9DC1C7C061100E73A2C /* ceshi.png in Resources */ = {isa = PBXBuildFile; fileRef = F019C9DB1C7C061100E73A2C /* ceshi.png */; };
+		F019C9E21C7C685700E73A2C /* RegisterSucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F019C9E11C7C685700E73A2C /* RegisterSucViewController.m */; };
 		F0292BAF1C7B00CD00A810A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BAE1C7B00CD00A810A9 /* main.m */; };
 		F0292BB21C7B00CD00A810A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BB11C7B00CD00A810A9 /* AppDelegate.m */; };
 		F0292BB81C7B00CD00A810A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0292BB61C7B00CD00A810A9 /* Main.storyboard */; };
@@ -81,6 +82,8 @@
 		F019C9D71C7BFD8D00E73A2C /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		F019C9D81C7BFD8D00E73A2C /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		F019C9DB1C7C061100E73A2C /* ceshi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceshi.png; sourceTree = "<group>"; };
+		F019C9E01C7C685600E73A2C /* RegisterSucViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterSucViewController.h; sourceTree = "<group>"; };
+		F019C9E11C7C685700E73A2C /* RegisterSucViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterSucViewController.m; sourceTree = "<group>"; };
 		F0292BAA1C7B00CD00A810A9 /* CloudService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0292BAE1C7B00CD00A810A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0292BB01C7B00CD00A810A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 				F019C9D51C7BFD7900E73A2C /* LoginViewController.m */,
 				F019C9D71C7BFD8D00E73A2C /* RegisterViewController.h */,
 				F019C9D81C7BFD8D00E73A2C /* RegisterViewController.m */,
+				F019C9E01C7C685600E73A2C /* RegisterSucViewController.h */,
+				F019C9E11C7C685700E73A2C /* RegisterSucViewController.m */,
 			);
 			name = "LoginRegisterControllers(登录注册)";
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				63C54E411C7C35BA007CE8CA /* PersonalViewController.m in Sources */,
 				63C07BAB1C7B15C10084581F /* HelperUtil.m in Sources */,
 				63C07B9B1C7B14BB0084581F /* MHAsiNetworkHandler.m in Sources */,
+				F019C9E21C7C685700E73A2C /* RegisterSucViewController.m in Sources */,
 				63C07B9D1C7B14BB0084581F /* MHNetworkManager.m in Sources */,
 				F0292BE11C7B015200A810A9 /* BaseTabBarViewController.m in Sources */,
 				63C54E2D1C7C2BC0007CE8CA /* OrderManagerViewController.m in Sources */,
