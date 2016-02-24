@@ -129,7 +129,7 @@
                     <connections>
                         <outlet property="inputView" destination="vHH-zz-iXo" id="zkz-c9-ufw"/>
                         <outlet property="loginBtn" destination="KW6-Fn-8rL" id="rtH-yA-4HD"/>
-                        <segue destination="qX7-op-fDe" kind="modal" identifier="loginToMenu" id="e95-HT-7ef"/>
+                        <segue destination="qX7-op-fDe" kind="modal" identifier="login" id="jwF-tE-Dpv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -644,7 +644,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5l-B0-GOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="291.5" y="219.5"/>
+            <point key="canvasLocation" x="403.5" y="186.5"/>
         </scene>
         <!--首页导航条-->
         <scene sceneID="HDM-0L-Ee9">

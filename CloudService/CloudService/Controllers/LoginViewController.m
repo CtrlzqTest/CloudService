@@ -44,7 +44,7 @@
 // 登录
 - (IBAction)loginAction:(id)sender {
     
-    [self performSegueWithIdentifier:LoginToMenuView sender:self];
+    [self performSegueWithIdentifier:@"login" sender:self];
     
 }
 
