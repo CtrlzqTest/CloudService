@@ -50,7 +50,12 @@
     
     
 }
-
+-(void)viewDidDisappear:(BOOL)animated {
+    self.view = nil;
+}
+-(void)dealloc{
+    NSLog(@"注册页面已销毁");
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
