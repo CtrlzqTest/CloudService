@@ -15,7 +15,12 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
-
+- (void)isPullDown:(BOOL )pullDown {
+    
+    self.textFiled.enabled = NO;
+    [self.imageBtn setImage:[UIImage imageNamed:@"title-back"] forState:UIControlStateNormal];
+    
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
