@@ -19,14 +19,15 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="真实姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtY-jf-6mD">
                         <rect key="frame" x="8" y="13" width="100" height="46.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="LQY-K6-Si0"/>
+                            <constraint firstAttribute="width" constant="120" id="LQY-K6-Si0"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzp-ED-hhq">
-                        <rect key="frame" x="108" y="13" width="167.5" height="46.5"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzp-ED-hhq">
+                        <rect key="frame" x="108" y="13" width="167.5" height="61.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -39,14 +40,14 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="ljp-EF-QNi" firstAttribute="top" secondItem="bzp-ED-hhq" secondAttribute="top" id="0iW-95-rks"/>
-                    <constraint firstItem="LtY-jf-6mD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="K6F-0S-keU"/>
+                    <constraint firstItem="LtY-jf-6mD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="K6F-0S-keU"/>
                     <constraint firstItem="ljp-EF-QNi" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="10" id="L3t-xx-PLR"/>
                     <constraint firstItem="ljp-EF-QNi" firstAttribute="bottom" secondItem="bzp-ED-hhq" secondAttribute="bottom" id="Qas-6j-vXv"/>
                     <constraint firstItem="LtY-jf-6mD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="TzO-g4-61e"/>
                     <constraint firstItem="bzp-ED-hhq" firstAttribute="top" secondItem="LtY-jf-6mD" secondAttribute="top" id="WYC-dh-qB4"/>
                     <constraint firstItem="ljp-EF-QNi" firstAttribute="leading" secondItem="bzp-ED-hhq" secondAttribute="trailing" id="aL0-dP-BcU"/>
                     <constraint firstItem="bzp-ED-hhq" firstAttribute="leading" secondItem="LtY-jf-6mD" secondAttribute="trailing" id="eZE-nE-uf2"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="LtY-jf-6mD" secondAttribute="bottom" constant="5" id="gAq-qB-ThZ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="LtY-jf-6mD" secondAttribute="bottom" id="gAq-qB-ThZ"/>
                     <constraint firstItem="bzp-ED-hhq" firstAttribute="bottom" secondItem="LtY-jf-6mD" secondAttribute="bottom" id="u40-mx-bqj"/>
                 </constraints>
             </tableViewCellContentView>

@@ -69,7 +69,7 @@ static CGFloat headerHeight = 30;
     
     SetUserInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id forIndexPath:indexPath];
     cell.label.text = indexPath.section == 0 ? _keyArray_User[indexPath.row] : _keyArray_Bank[indexPath.row];
-    cell.backgroundColor = [UIColor colorWithWhite:0.919 alpha:1.000];
+    
     return cell;
 }
 
@@ -82,6 +82,10 @@ static CGFloat headerHeight = 30;
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0.1;
+}
+
+- (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
 }
 
 - (CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
