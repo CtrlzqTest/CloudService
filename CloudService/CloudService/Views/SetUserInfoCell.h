@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *textFiled;
 @property (weak, nonatomic) IBOutlet UIButton *imageBtn;
 
+- (void)isPullDown:(BOOL )pullDown;
+
 @end

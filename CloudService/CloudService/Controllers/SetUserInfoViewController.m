@@ -13,14 +13,16 @@
 static NSString *const cell_id = @"setUserInfoCell";
 static NSString *const header_id = @"setUserInfoHeader";
 static CGFloat headerHeight = 30;
-
+static NSString *const select_CellID = @"selectCell";
 @interface SetUserInfoViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *_keyArray_User;
     NSArray *_keyArray_Bank;
+    NSArray *_selectArray;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property(nonatomic,strong) UITableView *selectTableView;
 
 @end
 
@@ -30,7 +32,9 @@ static CGFloat headerHeight = 30;
     [super viewDidLoad];
     [self setupTableView];
     [self initData];
+    [self setupSelectTableView];
 }
+
 
 // 设置tableView样式
 - (void)setupTableView {
@@ -51,13 +55,35 @@ static CGFloat headerHeight = 30;
                        @"银行账号",@"支行名称",
                        @"开户省份",@"开户城市"];
     
+    _selectArray = @[@"身份证",@"军人证"];
+    
 }
 
+- (void)setupSelectTableView {
+    
+    self.selectTableView = [[UITableView alloc] initWithFrame:CGRectZero style:(UITableViewStylePlain)];
+    self.selectTableView.dataSource = self;
+    self.selectTableView.delegate = self;
+    [self.selectTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:select_CellID];
+//    [self.view addSubview:self.selectTableView];
+}
+
+
+#pragma mark -- UITableViewDelegate
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    if ([tableView isEqual:self.tableView]) {
+        return 2;
+    }else {
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if ([tableView isEqual:self.selectTableView]) {
+        return _selectArray.count;
+    }
     if (section == 0) {
         return 11;
     }else {
@@ -67,10 +93,44 @@ static CGFloat headerHeight = 30;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    // 下拉的tableView
+    if ([tableView isEqual:self.selectTableView]) {
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:select_CellID];
+        cell.textLabel.text = _selectArray[indexPath.row];
+        return cell;
+    }
+    
     SetUserInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id forIndexPath:indexPath];
     cell.label.text = indexPath.section == 0 ? _keyArray_User[indexPath.row] : _keyArray_Bank[indexPath.row];
-    cell.backgroundColor = [UIColor colorWithWhite:0.919 alpha:1.000];
+    CGRect tempRect = [cell convertRect:cell.textFiled.frame fromView:self.view];
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 1:
+                NSLog(@"%@",NSStringFromCGRect(tempRect));
+                [cell isPullDown:YES];
+                cell.textFiled.text = @"身份证";
+//                CGRect rect = CGRectMake(tempRect.origin.x, CGRectGetMaxY(cell.frame), 150, 200);
+//                self.selectTableView.frame = rect;
+//                [cell addSubview:self.selectTableView];
+//                [self.selectTableView reloadData];
+                break;
+                
+            default:
+                break;
+        }
+    }
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 0) {
+        if (indexPath.row == 1) {
+            
+        }
+    }
+    
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -82,6 +142,10 @@ static CGFloat headerHeight = 30;
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0.1;
+}
+
+- (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
 }
 
 - (CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

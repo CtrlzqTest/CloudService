@@ -21,7 +21,7 @@
 
 - (void)addAllViews {
     
-    self.contentView.backgroundColor = [UIColor whiteColor];
+    self.contentView.backgroundColor = [UIColor colorWithWhite:0.919 alpha:1.000];
     
     UIView *lineView = [[UIView alloc] init];
     lineView.backgroundColor = [UIColor colorWithRed:0.000 green:0.548 blue:0.000 alpha:1.000];
