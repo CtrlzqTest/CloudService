@@ -17,9 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    //设置状态栏为黑色
+    //设置状态栏为白色
     
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     return YES;
 }

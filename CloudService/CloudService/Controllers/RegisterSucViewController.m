@@ -29,9 +29,7 @@
     [self performSegueWithIdentifier:RegisterToMenuView sender:self];
     
 }
--(void)viewDidDisappear:(BOOL)animated {
-    self.view = nil;
-}
+
 -(void)dealloc{
     NSLog(@"注册suc页面已销毁");
 }

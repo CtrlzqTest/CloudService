@@ -8,7 +8,7 @@
 
 #import "CreatOrderViewController.h"
 
-@interface CreatOrderViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface CreatOrderViewController ()
 
 @end
 
@@ -20,31 +20,11 @@
     [weakSelf setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 20, 20) image:@"title-back" selectImage:@"back" action:^(AYCButton *button) {
         [weakSelf.navigationController popViewControllerAnimated:YES];
     }];
-    [self setNavigationBarTitleColor:[UIColor whiteColor]];
-    self.title=@"创建订单";
-    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+
     // Do any additional setup after loading the view.
 }
-#pragma mark tableView
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *CellIdentifier = @"Cell";
-    //初始化cell并指定其类型，也可自定义cell
-    
-    UITableViewCell *cell = (UITableViewCell*)[tableView  dequeueReusableCellWithIdentifier:CellIdentifier];
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        
-    }
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    cell.textLabel.text = @"test";
-    cell.detailTextLabel.text = @"sub";
-    return cell;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+- (void)viewWillAppear:(BOOL)animated {
+    self.title=@"创建订单";
 }
 
 - (void)didReceiveMemoryWarning {

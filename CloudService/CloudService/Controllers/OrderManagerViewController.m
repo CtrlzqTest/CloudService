@@ -18,8 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self initPageView];
     // Do any additional setup after loading the view.
+}
+- (void)viewWillAppear:(BOOL)animated {
+    self.tabBarController.title = @"订单管理";
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchOrder:)];
+    self.tabBarController.navigationItem.rightBarButtonItem = item;
+}
+
+- (void)searchOrder:(UIButton *)sender{
+    [self performSegueWithIdentifier:@"searchOrder" sender:self];
 }
 #pragma mark pageView
 - (void)initPageView {

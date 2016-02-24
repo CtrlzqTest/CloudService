@@ -16,10 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //设置状态栏为黑色
     
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [self setNavigationBarTitleColor:[UIColor whiteColor]];
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+//    [self.tabBarController setImageTitleViewWithFrame:CGRectMake(0, 30, 0, 50) image:@"reg_head"];
     // Do any additional setup after loading the view.
+}
+- (void)viewWillAppear:(BOOL)animated {
+    self.tabBarController.title = @"首页";
 }
 
 - (void)didReceiveMemoryWarning {

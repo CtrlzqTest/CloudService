@@ -13,6 +13,8 @@
 		638365421C7D46E5001A10C4 /* AYCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6383653F1C7D46E5001A10C4 /* AYCButton.m */; };
 		638365431C7D46E5001A10C4 /* UIViewController+AYCNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 638365411C7D46E5001A10C4 /* UIViewController+AYCNavigationItem.m */; };
 		638365471C7D4943001A10C4 /* title-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 638365461C7D4943001A10C4 /* title-back.png */; };
+		6383654A1C7D590B001A10C4 /* SearchOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638365491C7D590B001A10C4 /* SearchOrderViewController.m */; };
+		6383654C1C7D605F001A10C4 /* reg_head.png in Resources */ = {isa = PBXBuildFile; fileRef = 6383654B1C7D605F001A10C4 /* reg_head.png */; };
 		63C07B9A1C7B14BB0084581F /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07B8C1C7B14BB0084581F /* MBProgressHUD+Add.m */; };
 		63C07B9B1C7B14BB0084581F /* MHAsiNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07B911C7B14BB0084581F /* MHAsiNetworkHandler.m */; };
 		63C07B9C1C7B14BB0084581F /* MHAsiNetworkItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07B931C7B14BB0084581F /* MHAsiNetworkItem.m */; };
@@ -32,7 +34,6 @@
 		F019C9D91C7BFD8D00E73A2C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F019C9D81C7BFD8D00E73A2C /* RegisterViewController.m */; };
 		F019C9DC1C7C061100E73A2C /* ceshi.png in Resources */ = {isa = PBXBuildFile; fileRef = F019C9DB1C7C061100E73A2C /* ceshi.png */; };
 		F019C9E21C7C685700E73A2C /* RegisterSucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F019C9E11C7C685700E73A2C /* RegisterSucViewController.m */; };
-		F019C9E51C7C7BB700E73A2C /* SetUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F019C9E41C7C7BB700E73A2C /* SetUserInfoViewController.m */; };
 		F0292BAF1C7B00CD00A810A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BAE1C7B00CD00A810A9 /* main.m */; };
 		F0292BB21C7B00CD00A810A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BB11C7B00CD00A810A9 /* AppDelegate.m */; };
 		F0292BB81C7B00CD00A810A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0292BB61C7B00CD00A810A9 /* Main.storyboard */; };
@@ -56,6 +57,9 @@
 		638365401C7D46E5001A10C4 /* UIViewController+AYCNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AYCNavigationItem.h"; sourceTree = "<group>"; };
 		638365411C7D46E5001A10C4 /* UIViewController+AYCNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AYCNavigationItem.m"; sourceTree = "<group>"; };
 		638365461C7D4943001A10C4 /* title-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title-back.png"; sourceTree = "<group>"; };
+		638365481C7D590B001A10C4 /* SearchOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchOrderViewController.h; sourceTree = "<group>"; };
+		638365491C7D590B001A10C4 /* SearchOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchOrderViewController.m; sourceTree = "<group>"; };
+		6383654B1C7D605F001A10C4 /* reg_head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reg_head.png; sourceTree = "<group>"; };
 		63C07B8B1C7B14BB0084581F /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		63C07B8C1C7B14BB0084581F /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		63C07B8E1C7B14BB0084581F /* MHAsiNetworkDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHAsiNetworkDefine.h; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 			children = (
 				63C54E2B1C7C2BC0007CE8CA /* OrderManagerViewController.h */,
 				63C54E2C1C7C2BC0007CE8CA /* OrderManagerViewController.m */,
+				638365481C7D590B001A10C4 /* SearchOrderViewController.h */,
+				638365491C7D590B001A10C4 /* SearchOrderViewController.m */,
 				6383653B1C7D3F3E001A10C4 /* CreatOrderViewController.h */,
 				6383653C1C7D3F3E001A10C4 /* CreatOrderViewController.m */,
 			);
@@ -246,6 +252,7 @@
 		F019C9DA1C7C05FD00E73A2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6383654B1C7D605F001A10C4 /* reg_head.png */,
 				638365461C7D4943001A10C4 /* title-back.png */,
 				63C54E341C7C312F007CE8CA /* line_solid.png */,
 				F019C9DB1C7C061100E73A2C /* ceshi.png */,
@@ -469,6 +476,7 @@
 				F0292BBA1C7B00CD00A810A9 /* Assets.xcassets in Resources */,
 				F0292BB81C7B00CD00A810A9 /* Main.storyboard in Resources */,
 				638365391C7D3D68001A10C4 /* OrderManagerCell.xib in Resources */,
+				6383654C1C7D605F001A10C4 /* reg_head.png in Resources */,
 				63C54E351C7C312F007CE8CA /* line_solid.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +559,7 @@
 				63C07BA91C7B15C10084581F /* NSDictionary+AYCUnicode.m in Sources */,
 				F019C9D61C7BFD7900E73A2C /* LoginViewController.m in Sources */,
 				638365431C7D46E5001A10C4 /* UIViewController+AYCNavigationItem.m in Sources */,
+				6383654A1C7D590B001A10C4 /* SearchOrderViewController.m in Sources */,
 				F0292BB21C7B00CD00A810A9 /* AppDelegate.m in Sources */,
 				63C07B9C1C7B14BB0084581F /* MHAsiNetworkItem.m in Sources */,
 				F0292BAF1C7B00CD00A810A9 /* main.m in Sources */,

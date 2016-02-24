@@ -37,9 +37,7 @@
     
     
 }
--(void)viewDidDisappear:(BOOL)animated {
-    self.view = nil;
-}
+
 -(void)dealloc{
     NSLog(@"注册页面已销毁");
 }

@@ -1,5 +1,5 @@
 //
-//  CreatOrderViewController.h
+//  SearchOrderViewController.h
 //  CloudService
 //
 //  Created by 安永超 on 16/2/24.
@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface CreatOrderViewController : BaseViewController
+@interface SearchOrderViewController : BaseViewController
 
 @end
