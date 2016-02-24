@@ -16,9 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [self setNavigationBarTitleColor:[UIColor whiteColor]];
+    self.navigationController.navigationBar.barTintColor = [HelperUtil colorWithHexString:@"277FD9"];
+    self.tabBarController.title = @"首页";
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

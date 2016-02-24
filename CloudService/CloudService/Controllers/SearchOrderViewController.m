@@ -7,12 +7,16 @@
 //
 
 #import "SearchOrderViewController.h"
+#import "HZQDatePickerView.h"
 
-@interface SearchOrderViewController ()
+@interface SearchOrderViewController ()<HZQDatePickerViewDelegate>
 {
     UIView *_searchView;//搜索菜单页面
     UIButton *_blackBtn;//背景层
     BOOL isOpen;//菜单是否展开
+    UILabel *_lbStart;//开始时间
+    UILabel *_lbEnd;//结束时间
+    HZQDatePickerView *_pickerView;//时间选择器
 }
 @end
 
@@ -203,20 +207,26 @@
         make.top.equalTo(lbState.mas_bottom).offset(15);
     }];
     
-    UILabel *lbStart = [UILabel new];
-    lbStart.textAlignment = NSTextAlignmentCenter;
-    lbStart.textColor = [UIColor lightGrayColor];
-    lbStart.font = [UIFont systemFontOfSize:14];
-    lbStart.text = @"起始时间";
-    [_searchView addSubview:lbStart];
+    _lbStart = [UILabel new];
+    _lbStart.textAlignment = NSTextAlignmentCenter;
+    _lbStart.textColor = [UIColor lightGrayColor];
+    _lbStart.font = [UIFont systemFontOfSize:14];
+    _lbStart.text = @"起始时间";
+    _lbStart.userInteractionEnabled = YES;
+    UITapGestureRecognizer *startTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(startDateClick:)];
+    [_lbStart addGestureRecognizer:startTap];
+    [_searchView addSubview:_lbStart];
     
-    UILabel *lbEnd = [UILabel new];
-    lbEnd.textAlignment = NSTextAlignmentCenter;
-    lbEnd.textColor = [UIColor lightGrayColor];
-    lbEnd.font = [UIFont systemFontOfSize:14];
-    lbEnd.text = @"终止时间";
-    [_searchView addSubview:lbEnd];
-    [lbStart mas_makeConstraints:^(MASConstraintMaker *make) {
+    _lbEnd = [UILabel new];
+    _lbEnd.textAlignment = NSTextAlignmentCenter;
+    _lbEnd.textColor = [UIColor lightGrayColor];
+    _lbEnd.font = [UIFont systemFontOfSize:14];
+    _lbEnd.text = @"终止时间";
+    _lbEnd.userInteractionEnabled = YES;
+    UITapGestureRecognizer *endTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endDateClick:)];
+    [_lbEnd addGestureRecognizer:endTap];
+    [_searchView addSubview:_lbEnd];
+    [_lbStart mas_makeConstraints:^(MASConstraintMaker *make) {
         //添加高约束
         make.height.mas_equalTo(34);
         //添加上边距约束
@@ -224,25 +234,25 @@
         // 添加左边距约束（距离当前主视图左边的距离）
         make.left.equalTo(lbTime.mas_right).offset(15);
         // 添加右边距约束（距离第二个按键左边的距离）
-        make.right.equalTo(lbEnd.mas_left).with.offset(-20);
+        make.right.equalTo(_lbEnd.mas_left).with.offset(-20);
 
         // 添加宽度（宽度跟右边按键一样）
-        make.width.equalTo(lbEnd);
+        make.width.equalTo(_lbEnd);
     }];
     
     
-    [lbEnd mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_lbEnd mas_makeConstraints:^(MASConstraintMaker *make) {
         //添加高约束
         make.height.mas_equalTo(34);
         //添加上边距约束
         make.top.equalTo(tfState.mas_bottom).offset(15);
         // 添加左边距约束（距离左边按键的距离）
-        make.left.equalTo(lbStart.mas_right).with.offset(20);
+        make.left.equalTo(_lbStart.mas_right).with.offset(20);
         // 添加右边距约束（距离当前主视图右边的距离）
         make.right.equalTo(self.view.mas_right).with.offset(-20);
         
         // 添加宽度（宽度跟右边按键一样）
-        make.width.equalTo(lbStart);
+        make.width.equalTo(_lbStart);
     }];
     
     UIView *lineView = [UIView new];
@@ -252,7 +262,7 @@
         //添加大小约束
         make.size.mas_equalTo(CGSizeMake(10, 1));
         //添加左边距约束
-         make.left.equalTo(lbStart.mas_right).with.offset(5);
+         make.left.equalTo(_lbStart.mas_right).with.offset(5);
         //添加上边距约束（上边距 = lbName的下边框 + 偏移量15）
         make.top.equalTo(lbState.mas_bottom).offset(31);
     }];
@@ -277,7 +287,7 @@
     [btnCancel mas_makeConstraints:^(MASConstraintMaker *make) {
         
         //添加上边距约束
-        make.top.equalTo(lbStart.mas_bottom).offset(15);
+        make.top.equalTo(_lbStart.mas_bottom).offset(15);
         // 添加左边距约束（距离当前主视图左边的距离）
         make.left.equalTo(self.view.mas_left).with.offset(20);
         // 添加右边距约束（距离第二个按键左边的距离）
@@ -292,7 +302,7 @@
     [btnSearch mas_makeConstraints:^(MASConstraintMaker *make) {
         
         //添加上边距约束
-        make.top.equalTo(lbEnd.mas_bottom).offset(15);
+        make.top.equalTo(_lbEnd.mas_bottom).offset(15);
         // 添加左边距约束（距离左边按键的距离）
         make.left.equalTo(btnCancel.mas_right).with.offset(20);
         // 添加右边距约束（距离当前主视图右边的距离）
@@ -314,13 +324,79 @@
 }
 /** 收回菜单*/
 - (void)upMenu {
+    [self resignKeyBoardInView:self.view];
     isOpen = !isOpen;
     [UIView animateWithDuration:0.5 animations:^{
         _searchView.frame = CGRectMake(0, -310, KWidth, 310);
         _blackBtn.hidden = YES;
     }];
 }
+// 开始时间
+- (void)startDateClick:(id)sender {
+    [self resignKeyBoardInView:self.view];
+    [self setupDateView:DateTypeOfStart];
+    
+}
 
+// 结束时间
+- (void)endDateClick:(id)sender {
+    [self resignKeyBoardInView:self.view];
+    [self setupDateView:DateTypeOfEnd];
+    
+}
+#pragma mark 
+- (void)setupDateView:(DateType)type {
+    
+    _pickerView = [HZQDatePickerView instanceDatePickerView];
+    _pickerView.frame = CGRectMake(0, 0, KWidth, KHeight + 20);
+    [_pickerView setBackgroundColor:[UIColor clearColor]];
+    _pickerView.delegate = self;
+    _pickerView.type = type;
+    [_pickerView.datePickerView setMinimumDate:[NSDate date]];
+    [self.view addSubview:_pickerView];
+    
+}
+
+- (void)getSelectDate:(NSString *)date type:(DateType)type {
+    NSLog(@"%d - %@", type, date);
+    
+    switch (type) {
+        case DateTypeOfStart:
+            _lbStart.text = date;
+            
+            break;
+            
+        case DateTypeOfEnd:
+            _lbEnd.text = date;
+            
+            break;
+            
+        default:
+            break;
+    }
+}
+/** 消失键盘*/
+- (void)resignKeyBoardInView:(UIView *)view
+
+{
+    
+    for (UIView *v in view.subviews) {
+        
+        if ([v.subviews count] > 0) {
+            
+            [self resignKeyBoardInView:v];
+            
+        }
+        
+        if ([v isKindOfClass:[UITextView class]] || [v isKindOfClass:[UITextField class]]) {
+            
+            [v resignFirstResponder];
+            
+        }
+        
+    }
+    
+}
 -(void)dealloc {
     NSLog(@"搜索界面已销毁");
 }
