@@ -38,7 +38,7 @@
 
 - (IBAction)gotoMenuAction:(id)sender {
     
-    [self performSegueWithIdentifier:RegisterToMenuView sender:self];
+
     
 }
 
