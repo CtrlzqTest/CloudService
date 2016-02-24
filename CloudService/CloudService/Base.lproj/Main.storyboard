@@ -164,6 +164,9 @@
                                 <state key="normal" title="填写个人信息，马上成为会员">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="9IL-JY-7wm" kind="push" id="8qY-iq-XRY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxx-QW-HOq">
                                 <rect key="frame" x="16" y="175" width="343" height="30"/>
@@ -202,7 +205,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJW-vo-tnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-163.5" y="1155.5"/>
+            <point key="canvasLocation" x="-336.5" y="1205.5"/>
+        </scene>
+        <!--填写个人资料-->
+        <scene sceneID="4ao-lA-r92">
+            <objects>
+                <viewController id="9IL-JY-7wm" customClass="SetUserInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vaL-dO-pgL"/>
+                        <viewControllerLayoutGuide type="bottom" id="JOP-ZO-6hb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="siK-qm-c7x">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OJo-Kd-v1q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JOP-ZO-6hb" firstAttribute="top" secondItem="OJo-Kd-v1q" secondAttribute="bottom" id="I7s-42-ffe"/>
+                            <constraint firstItem="OJo-Kd-v1q" firstAttribute="top" secondItem="vaL-dO-pgL" secondAttribute="bottom" id="LZv-hg-XCE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OJo-Kd-v1q" secondAttribute="trailing" constant="-16" id="ZWg-Tz-ECF"/>
+                            <constraint firstItem="OJo-Kd-v1q" firstAttribute="leading" secondItem="siK-qm-c7x" secondAttribute="leadingMargin" constant="-16" id="y6g-BU-l3k"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="填写个人资料" id="nMu-kQ-1fd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="OJo-Kd-v1q" id="6Nv-EM-LMU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSv-2H-jig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150.5" y="1200.5"/>
         </scene>
         <!--注册-->
         <scene sceneID="Alk-RV-aEW">
@@ -456,11 +494,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1Md-eg-W3o" firstAttribute="leading" secondItem="GR1-d2-YUT" secondAttribute="leadingMargin" constant="-16" id="8Dj-Bh-8oi"/>
-                            <constraint firstItem="1Md-eg-W3o" firstAttribute="top" secondItem="fgh-Yz-k8A" secondAttribute="bottom" id="9bT-SO-SAn"/>
                             <constraint firstItem="5BW-Qi-ObQ" firstAttribute="leading" secondItem="GR1-d2-YUT" secondAttribute="leadingMargin" constant="15" id="VBa-W2-X63"/>
                             <constraint firstItem="5BW-Qi-ObQ" firstAttribute="top" secondItem="1Md-eg-W3o" secondAttribute="bottom" constant="40" id="mVT-gc-y4G"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1Md-eg-W3o" secondAttribute="trailing" constant="-16" id="pGw-qD-4ug"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5BW-Qi-ObQ" secondAttribute="trailing" constant="15" id="wml-U5-oRs"/>
+                            <constraint firstItem="1Md-eg-W3o" firstAttribute="top" secondItem="fgh-Yz-k8A" secondAttribute="bottom" id="z08-qR-lJm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="Zrn-YY-poP"/>

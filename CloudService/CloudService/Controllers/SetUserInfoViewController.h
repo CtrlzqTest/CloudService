@@ -1,5 +1,5 @@
 //
-//  RegisterSucViewController.h
+//  SetUserInfoViewController.h
 //  CloudService
 //
 //  Created by zhangqiang on 16/2/23.
@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface RegisterSucViewController : BaseViewController
+@interface SetUserInfoViewController : BaseViewController
 
 @end
