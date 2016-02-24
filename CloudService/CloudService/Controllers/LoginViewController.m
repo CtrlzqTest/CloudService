@@ -8,12 +8,15 @@
 
 #import "LoginViewController.h"
 #import "RestAPI.h"
+#import <Masonry.h>
+#import "LoginInputView.h"
 
-@interface LoginViewController ()
+@interface LoginViewController ()<UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UIView *inputView;
+@property (weak, nonatomic) IBOutlet LoginInputView *inputView;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
-
+@property (weak, nonatomic) IBOutlet UITextField *UserTextFiled;
+@property (weak, nonatomic) IBOutlet UITextField *pwdTextFiled;
 
 @end
 
@@ -31,13 +34,18 @@
 
 - (void)setupView {
     
-    self.inputView.layer.cornerRadius = 5;
+    self.inputView.layer.cornerRadius = 2;
     self.inputView.clipsToBounds = YES;
+    self.inputView.layer.borderWidth = 0.1;
+    self.inputView.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    UIColor *color = [UIColor colorWithWhite:0.879 alpha:0.600];
+    self.UserTextFiled.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"用户名/手机号码/邮箱" attributes:@{NSForegroundColorAttributeName:color}];
+    self.pwdTextFiled.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入密码" attributes:@{NSForegroundColorAttributeName:color}];
+//    [self.inputView setNeedsDisplay];
     
     self.loginBtn.layer.cornerRadius = 3;
     self.loginBtn.clipsToBounds = YES;
-    self.loginBtn.layer.borderWidth = 1;
-    self.loginBtn.layer.borderColor = [UIColor colorWithRed:0.356 green:0.744 blue:0.036 alpha:1.000].CGColor;
     
 }
 
@@ -47,6 +55,7 @@
     [self performSegueWithIdentifier:@"login" sender:self];
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

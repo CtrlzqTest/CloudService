@@ -20,9 +20,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupViews];
     
 }
 
+- (void)setupViews {
+    
+    self.inputBtn.layer.cornerRadius = 3;
+    self.inputBtn.layer.borderWidth = 0.6;
+    self.inputBtn.layer.borderColor = [UIColor grayColor].CGColor;
+    
+    self.pushMenuBtn.layer.cornerRadius = 3;
+    self.pushMenuBtn.layer.borderWidth = 0.6;
+    self.pushMenuBtn.layer.borderColor = [UIColor grayColor].CGColor;
+    
+}
 
 - (IBAction)gotoMenuAction:(id)sender {
     

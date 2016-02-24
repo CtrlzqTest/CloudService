@@ -11,13 +11,26 @@
 
 @interface RegisterViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *getCodeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *registerBtn;
+
 @end
 
 @implementation RegisterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupViews];
+}
 
+- (void)setupViews {
+    
+    self.getCodeBtn.layer.cornerRadius = 5;
+    self.getCodeBtn.layer.borderWidth = 0.2;
+    self.getCodeBtn.layer.borderColor = [UIColor redColor].CGColor;
+    
+    self.registerBtn.layer.cornerRadius = 2;
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
