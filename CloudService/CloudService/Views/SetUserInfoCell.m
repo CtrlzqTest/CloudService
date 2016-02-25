@@ -31,15 +31,21 @@
     }
 }
 
--(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    
-    NSLog(@"%@",string);
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    if ([self.delegate respondsToSelector:@selector(textFiledShouldBeginEditAtCell:)]) {
+        [self.delegate textFiledShouldBeginEditAtCell:self];
+    }
+}
+
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    if ([self.delegate respondsToSelector:@selector(textFiledDidEndEdit:)]) {
+        [self.delegate textFiledDidEndEdit:textField.text];
+    }
     return YES;
 }
 
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    
-    return YES;
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    return [textField resignFirstResponder];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

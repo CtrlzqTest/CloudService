@@ -18,15 +18,17 @@ static NSString *const select_CellID = @"selectCell";
 {
     NSArray *_keyArray_User;
     NSArray *_keyArray_Bank;
-    NSMutableArray *_selectArray0;
-    NSMutableArray *_selectArray1;
+    NSMutableArray *_valueArray_User;
+    NSMutableArray *_valueArray_Bank;
     NSIndexPath *_indexPath;
     
+    BOOL _isAnimating;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong) UITableView *selectTableView;
-
+@property(nonatomic,strong) NSArray *selectArray;
+@property(nonatomic,strong) UIButton *maskView;
 @end
 
 @implementation SetUserInfoViewController
@@ -38,6 +40,13 @@ static NSString *const select_CellID = @"selectCell";
     [self setupSelectTableView];
 }
 
+-(void)setSelectArray:(NSArray *)selectArray {
+    
+    if (_selectArray != selectArray) {
+        _selectArray = [selectArray copy];
+        
+    }
+}
 
 // 设置tableView样式
 - (void)setupTableView {
@@ -59,27 +68,97 @@ static NSString *const select_CellID = @"selectCell";
                        @"银行账号",@"支行名称",
                        @"开户省份",@"开户城市"];
     
-    _selectArray0 = [NSMutableArray arrayWithArray:@[@"",@"身份证",@"",@"",@"",@"",@"",@"",@"",@"",@""]];
+    _valueArray_User = [NSMutableArray arrayWithArray:@[@"",@"身份证",@"",@"销售人员",@"",@"",@"",@"",@"",@"",@""]];
     
-    _selectArray1 = [NSMutableArray arrayWithArray:@[@"",@"",@"",@"",@"",@""]];
+    _valueArray_Bank = [NSMutableArray arrayWithArray:@[@"",@"",@"",@"",@"",@""]];
+    
     
 }
 
 - (void)setupSelectTableView {
     
+    // 现加上蒙版
+    self.maskView = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.maskView.frame = self.view.bounds;
+    [self.maskView addTarget:self action:@selector(hidePullDownView) forControlEvents:UIControlEventTouchUpInside];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.maskView.hidden = YES;
+    [self.view addSubview:self.maskView];
+    
     self.selectTableView = [[UITableView alloc] initWithFrame:CGRectZero style:(UITableViewStylePlain)];
     self.selectTableView.dataSource = self;
     self.selectTableView.delegate = self;
     [self.selectTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:select_CellID];
-//    [self.view addSubview:self.selectTableView];
+    self.selectTableView.layer.borderWidth = 0.6;
+    self.selectTableView.layer.borderColor = [UIColor grayColor].CGColor;
+    [self.maskView addSubview:self.selectTableView];
 }
+
+// 显示下拉列表
+- (void)showPullDownViewWithRect:(CGRect )rect {
+    
+    if (_isAnimating) {
+        return ;
+    }
+    _isAnimating = YES;
+    self.maskView.hidden = NO;
+    [self.selectTableView reloadData];
+    CGRect tempRect = rect;
+    tempRect.size.height = 0.1;
+    self.selectTableView.frame = tempRect;
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.selectTableView.frame = rect;
+    } completion:^(BOOL finished) {
+        self.selectTableView.frame = rect;
+        _isAnimating = NO;
+    }];
+    
+}
+
+
+// 隐藏下拉列表
+- (void)hidePullDownView {
+    if (_isAnimating) {
+        return;
+    }
+    CGRect tempRext = self.selectTableView.frame;
+    tempRext.size.height = 0.1;
+    _isAnimating = YES;
+    [UIView animateWithDuration:0.5 animations:^{
+        self.selectTableView.frame = tempRext;
+    } completion:^(BOOL finished) {
+       self.maskView.hidden = YES;
+        _isAnimating = NO;
+        
+    }];
+
+}
+
 #pragma mark -- SetUserInfoCellDelegate
--(void)textFiledDidChange:(NSString *)text cellIndePath:(NSIndexPath *)indexPath {
-    _indexPath = indexPath;
-    NSLog(@"%ld",indexPath.row);
+// 确定编辑在哪个cell上
+-(void)textFiledShouldBeginEditAtCell:(SetUserInfoCell *)cell {
+    _indexPath = [self.tableView indexPathForCell:cell];
+}
+
+-(void)textFiledDidEndEdit:(NSString *)text {
+    if (_indexPath.section == 0) {
+        _valueArray_User[_indexPath.row] = text;
+    }else {
+        _valueArray_Bank[_indexPath.row] = text;
+    }
+    _indexPath = nil;
 }
 
 #pragma mark -- UITableViewDelegate
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    
+    if (_indexPath) {
+        SetUserInfoCell *cell = [self.tableView cellForRowAtIndexPath:_indexPath];
+        [cell.textFiled resignFirstResponder];
+    }
+    
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if ([tableView isEqual:self.tableView]) {
@@ -92,7 +171,7 @@ static NSString *const select_CellID = @"selectCell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     if ([tableView isEqual:self.selectTableView]) {
-        return _selectArray0.count;
+        return _selectArray.count;
     }
     if (section == 0) {
         return 11;
@@ -107,29 +186,18 @@ static NSString *const select_CellID = @"selectCell";
     if ([tableView isEqual:self.selectTableView]) {
         
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:select_CellID];
-        cell.textLabel.text = _selectArray0[indexPath.row];
+        cell.textLabel.text = _selectArray[indexPath.row];
         return cell;
     }
     
     SetUserInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id forIndexPath:indexPath];
     cell.delegate = self;
     cell.label.text = indexPath.section == 0 ? _keyArray_User[indexPath.row] : _keyArray_Bank[indexPath.row];
-    cell.textFiled.text = indexPath.section == 0 ? _selectArray0[indexPath.row] : _selectArray1[indexPath.row];
+    cell.textFiled.text = indexPath.section == 0 ? _valueArray_User[indexPath.row] : _valueArray_Bank[indexPath.row];
     [cell isPullDown:NO];
-    CGRect tempRect = [cell convertRect:cell.textFiled.frame fromView:self.view];
     if (indexPath.section == 0) {
-        switch (indexPath.row) {
-            case 1:
-//                NSLog(@"%@",NSStringFromCGRect(tempRect));
-                [cell isPullDown:YES];
-//                CGRect rect = CGRectMake(tempRect.origin.x, CGRectGetMaxY(cell.frame), 150, 200);
-//                self.selectTableView.frame = rect;
-//                [cell addSubview:self.selectTableView];
-//                [self.selectTableView reloadData];
-                break;
-                
-            default:
-                break;
+        if (indexPath.row == 1 || indexPath.row == 3 || indexPath.row == 7 || indexPath.row == 9) {
+            [cell isPullDown:YES];
         }
     }
     return cell;
@@ -137,9 +205,34 @@ static NSString *const select_CellID = @"selectCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if ([tableView isEqual:self.selectTableView]) {
+        [self hidePullDownView];
+        return;
+    }
+    SetUserInfoCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    CGRect tempRect = [cell.contentView convertRect:cell.textFiled.frame fromView:self.view];
+    
     if (indexPath.section == 0) {
-        if (indexPath.row == 1) {
-            
+        switch (indexPath.row) {
+            case 1:     _selectArray = @[@"身份证",@"军人证"];
+                        CGRect rect1 = CGRectMake(tempRect.origin.x, CGRectGetMaxY(cell.frame) - self.tableView.contentOffset.y, 150, _selectArray.count * 30);
+                        [self showPullDownViewWithRect:rect1];
+                        break;
+            case 3:     _selectArray = @[@"身份证",@"军人证"];
+                        CGRect rect3 = CGRectMake(tempRect.origin.x, CGRectGetMaxY(cell.frame) - self.tableView.contentOffset.y, 150, _selectArray.count * 30);
+                        [self showPullDownViewWithRect:rect3];
+                        break;
+            case 7:     _selectArray = @[@"身份证",@"军人证"];
+                        CGRect rect7 = CGRectMake(tempRect.origin.x, CGRectGetMaxY(cell.frame) - self.tableView.contentOffset.y, 150, _selectArray.count * 30);
+                        [self showPullDownViewWithRect:rect7];
+                        break;
+                
+            case 9:     _selectArray = @[@"身份证",@"军人证"];
+                        CGRect rect9 = CGRectMake(tempRect.origin.x, CGRectGetMaxY(cell.frame) - self.tableView.contentOffset.y, 150, _selectArray.count * 30);
+                        [self showPullDownViewWithRect:rect9];
+                        break;
+            default:
+                break;
         }
     }
 }
@@ -156,11 +249,41 @@ static NSString *const select_CellID = @"selectCell";
 }
 
 - (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([tableView isEqual:self.selectTableView]) {
+        return 30;
+    }
     return 50;
 }
 
 - (CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if ([tableView isEqual:self.selectTableView]) {
+        return 0.1;
+    }
     return headerHeight;
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
+    
+    if ([tableView isEqual:self.selectTableView]) {
+        if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+            [cell setLayoutMargins:UIEdgeInsetsZero];
+        }
+        if ([cell respondsToSelector:@selector(setSeparatorInset:)]){
+            [cell setSeparatorInset:UIEdgeInsetsZero];
+        }
+    }
+}
+
+-(void)viewDidLayoutSubviews {
+    
+    if ([self.selectTableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [self.selectTableView setSeparatorInset:UIEdgeInsetsZero];
+        
+    }
+    if ([self.selectTableView respondsToSelector:@selector(setLayoutMargins:)])  {
+        [self.selectTableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

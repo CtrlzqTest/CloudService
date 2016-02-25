@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class SetUserInfoCell;
 @protocol SetUserInfoCellDelegate <NSObject>
 
--(void)textFiledDidChange:(NSString *)text cellIndePath:(NSIndexPath *)indexPath;
+-(void)textFiledShouldBeginEditAtCell:(SetUserInfoCell *)cell;
+-(void)textFiledDidEndEdit:(NSString *)text;
 
 @end
 
@@ -22,5 +24,4 @@
 @property(nonatomic,assign) id<SetUserInfoCellDelegate> delegate;
 
 - (void)isPullDown:(BOOL )pullDown;
-
 @end
