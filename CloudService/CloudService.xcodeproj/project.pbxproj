@@ -54,6 +54,7 @@
 		F06DDBAA1C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBA81C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m */; };
 		F06DDBB01C7DACDE00C862A1 /* OrderManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBAF1C7DACDE00C862A1 /* OrderManagerViewController.m */; };
 		F06DDBB21C7DAFE300C862A1 /* title-back.png in Resources */ = {isa = PBXBuildFile; fileRef = F06DDBB11C7DAFE300C862A1 /* title-back.png */; };
+		F0EF92F71C7F00BC0082EDC0 /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0EF92F61C7F00BC0082EDC0 /* login.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +149,7 @@
 		F06DDBAE1C7DACDE00C862A1 /* OrderManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderManagerViewController.h; sourceTree = "<group>"; };
 		F06DDBAF1C7DACDE00C862A1 /* OrderManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderManagerViewController.m; sourceTree = "<group>"; };
 		F06DDBB11C7DAFE300C862A1 /* title-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title-back.png"; sourceTree = "<group>"; };
+		F0EF92F61C7F00BC0082EDC0 /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +305,7 @@
 		F019C9DA1C7C05FD00E73A2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F0EF92F61C7F00BC0082EDC0 /* login.jpg */,
 				63C54E341C7C312F007CE8CA /* line_solid.png */,
 				F019C9DB1C7C061100E73A2C /* ceshi.png */,
 				F06DDBB11C7DAFE300C862A1 /* title-back.png */,
@@ -542,6 +545,7 @@
 				F019C9DC1C7C061100E73A2C /* ceshi.png in Resources */,
 				F0292BBD1C7B00CD00A810A9 /* LaunchScreen.storyboard in Resources */,
 				F0292BBA1C7B00CD00A810A9 /* Assets.xcassets in Resources */,
+				F0EF92F71C7F00BC0082EDC0 /* login.jpg in Resources */,
 				F01A61611C7D3D3E008CBBD5 /* SetUserInfoCell.xib in Resources */,
 				6383656B1C7DB8BA001A10C4 /* HZQDatePickerView.xib in Resources */,
 				F0292BB81C7B00CD00A810A9 /* Main.storyboard in Resources */,

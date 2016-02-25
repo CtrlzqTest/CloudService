@@ -28,6 +28,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.title=@"订单详情";
 }
+
 - (void)initFootView {
     self.footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KWidth, 44)];
     self.footView.backgroundColor = [UIColor lightGrayColor];
