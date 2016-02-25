@@ -34,8 +34,10 @@
 #pragma mark pageView
 - (void)initPageView {
     _pageView.delegate=self;
-    [_pageView initTab:YES Gap:44 TabHeight:44 VerticalDistance:0 BkColor:[HelperUtil colorWithHexString:@"#F4F4F4"]];
+    [_pageView initTab:YES Gap:38 TabHeight:38 VerticalDistance:0 BkColor:[UIColor whiteColor]];
     UITableView *tableView = [[UITableView alloc] init];
+    tableView.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // 下拉刷新
     tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
@@ -73,9 +75,9 @@
     tableView.dataSource = self;
     [_pageView addTab:@"已支付订单" View:tableView Info:nil];
    
-    [_pageView enableTabBottomLine:YES LineHeight:2 LineColor:[UIColor blueColor] LineBottomGap:4 ExtraWidth:15];
-    [_pageView enableBreakLine:YES Width:2 TopMargin:0 BottomMargin:0 Color:[UIColor purpleColor]];
-    [_pageView setTitleStyle:[UIFont systemFontOfSize:16] SelFont:[UIFont systemFontOfSize:16] Color:[UIColor blackColor] SelColor:[UIColor blueColor]];
+    [_pageView enableTabBottomLine:YES LineHeight:2 LineColor:[HelperUtil colorWithHexString:@"277FD9"] LineBottomGap:0 ExtraWidth:15];
+    [_pageView enableBreakLine:YES Width:2 TopMargin:0 BottomMargin:0 Color:[UIColor lightGrayColor]];
+    [_pageView setTitleStyle:[UIFont systemFontOfSize:14] SelFont:[UIFont systemFontOfSize:16] Color:[UIColor blackColor] SelColor:[HelperUtil colorWithHexString:@"277FD9"]];
     [_pageView generate:^(UIButton *firstTitleControl, UIView *viewTitleEffect) {
         
     }];
@@ -107,15 +109,16 @@
     if (cell == nil) {
         NSArray *array = [[NSBundle mainBundle] loadNibNamed:@"OrderManagerCell" owner:self options:nil];
         cell = [array objectAtIndex:0];
-        
     }
+    
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 123;
+    return 140;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self performSegueWithIdentifier:@"orderInfo" sender:self];
 }
 
 

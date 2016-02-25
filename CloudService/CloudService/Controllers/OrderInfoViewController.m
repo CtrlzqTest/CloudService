@@ -1,25 +1,29 @@
 //
-//  ResultViewController.m
+//  OrderInfoViewController.m
 //  CloudService
 //
-//  Created by 安永超 on 16/2/23.
+//  Created by 安永超 on 16/2/25.
 //  Copyright © 2016年 zhangqiang. All rights reserved.
 //
 
-#import "ResultViewController.h"
+#import "OrderInfoViewController.h"
 
-@interface ResultViewController ()
+@interface OrderInfoViewController ()
 
 @end
 
-@implementation ResultViewController
+@implementation OrderInfoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    __weak typeof(self) weakSelf = self;
+    [weakSelf setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 20, 20) image:@"title-back" selectImage:@"back" action:^(AYCButton *button) {
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    }];
     // Do any additional setup after loading the view.
 }
 - (void)viewWillAppear:(BOOL)animated {
-    self.tabBarController.title = @"业绩查询";
+    self.title=@"订单详情";
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
