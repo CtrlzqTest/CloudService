@@ -8,8 +8,9 @@
 
 #import "SearchOrderViewController.h"
 #import "HZQDatePickerView.h"
+#import "PellTableViewSelect.h"
 
-@interface SearchOrderViewController ()<HZQDatePickerViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface SearchOrderViewController ()<HZQDatePickerViewDelegate>
 {
     UIView *_searchView;//搜索菜单页面
     UIButton *_blackBtn;//背景层
@@ -18,7 +19,6 @@
     UILabel *_lbEnd;//结束时间
     HZQDatePickerView *_pickerView;//时间选择器
     UILabel *_lbCode;//结束码
-    UITableView *_tableView;//结束码下拉选择框
 }
 @end
 
@@ -320,83 +320,37 @@
         make.width.equalTo(btnCancel);
     }];
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
-    _tableView.hidden = YES;
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    [_searchView addSubview:_tableView];
-    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        //添加高约束
-        make.height.mas_equalTo(100);
-        //添加左边距约束(距离左边label的距离)
-        make.left.mas_equalTo(90);
-        //添加右边距约束
-        make.right.mas_equalTo(-20);
-        //添加上边距约束
-        make.top.equalTo(_lbCode.mas_bottom).offset(0);
-        
-    }];
+//    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
+//    _tableView.hidden = YES;
+//    _tableView.delegate = self;
+//    _tableView.dataSource = self;
+//    [_searchView addSubview:_tableView];
+//    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        //添加高约束
+//        make.height.mas_equalTo(100);
+//        //添加左边距约束(距离左边label的距离)
+//        make.left.mas_equalTo(90);
+//        //添加右边距约束
+//        make.right.mas_equalTo(-20);
+//        //添加上边距约束
+//        make.top.equalTo(_lbCode.mas_bottom).offset(0);
+//        
+//    }];
 
 }
 /** 结束码下拉*/
 -  (void)codeClick:(UITapGestureRecognizer *)tap {
     
-    if (_tableView.hidden) {
-        _tableView.hidden = NO;
-    }else{
-        _tableView.hidden = YES;
-    }
+    [PellTableViewSelect addPellTableViewSelectWithWindowFrame:CGRectMake(80, 260, 200, 200) selectData:
+     
+     @[@"筛选1",@"筛选2",@"筛选3",@"筛选4",@"筛选5"]
+                                                        action:^(NSInteger index) {
+                                                            
+                                                            NSLog(@"选择了 %ld",index);
+                                                        } animated:YES];
+
 }
-#pragma mark tableView
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *cellId=@"cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
-    }
-    cell.textLabel.textColor = [UIColor darkGrayColor];
-    cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.detailTextLabel.textColor = [UIColor blackColor];
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
-    switch (indexPath.row) {
-        case 0:
-            cell.textLabel.text = @"订单号";
-            cell.detailTextLabel.text = @"20161349873423";
-            break;
-        case 1:
-            cell.textLabel.text = @"客户姓名";
-            cell.detailTextLabel.text = @"20161349873423";
-            break;
-        case 2:
-            cell.textLabel.text = @"手机号";
-            cell.detailTextLabel.text = @"20161349873423";
-            break;
-        case 3:
-            cell.textLabel.text = @"车牌号";
-            cell.detailTextLabel.text = @"20161349873423";
-            break;
-        case 4:
-            cell.textLabel.text = @"结束码";
-            cell.detailTextLabel.text = @"未报价";
-            break;
-            //        case 5:
-            //            cell.textLabel.text = @"结束码";
-            //            cell.detailTextLabel.text = @"未报价";
-            //            break;
-            
-        default:
-            break;
-    }
-    
-    return cell;
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
+
 /** 下拉菜单*/
 - (void)downMenu {
    isOpen = !isOpen;
