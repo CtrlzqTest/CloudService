@@ -18,6 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (IBAction)exit:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 - (void)viewWillAppear:(BOOL)animated {
     self.tabBarController.title = @"个人中心";
 }

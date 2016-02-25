@@ -13,6 +13,7 @@
 		63ADFBE11C7E8E8F000D3164 /* OrderInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ADFBE01C7E8E8F000D3164 /* OrderInfoViewController.m */; };
 		63ADFBE61C7EAC52000D3164 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ADFBE41C7EAC52000D3164 /* ResultTableViewCell.m */; };
 		63ADFBE71C7EAC52000D3164 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63ADFBE51C7EAC52000D3164 /* ResultTableViewCell.xib */; };
+		63ADFBEB1C7F0622000D3164 /* PellTableViewSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 63ADFBEA1C7F0622000D3164 /* PellTableViewSelect.m */; };
 		63C07B9A1C7B14BB0084581F /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07B8C1C7B14BB0084581F /* MBProgressHUD+Add.m */; };
 		63C07B9B1C7B14BB0084581F /* MHAsiNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07B911C7B14BB0084581F /* MHAsiNetworkHandler.m */; };
 		63C07B9C1C7B14BB0084581F /* MHAsiNetworkItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07B931C7B14BB0084581F /* MHAsiNetworkItem.m */; };
@@ -68,6 +69,8 @@
 		63ADFBE31C7EAC52000D3164 /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
 		63ADFBE41C7EAC52000D3164 /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewCell.m; sourceTree = "<group>"; };
 		63ADFBE51C7EAC52000D3164 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
+		63ADFBE91C7F0622000D3164 /* PellTableViewSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PellTableViewSelect.h; sourceTree = "<group>"; };
+		63ADFBEA1C7F0622000D3164 /* PellTableViewSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PellTableViewSelect.m; sourceTree = "<group>"; };
 		63C07B8B1C7B14BB0084581F /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		63C07B8C1C7B14BB0084581F /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		63C07B8E1C7B14BB0084581F /* MHAsiNetworkDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHAsiNetworkDefine.h; sourceTree = "<group>"; };
@@ -193,6 +196,15 @@
 				63ADFBE51C7EAC52000D3164 /* ResultTableViewCell.xib */,
 			);
 			name = ResultCell;
+			sourceTree = "<group>";
+		};
+		63ADFBE81C7F0622000D3164 /* lib1 */ = {
+			isa = PBXGroup;
+			children = (
+				63ADFBE91C7F0622000D3164 /* PellTableViewSelect.h */,
+				63ADFBEA1C7F0622000D3164 /* PellTableViewSelect.m */,
+			);
+			path = lib1;
 			sourceTree = "<group>";
 		};
 		63C07B8D1C7B14BB0084581F /* NetwrokHandle */ = {
@@ -422,6 +434,7 @@
 		F0292BD31C7B015200A810A9 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				63ADFBE81C7F0622000D3164 /* lib1 */,
 				F06DDBA51C7DAB7400C862A1 /* AYCButton.h */,
 				F06DDBA61C7DAB7400C862A1 /* AYCButton.m */,
 				F06DDBA71C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.h */,
@@ -632,6 +645,7 @@
 				F019C9E21C7C685700E73A2C /* RegisterSucViewController.m in Sources */,
 				63C07B9D1C7B14BB0084581F /* MHNetworkManager.m in Sources */,
 				F0292BE11C7B015200A810A9 /* BaseTabBarViewController.m in Sources */,
+				63ADFBEB1C7F0622000D3164 /* PellTableViewSelect.m in Sources */,
 				F06DDBAA1C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m in Sources */,
 				63C54E3E1C7C35AA007CE8CA /* ResultViewController.m in Sources */,
 				6383656C1C7DB8BA001A10C4 /* UIColor+HexString.m in Sources */,
