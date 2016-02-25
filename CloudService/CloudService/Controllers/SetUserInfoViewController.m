@@ -20,8 +20,9 @@ static NSString *const select_CellID = @"selectCell";
     NSArray *_keyArray_Bank;
     NSMutableArray *_valueArray_User;
     NSMutableArray *_valueArray_Bank;
-    NSIndexPath *_indexPath;
     
+    NSIndexPath *_indexPath;
+    NSInteger _selectCellIndex;
     BOOL _isAnimating;
 }
 
@@ -68,10 +69,9 @@ static NSString *const select_CellID = @"selectCell";
                        @"银行账号",@"支行名称",
                        @"开户省份",@"开户城市"];
     
-    _valueArray_User = [NSMutableArray arrayWithArray:@[@"",@"身份证",@"",@"销售人员",@"",@"",@"",@"",@"",@"",@""]];
+    _valueArray_User = [NSMutableArray arrayWithArray:@[@"",@"身份证",@"",@"初级用户",@"",@"",@"",@"销售人员",@"",@"阳光保险",@""]];
     
     _valueArray_Bank = [NSMutableArray arrayWithArray:@[@"",@"",@"",@"",@"",@""]];
-    
     
 }
 
@@ -207,11 +207,13 @@ static NSString *const select_CellID = @"selectCell";
     
     if ([tableView isEqual:self.selectTableView]) {
         [self hidePullDownView];
+        _valueArray_User[_selectCellIndex] = _selectArray[indexPath.row];
+        [self.tableView reloadData];
         return;
     }
     SetUserInfoCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     CGRect tempRect = [cell.contentView convertRect:cell.textFiled.frame fromView:self.view];
-    
+    _selectCellIndex = indexPath.row;
     if (indexPath.section == 0) {
         switch (indexPath.row) {
             case 1:     _selectArray = @[@"身份证",@"军人证"];
