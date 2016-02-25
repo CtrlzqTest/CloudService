@@ -8,12 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class SetUserInfoCell;
+@protocol SetUserInfoCellDelegate <NSObject>
+
+-(void)textFiledShouldBeginEditAtCell:(SetUserInfoCell *)cell;
+-(void)textFiledDidEndEdit:(NSString *)text;
+
+@end
+
 @interface SetUserInfoCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITextField *textFiled;
 @property (weak, nonatomic) IBOutlet UIButton *imageBtn;
+@property(nonatomic,assign) id<SetUserInfoCellDelegate> delegate;
 
 - (void)isPullDown:(BOOL )pullDown;
-
 @end
