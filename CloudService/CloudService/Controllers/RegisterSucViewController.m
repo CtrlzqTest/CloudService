@@ -10,9 +10,12 @@
 
 @interface RegisterSucViewController ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIButton *inputBtn;
 @property (weak, nonatomic) IBOutlet UIButton *pushMenuBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *iconHeadImg;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contenSize_H;
 
 @end
 
@@ -21,8 +24,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupViews];
-    
+//    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 400, 320, 200)];
+//    scrollView.backgroundColor = [UIColor redColor];
+//    UIButton *butn = [UIButton buttonWithType:(UIButtonTypeSystem)];
+//    butn.frame = CGRectMake(50, 50, 50, 50);
+//    [butn setTitle:@"nima" forState:(UIControlStateNormal)];
+//    [butn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+//    [scrollView addSubview:butn];
+//    [self.view addSubview:scrollView];
+//    
+//    [butn addTarget:self action:@selector(ddd) forControlEvents:UIControlEventTouchUpInside];
+//    self.scrollView.contentSize = CGSizeMake(KWidth, KHeight);
 }
+
+
 
 - (void)setupViews {
     
@@ -36,9 +51,10 @@
     
 }
 
+
+
 - (IBAction)gotoMenuAction:(id)sender {
     
-
     
 }
 
