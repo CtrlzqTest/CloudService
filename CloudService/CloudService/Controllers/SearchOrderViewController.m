@@ -9,7 +9,7 @@
 #import "SearchOrderViewController.h"
 #import "HZQDatePickerView.h"
 
-@interface SearchOrderViewController ()<HZQDatePickerViewDelegate>
+@interface SearchOrderViewController ()<HZQDatePickerViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     UIView *_searchView;//搜索菜单页面
     UIButton *_blackBtn;//背景层
@@ -17,6 +17,8 @@
     UILabel *_lbStart;//开始时间
     UILabel *_lbEnd;//结束时间
     HZQDatePickerView *_pickerView;//时间选择器
+    UILabel *_lbCode;//结束码
+    UITableView *_tableView;//结束码下拉选择框
 }
 @end
 
@@ -174,13 +176,16 @@
         make.top.equalTo(lbCar.mas_bottom).offset(15);
     }];
     
-    UITextField *tfState = [UITextField new];
-    tfState.placeholder = @"未报价";
-    [tfState setValue:[UIFont boldSystemFontOfSize:14] forKeyPath:@"_placeholderLabel.font"];
-    tfState.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    tfState.borderStyle = UITextBorderStyleRoundedRect;
-    [_searchView addSubview:tfState];
-    [tfState mas_makeConstraints:^(MASConstraintMaker *make) {
+    _lbCode = [UILabel new];
+//    _lbCode.textAlignment = NSTextAlignmentCenter;
+    _lbCode.textColor = [UIColor lightGrayColor];
+    _lbCode.font = [UIFont systemFontOfSize:14];
+    _lbCode.text = @"未报价";
+    _lbCode.userInteractionEnabled = YES;
+    UITapGestureRecognizer *startTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(codeClick:)];
+    [_lbCode addGestureRecognizer:startTap];
+    [_searchView addSubview:_lbCode];
+    [_lbCode mas_makeConstraints:^(MASConstraintMaker *make) {
         //添加高约束
         make.height.mas_equalTo(34);
         //添加左边距约束(距离左边label的距离)
@@ -191,6 +196,8 @@
         make.top.equalTo(tfCar.mas_bottom).offset(15);
         
     }];
+    
+    
     
     UILabel *lbTime = [UILabel new];
     lbTime.textColor = [UIColor darkGrayColor];
@@ -213,8 +220,8 @@
     _lbStart.font = [UIFont systemFontOfSize:14];
     _lbStart.text = @"起始时间";
     _lbStart.userInteractionEnabled = YES;
-    UITapGestureRecognizer *startTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(startDateClick:)];
-    [_lbStart addGestureRecognizer:startTap];
+    UITapGestureRecognizer *codeTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(startDateClick:)];
+    [_lbStart addGestureRecognizer:codeTap];
     [_searchView addSubview:_lbStart];
     
     _lbEnd = [UILabel new];
@@ -230,7 +237,7 @@
         //添加高约束
         make.height.mas_equalTo(34);
         //添加上边距约束
-        make.top.equalTo(tfState.mas_bottom).offset(15);
+        make.top.equalTo(_lbCode.mas_bottom).offset(15);
         // 添加左边距约束（距离当前主视图左边的距离）
         make.left.equalTo(lbTime.mas_right).offset(15);
         // 添加右边距约束（距离第二个按键左边的距离）
@@ -245,7 +252,7 @@
         //添加高约束
         make.height.mas_equalTo(34);
         //添加上边距约束
-        make.top.equalTo(tfState.mas_bottom).offset(15);
+        make.top.equalTo(_lbCode.mas_bottom).offset(15);
         // 添加左边距约束（距离左边按键的距离）
         make.left.equalTo(_lbStart.mas_right).with.offset(20);
         // 添加右边距约束（距离当前主视图右边的距离）
@@ -312,7 +319,83 @@
         // 添加宽度（宽度跟左边按键一样）
         make.width.equalTo(btnCancel);
     }];
+    
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
+    _tableView.hidden = YES;
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    [_searchView addSubview:_tableView];
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        //添加高约束
+        make.height.mas_equalTo(100);
+        //添加左边距约束(距离左边label的距离)
+        make.left.mas_equalTo(90);
+        //添加右边距约束
+        make.right.mas_equalTo(-20);
+        //添加上边距约束
+        make.top.equalTo(_lbCode.mas_bottom).offset(0);
+        
+    }];
 
+}
+/** 结束码下拉*/
+-  (void)codeClick:(UITapGestureRecognizer *)tap {
+    
+    if (_tableView.hidden) {
+        _tableView.hidden = NO;
+    }else{
+        _tableView.hidden = YES;
+    }
+}
+#pragma mark tableView
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 5;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *cellId=@"cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+    }
+    cell.textLabel.textColor = [UIColor darkGrayColor];
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
+    cell.detailTextLabel.textColor = [UIColor blackColor];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
+    switch (indexPath.row) {
+        case 0:
+            cell.textLabel.text = @"订单号";
+            cell.detailTextLabel.text = @"20161349873423";
+            break;
+        case 1:
+            cell.textLabel.text = @"客户姓名";
+            cell.detailTextLabel.text = @"20161349873423";
+            break;
+        case 2:
+            cell.textLabel.text = @"手机号";
+            cell.detailTextLabel.text = @"20161349873423";
+            break;
+        case 3:
+            cell.textLabel.text = @"车牌号";
+            cell.detailTextLabel.text = @"20161349873423";
+            break;
+        case 4:
+            cell.textLabel.text = @"结束码";
+            cell.detailTextLabel.text = @"未报价";
+            break;
+            //        case 5:
+            //            cell.textLabel.text = @"结束码";
+            //            cell.detailTextLabel.text = @"未报价";
+            //            break;
+            
+        default:
+            break;
+    }
+    
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 /** 下拉菜单*/
 - (void)downMenu {
@@ -332,19 +415,19 @@
     }];
 }
 // 开始时间
-- (void)startDateClick:(id)sender {
+- (void)startDateClick:(UITapGestureRecognizer *)tap {
     [self resignKeyBoardInView:self.view];
     [self setupDateView:DateTypeOfStart];
     
 }
 
 // 结束时间
-- (void)endDateClick:(id)sender {
+- (void)endDateClick:(UITapGestureRecognizer *)tap {
     [self resignKeyBoardInView:self.view];
     [self setupDateView:DateTypeOfEnd];
     
 }
-#pragma mark 
+#pragma mark HZQDatePickerView
 - (void)setupDateView:(DateType)type {
     
     _pickerView = [HZQDatePickerView instanceDatePickerView];

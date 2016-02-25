@@ -79,7 +79,11 @@
     [_pageView enableBreakLine:YES Width:2 TopMargin:0 BottomMargin:0 Color:[UIColor lightGrayColor]];
     [_pageView setTitleStyle:[UIFont systemFontOfSize:14] SelFont:[UIFont systemFontOfSize:16] Color:[UIColor blackColor] SelColor:[HelperUtil colorWithHexString:@"277FD9"]];
     [_pageView generate:^(UIButton *firstTitleControl, UIView *viewTitleEffect) {
-        
+        CGRect frame= firstTitleControl.frame;
+        frame.size.height-=5;
+        frame.size.width-=6;
+        viewTitleEffect.frame=frame;
+        viewTitleEffect.center=firstTitleControl.center;
     }];
 }
 
