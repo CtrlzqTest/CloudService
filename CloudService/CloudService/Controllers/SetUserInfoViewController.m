@@ -14,11 +14,14 @@ static NSString *const cell_id = @"setUserInfoCell";
 static NSString *const header_id = @"setUserInfoHeader";
 static CGFloat headerHeight = 30;
 static NSString *const select_CellID = @"selectCell";
-@interface SetUserInfoViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface SetUserInfoViewController ()<SetUserInfoCellDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *_keyArray_User;
     NSArray *_keyArray_Bank;
-    NSArray *_selectArray;
+    NSMutableArray *_selectArray0;
+    NSMutableArray *_selectArray1;
+    NSIndexPath *_indexPath;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -51,11 +54,14 @@ static NSString *const select_CellID = @"selectCell";
                        @"从业时间",@"工作类型",
                        @"微信号",@"申请销售保险公司",
                        @"销售数据城市"];
+    
     _keyArray_Bank = @[@"开户人姓名",@"开户银行",
                        @"银行账号",@"支行名称",
                        @"开户省份",@"开户城市"];
     
-    _selectArray = @[@"身份证",@"军人证"];
+    _selectArray0 = [NSMutableArray arrayWithArray:@[@"",@"身份证",@"",@"",@"",@"",@"",@"",@"",@"",@""]];
+    
+    _selectArray1 = [NSMutableArray arrayWithArray:@[@"",@"",@"",@"",@"",@""]];
     
 }
 
@@ -67,7 +73,11 @@ static NSString *const select_CellID = @"selectCell";
     [self.selectTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:select_CellID];
 //    [self.view addSubview:self.selectTableView];
 }
-
+#pragma mark -- SetUserInfoCellDelegate
+-(void)textFiledDidChange:(NSString *)text cellIndePath:(NSIndexPath *)indexPath {
+    _indexPath = indexPath;
+    NSLog(@"%ld",indexPath.row);
+}
 
 #pragma mark -- UITableViewDelegate
 
@@ -82,7 +92,7 @@ static NSString *const select_CellID = @"selectCell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     if ([tableView isEqual:self.selectTableView]) {
-        return _selectArray.count;
+        return _selectArray0.count;
     }
     if (section == 0) {
         return 11;
@@ -97,19 +107,21 @@ static NSString *const select_CellID = @"selectCell";
     if ([tableView isEqual:self.selectTableView]) {
         
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:select_CellID];
-        cell.textLabel.text = _selectArray[indexPath.row];
+        cell.textLabel.text = _selectArray0[indexPath.row];
         return cell;
     }
     
     SetUserInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id forIndexPath:indexPath];
+    cell.delegate = self;
     cell.label.text = indexPath.section == 0 ? _keyArray_User[indexPath.row] : _keyArray_Bank[indexPath.row];
+    cell.textFiled.text = indexPath.section == 0 ? _selectArray0[indexPath.row] : _selectArray1[indexPath.row];
+    [cell isPullDown:NO];
     CGRect tempRect = [cell convertRect:cell.textFiled.frame fromView:self.view];
     if (indexPath.section == 0) {
         switch (indexPath.row) {
             case 1:
-                NSLog(@"%@",NSStringFromCGRect(tempRect));
+//                NSLog(@"%@",NSStringFromCGRect(tempRect));
                 [cell isPullDown:YES];
-                cell.textFiled.text = @"身份证";
 //                CGRect rect = CGRectMake(tempRect.origin.x, CGRectGetMaxY(cell.frame), 150, 200);
 //                self.selectTableView.frame = rect;
 //                [cell addSubview:self.selectTableView];
@@ -130,7 +142,6 @@ static NSString *const select_CellID = @"selectCell";
             
         }
     }
-    
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
