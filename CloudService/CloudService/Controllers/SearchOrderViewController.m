@@ -279,7 +279,7 @@
     btnCancel.layer.masksToBounds = YES;
     [btnCancel setTitle:@"取消" forState:UIControlStateNormal];
     btnCancel.titleLabel.font = [UIFont systemFontOfSize:14];
-    btnCancel.backgroundColor = [UIColor darkGrayColor];
+    btnCancel.backgroundColor = [UIColor lightGrayColor];
     [_searchView addSubview:btnCancel];
     
     UIButton *btnSearch = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -320,22 +320,6 @@
         make.width.equalTo(btnCancel);
     }];
     
-//    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
-//    _tableView.hidden = YES;
-//    _tableView.delegate = self;
-//    _tableView.dataSource = self;
-//    [_searchView addSubview:_tableView];
-//    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        //添加高约束
-//        make.height.mas_equalTo(100);
-//        //添加左边距约束(距离左边label的距离)
-//        make.left.mas_equalTo(90);
-//        //添加右边距约束
-//        make.right.mas_equalTo(-20);
-//        //添加上边距约束
-//        make.top.equalTo(_lbCode.mas_bottom).offset(0);
-//        
-//    }];
 
 }
 /** 结束码下拉*/
