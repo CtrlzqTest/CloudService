@@ -112,6 +112,10 @@ static NSString *cell_id = @"personalCell";
     return cell;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return KHeight / 667.0  * 44;
+}
+
 - (CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 10;
 }
