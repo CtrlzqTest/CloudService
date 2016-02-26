@@ -19,7 +19,7 @@ typedef enum {
 
 @protocol HZQDatePickerViewDelegate <NSObject>
 
-- (void)getSelectDate:(NSString *)date type:(DateType)type;
+- (void)getSelectDate:(NSDate *)date type:(DateType)type;
 
 @end
 

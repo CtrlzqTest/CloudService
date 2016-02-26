@@ -73,6 +73,10 @@ static NSString *cell_id = @"personalCell";
     [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return _dataArray.count + 1;

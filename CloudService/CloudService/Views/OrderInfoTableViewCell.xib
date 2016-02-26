@@ -83,7 +83,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pJS-9o-hwK">
                                 <rect key="frame" x="281" y="176" width="25" height="25"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="拨报价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xaz-yr-Q4k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="报价" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xaz-yr-Q4k">
                                 <rect key="frame" x="178" y="178" width="53" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -130,6 +130,11 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="appointmentBtn" destination="ZHL-oW-Dk3" id="ft3-m5-4OB"/>
+                <outlet property="callBtn" destination="fqb-RP-bxQ" id="UNR-1I-5qW"/>
+                <outlet property="priceBtn" destination="QNG-L2-OfK" id="zDq-Ca-4cG"/>
+            </connections>
             <point key="canvasLocation" x="271.5" y="118.5"/>
         </tableViewCell>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="262" id="q5Q-cJ-9bp" customClass="OrderInfoTableViewCell">
@@ -248,6 +253,10 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="callBtn" destination="XUw-kQ-Z8L" id="N6T-1F-KaY"/>
+                <outlet property="giftBtn" destination="YGb-NM-MkY" id="GGd-az-z6a"/>
+            </connections>
             <point key="canvasLocation" x="251.5" y="481"/>
         </tableViewCell>
     </objects>

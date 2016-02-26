@@ -378,17 +378,20 @@
     
 }
 
-- (void)getSelectDate:(NSString *)date type:(DateType)type {
-    NSLog(@"%d - %@", type, date);
-    
+- (void)getSelectDate:(NSDate *)date type:(DateType)type {
+  
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *currentOlderOneDateStr = [dateFormatter stringFromDate:date];
+
     switch (type) {
         case DateTypeOfStart:
-            _lbStart.text = date;
+            _lbStart.text = currentOlderOneDateStr;
             
             break;
             
         case DateTypeOfEnd:
-            _lbEnd.text = date;
+            _lbEnd.text = currentOlderOneDateStr;
             
             break;
             
@@ -396,6 +399,7 @@
             break;
     }
 }
+
 /** 消失键盘*/
 - (void)resignKeyBoardInView:(UIView *)view
 
