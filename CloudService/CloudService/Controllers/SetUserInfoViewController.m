@@ -49,8 +49,18 @@ static NSString *const select_CellID = @"selectCell";
     }
 }
 
+- (IBAction)saveAction:(id)sender {
+    
+}
+
+- (IBAction)uploadAction:(id)sender {
+    
+}
+
 // 设置tableView样式
 - (void)setupTableView {
+    
+//    __weak typeof(self) weakSelf = self;
     
     [self.tableView registerNib:[UINib nibWithNibName:@"SetUserInfoCell" bundle:nil] forCellReuseIdentifier:cell_id];
     [self.tableView registerClass:[SetUserInfoHeaderView class] forHeaderFooterViewReuseIdentifier:header_id];

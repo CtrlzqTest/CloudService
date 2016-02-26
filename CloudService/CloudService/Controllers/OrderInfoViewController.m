@@ -28,6 +28,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.title=@"订单详情";
 }
+
 - (void)initFootView {
    
     
