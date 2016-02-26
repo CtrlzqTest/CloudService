@@ -25,6 +25,8 @@
 		63C07BAB1C7B15C10084581F /* HelperUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07BA71C7B15C10084581F /* HelperUtil.m */; };
 		63C2FB941C7FEC9500D48B8C /* OrderInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2FB921C7FEC9500D48B8C /* OrderInfoTableViewCell.m */; };
 		63C2FB951C7FEC9500D48B8C /* OrderInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C2FB931C7FEC9500D48B8C /* OrderInfoTableViewCell.xib */; };
+		63C2FB981C8022D900D48B8C /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2FB971C8022D900D48B8C /* PlaceholderTextView.m */; };
+		63C2FB9B1C80237E00D48B8C /* AppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2FB9A1C80237E00D48B8C /* AppointmentViewController.m */; };
 		63C54E321C7C2F96007CE8CA /* OrderManagerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C54E301C7C2F96007CE8CA /* OrderManagerCell.m */; };
 		63C54E331C7C2F96007CE8CA /* OrderManagerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C54E311C7C2F96007CE8CA /* OrderManagerCell.xib */; };
 		63C54E351C7C312F007CE8CA /* line_solid.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C54E341C7C312F007CE8CA /* line_solid.png */; };
@@ -100,6 +102,10 @@
 		63C2FB911C7FEC9500D48B8C /* OrderInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderInfoTableViewCell.h; sourceTree = "<group>"; };
 		63C2FB921C7FEC9500D48B8C /* OrderInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderInfoTableViewCell.m; sourceTree = "<group>"; };
 		63C2FB931C7FEC9500D48B8C /* OrderInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderInfoTableViewCell.xib; sourceTree = "<group>"; };
+		63C2FB961C8022D900D48B8C /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		63C2FB971C8022D900D48B8C /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
+		63C2FB991C80237E00D48B8C /* AppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentViewController.h; sourceTree = "<group>"; };
+		63C2FB9A1C80237E00D48B8C /* AppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentViewController.m; sourceTree = "<group>"; };
 		63C54E2F1C7C2F96007CE8CA /* OrderManagerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderManagerCell.h; sourceTree = SOURCE_ROOT; };
 		63C54E301C7C2F96007CE8CA /* OrderManagerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderManagerCell.m; sourceTree = SOURCE_ROOT; };
 		63C54E311C7C2F96007CE8CA /* OrderManagerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderManagerCell.xib; sourceTree = SOURCE_ROOT; };
@@ -263,6 +269,8 @@
 				F06DDBA11C7DAAE900C862A1 /* SearchOrderViewController.m */,
 				63ADFBDF1C7E8E8F000D3164 /* OrderInfoViewController.h */,
 				63ADFBE01C7E8E8F000D3164 /* OrderInfoViewController.m */,
+				63C2FB991C80237E00D48B8C /* AppointmentViewController.h */,
+				63C2FB9A1C80237E00D48B8C /* AppointmentViewController.m */,
 			);
 			name = "OrderManager(订单管理)";
 			sourceTree = "<group>";
@@ -450,6 +458,8 @@
 		F0292BD31C7B015200A810A9 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				63C2FB961C8022D900D48B8C /* PlaceholderTextView.h */,
+				63C2FB971C8022D900D48B8C /* PlaceholderTextView.m */,
 				F094B5971C7FF8D600A2312D /* ZQScrollPageView.h */,
 				F094B5981C7FF8D600A2312D /* ZQScrollPageView.m */,
 				63ADFBE81C7F0622000D3164 /* lib1 */,
@@ -668,6 +678,7 @@
 				63C54E411C7C35BA007CE8CA /* PersonalViewController.m in Sources */,
 				F06DDBB01C7DACDE00C862A1 /* OrderManagerViewController.m in Sources */,
 				6383656A1C7DB8BA001A10C4 /* HZQDatePickerView.m in Sources */,
+				63C2FB9B1C80237E00D48B8C /* AppointmentViewController.m in Sources */,
 				63C07BAB1C7B15C10084581F /* HelperUtil.m in Sources */,
 				F01A61601C7D3D3E008CBBD5 /* SetUserInfoCell.m in Sources */,
 				63ADFBE11C7E8E8F000D3164 /* OrderInfoViewController.m in Sources */,
@@ -691,6 +702,7 @@
 				F0292BAF1C7B00CD00A810A9 /* main.m in Sources */,
 				F06DDBA21C7DAAE900C862A1 /* CreatOrderViewController.m in Sources */,
 				F01A61641C7D456B008CBBD5 /* SetUserInfoHeaderView.m in Sources */,
+				63C2FB981C8022D900D48B8C /* PlaceholderTextView.m in Sources */,
 				F06DDBA91C7DAB7400C862A1 /* AYCButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

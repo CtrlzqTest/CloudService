@@ -48,12 +48,28 @@
         cell = [array objectAtIndex:0];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    [cell.callBtn addTarget:self action:@selector(callClick:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.priceBtn addTarget:self action:@selector(priceClick:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.appointmentBtn addTarget:self action:@selector(appointmentClick:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 214;
 }
-
+/** 拨打电话*/
+- (void)callClick:(UIButton *)sender {
+    
+}
+/** */
+- (void)priceClick:(UIButton *)sender {
+    
+}
+/** */
+- (void)appointmentClick:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"appointment" sender:self];
+}
+/** */
+/** */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
