@@ -57,6 +57,7 @@
 		F06DDBB21C7DAFE300C862A1 /* title-back.png in Resources */ = {isa = PBXBuildFile; fileRef = F06DDBB11C7DAFE300C862A1 /* title-back.png */; };
 		F094B5951C7FEA7A00A2312D /* HomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F094B5931C7FEA7A00A2312D /* HomeCollectionCell.m */; };
 		F094B5961C7FEA7A00A2312D /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F094B5941C7FEA7A00A2312D /* HomeCollectionCell.xib */; };
+		F094B5991C7FF8D600A2312D /* ZQScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F094B5981C7FF8D600A2312D /* ZQScrollPageView.m */; };
 		F0EF92F71C7F00BC0082EDC0 /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0EF92F61C7F00BC0082EDC0 /* login.jpg */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +158,8 @@
 		F094B5921C7FEA7A00A2312D /* HomeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionCell.h; sourceTree = "<group>"; };
 		F094B5931C7FEA7A00A2312D /* HomeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionCell.m; sourceTree = "<group>"; };
 		F094B5941C7FEA7A00A2312D /* HomeCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionCell.xib; sourceTree = "<group>"; };
+		F094B5971C7FF8D600A2312D /* ZQScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQScrollPageView.h; sourceTree = "<group>"; };
+		F094B5981C7FF8D600A2312D /* ZQScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQScrollPageView.m; sourceTree = "<group>"; };
 		F0EF92F61C7F00BC0082EDC0 /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -439,6 +442,8 @@
 		F0292BD31C7B015200A810A9 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				F094B5971C7FF8D600A2312D /* ZQScrollPageView.h */,
+				F094B5981C7FF8D600A2312D /* ZQScrollPageView.m */,
 				63ADFBE81C7F0622000D3164 /* lib1 */,
 				F06DDBA51C7DAB7400C862A1 /* AYCButton.h */,
 				F06DDBA61C7DAB7400C862A1 /* AYCButton.m */,
@@ -658,6 +663,7 @@
 				63ADFBE11C7E8E8F000D3164 /* OrderInfoViewController.m in Sources */,
 				63ADFBE61C7EAC52000D3164 /* ResultTableViewCell.m in Sources */,
 				63C07B9B1C7B14BB0084581F /* MHAsiNetworkHandler.m in Sources */,
+				F094B5991C7FF8D600A2312D /* ZQScrollPageView.m in Sources */,
 				F01A616D1C7D860E008CBBD5 /* LoginInputView.m in Sources */,
 				F019C9E21C7C685700E73A2C /* RegisterSucViewController.m in Sources */,
 				F094B5951C7FEA7A00A2312D /* HomeCollectionCell.m in Sources */,
