@@ -95,6 +95,7 @@ static NSString *cell_id = @"personalCell";
 //    }
     
     PersonalViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id forIndexPath:indexPath];
+
     return cell;
 }
 
