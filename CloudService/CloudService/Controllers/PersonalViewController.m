@@ -55,10 +55,10 @@ static NSString *cell_id = @"personalCell";
 - (void)setupViews {
     // 注册Cell
     [self.tableView registerNib:[UINib nibWithNibName:@"PersonalViewCell" bundle:nil] forCellReuseIdentifier:cell_id];
-
 }
 
-- (IBAction)exit:(id)sender {
+- (void)logOutAction {
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -92,22 +92,43 @@ static NSString *cell_id = @"personalCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    if (indexPath.section == _dataArray.count) {
-//        static NSString *cell_ID = @"logOutCell";
-//        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_ID];
-//        return cell;
-//    }
+    if (indexPath.section == _dataArray.count) {
+#warning cell宽度有问题,可能是没有启动图
+        static NSString *cell_ID = @"logOutCell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_ID];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cell_ID];
+            UIButton *button = [UIButton buttonWithType:(UIButtonTypeSystem)];
+            button.frame = cell.contentView.frame;
+            [button addTarget:self action:@selector(logOutAction) forControlEvents:(UIControlEventTouchUpInside)];
+            [button setTitle:@"退出登录" forState:(UIControlStateNormal)];
+            [cell addSubview:button];
+        }
+        return cell;
+    }
     
     PersonalViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id forIndexPath:indexPath];
+    cell.titleLabel.text = [_dataArray[indexPath.section] objectAtIndex:indexPath.row];
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return KHeight / 667.0  * 44;
 }
 
 - (CGFloat )tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 10;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.1;
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    });
 }
 
 - (void)didReceiveMemoryWarning {

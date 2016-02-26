@@ -892,14 +892,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="afC-gc-h7E" secondAttribute="trailing" constant="-16" id="5fb-VH-IyX"/>
+                            <constraint firstAttribute="trailing" secondItem="afC-gc-h7E" secondAttribute="trailing" id="FiQ-oc-4dA"/>
                             <constraint firstItem="afC-gc-h7E" firstAttribute="leading" secondItem="dgd-TK-K9v" secondAttribute="leadingMargin" constant="-16" id="J8l-wT-rwI"/>
                             <constraint firstItem="afC-gc-h7E" firstAttribute="top" secondItem="QwF-Ro-dNO" secondAttribute="bottom" id="P2I-UR-3vS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="afC-gc-h7E" secondAttribute="trailing" id="XYN-7X-8fg"/>
+                            <constraint firstItem="afC-gc-h7E" firstAttribute="leading" secondItem="dgd-TK-K9v" secondAttribute="leading" id="ifM-cu-XrK"/>
                             <constraint firstItem="yva-ez-i3o" firstAttribute="top" secondItem="afC-gc-h7E" secondAttribute="bottom" id="pWI-Q6-Kyy"/>
+                            <constraint firstItem="afC-gc-h7E" firstAttribute="leading" secondItem="dgd-TK-K9v" secondAttribute="leadingMargin" id="wak-r6-skD"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5fb-VH-IyX"/>
+                                <exclude reference="J8l-wT-rwI"/>
+                                <exclude reference="XYN-7X-8fg"/>
+                                <exclude reference="wak-r6-skD"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" id="DRu-8S-KMC"/>
                     <navigationItem key="navigationItem" title="首页" id="nfR-qK-uD8"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="collectionView" destination="2q4-X0-cIi" id="OWj-5z-Pg5"/>
                         <outlet property="headImg" destination="Wdv-ka-Zrv" id="aSc-hv-bUc"/>
@@ -1117,8 +1128,8 @@
                                             <constraint firstAttribute="width" constant="60" id="aew-h8-U0A"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张三" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPB-W3-D7n">
-                                        <rect key="frame" x="93" y="76" width="252" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="张三" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPB-W3-D7n">
+                                        <rect key="frame" x="93" y="76" width="236" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Obt-fE-o9H"/>
                                         </constraints>
@@ -1126,8 +1137,8 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15027164687" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NQ-Zl-j02">
-                                        <rect key="frame" x="93" y="101" width="252" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="15027164687" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NQ-Zl-j02">
+                                        <rect key="frame" x="93" y="101" width="236" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="rVz-Xn-Fvv"/>
                                         </constraints>
@@ -1159,9 +1170,9 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Zx-uD-s9z">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="9Zx-uD-s9z">
                                 <rect key="frame" x="0.0" y="131" width="375" height="423"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="3dY-Jo-m2V" id="5nP-Vs-VXP"/>
                                     <outlet property="delegate" destination="3dY-Jo-m2V" id="rhK-IF-wmh"/>
@@ -1170,15 +1181,27 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CcC-3b-g76" secondAttribute="trailing" id="3XX-bI-Yja"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Zx-uD-s9z" secondAttribute="trailing" constant="-16" id="976-lU-cCi"/>
                             <constraint firstItem="9Zx-uD-s9z" firstAttribute="top" secondItem="CcC-3b-g76" secondAttribute="bottom" id="D9Y-bk-LtT"/>
                             <constraint firstItem="qrB-ZB-yaI" firstAttribute="top" secondItem="9Zx-uD-s9z" secondAttribute="bottom" id="ECh-hf-18u"/>
+                            <constraint firstItem="CcC-3b-g76" firstAttribute="leading" secondItem="5Am-r7-87Z" secondAttribute="leading" id="Jdy-vY-67e"/>
+                            <constraint firstItem="9Zx-uD-s9z" firstAttribute="leading" secondItem="5Am-r7-87Z" secondAttribute="leading" id="KCp-at-7cy"/>
+                            <constraint firstAttribute="trailing" secondItem="9Zx-uD-s9z" secondAttribute="trailing" id="LWW-ht-oSM"/>
                             <constraint firstItem="9Zx-uD-s9z" firstAttribute="leading" secondItem="5Am-r7-87Z" secondAttribute="leadingMargin" constant="-16" id="d9e-Ol-zpF"/>
                             <constraint firstItem="CcC-3b-g76" firstAttribute="top" secondItem="w3c-eB-OlS" secondAttribute="bottom" constant="-20" id="gli-eX-KPi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CcC-3b-g76" secondAttribute="trailing" constant="-16" id="w2b-cg-6IQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CcC-3b-g76" secondAttribute="trailing" id="w2b-cg-6IQ"/>
                             <constraint firstItem="CcC-3b-g76" firstAttribute="height" secondItem="5Am-r7-87Z" secondAttribute="height" multiplier="1:4" id="z4r-bN-m4y"/>
                             <constraint firstItem="CcC-3b-g76" firstAttribute="leading" secondItem="5Am-r7-87Z" secondAttribute="leadingMargin" constant="-16" id="zw9-R7-bxK"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="w2b-cg-6IQ"/>
+                                <exclude reference="zw9-R7-bxK"/>
+                                <exclude reference="976-lU-cCi"/>
+                                <exclude reference="d9e-Ol-zpF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="个人中心" id="uw4-yg-oo8"/>
                     <navigationItem key="navigationItem" title="个人中心" id="KMz-Uf-fpm"/>
@@ -1359,7 +1382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAN-tt-IbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724.5" y="-1052.5"/>
+            <point key="canvasLocation" x="1703.5" y="-1247.5"/>
         </scene>
     </scenes>
     <resources>
