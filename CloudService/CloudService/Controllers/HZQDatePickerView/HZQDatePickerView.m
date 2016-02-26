@@ -15,7 +15,7 @@
 
 @interface HZQDatePickerView ()
 
-@property (nonatomic, strong) NSString *selectDate;
+@property (nonatomic, strong) NSDate *selectDate;
 
 @property (weak, nonatomic) IBOutlet UIButton *cannelBtn;
 @property (weak, nonatomic) IBOutlet UIButton *sureBtn;
@@ -65,14 +65,14 @@
     }
 }
 
-- (NSString *)timeFormat
-{
-    NSDate *selected = [self.datePickerView date];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    NSString *currentOlderOneDateStr = [dateFormatter stringFromDate:selected];
-    return currentOlderOneDateStr;
-}
+//- (NSString *)timeFormat
+//{
+//    NSDate *selected = [self.datePickerView date];
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+//    NSString *currentOlderOneDateStr = [dateFormatter stringFromDate:selected];
+//    return currentOlderOneDateStr;
+//}
 
 - (void)animationbegin:(UIView *)view {
     /* 放大缩小 */
@@ -116,7 +116,7 @@
     // 开始动画
     [self animationbegin:sender];
     
-    self.selectDate = [self timeFormat];
+    self.selectDate = [self.datePickerView date];
     
     //delegate
     [self.delegate getSelectDate:self.selectDate type:self.type];
