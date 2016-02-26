@@ -57,9 +57,9 @@
 		F06DDBAA1C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBA81C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m */; };
 		F06DDBB01C7DACDE00C862A1 /* OrderManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBAF1C7DACDE00C862A1 /* OrderManagerViewController.m */; };
 		F06DDBB21C7DAFE300C862A1 /* title-back.png in Resources */ = {isa = PBXBuildFile; fileRef = F06DDBB11C7DAFE300C862A1 /* title-back.png */; };
-		F094B5951C7FEA7A00A2312D /* HomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F094B5931C7FEA7A00A2312D /* HomeCollectionCell.m */; };
-		F094B5961C7FEA7A00A2312D /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F094B5941C7FEA7A00A2312D /* HomeCollectionCell.xib */; };
 		F094B5991C7FF8D600A2312D /* ZQScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F094B5981C7FF8D600A2312D /* ZQScrollPageView.m */; };
+		F094B59D1C8000E500A2312D /* HomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F094B59B1C8000E500A2312D /* HomeCollectionCell.m */; };
+		F094B59E1C8000E500A2312D /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F094B59C1C8000E500A2312D /* HomeCollectionCell.xib */; };
 		F0EF92F71C7F00BC0082EDC0 /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0EF92F61C7F00BC0082EDC0 /* login.jpg */; };
 /* End PBXBuildFile section */
 
@@ -160,11 +160,11 @@
 		F06DDBAE1C7DACDE00C862A1 /* OrderManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderManagerViewController.h; sourceTree = "<group>"; };
 		F06DDBAF1C7DACDE00C862A1 /* OrderManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderManagerViewController.m; sourceTree = "<group>"; };
 		F06DDBB11C7DAFE300C862A1 /* title-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title-back.png"; sourceTree = "<group>"; };
-		F094B5921C7FEA7A00A2312D /* HomeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionCell.h; sourceTree = "<group>"; };
-		F094B5931C7FEA7A00A2312D /* HomeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionCell.m; sourceTree = "<group>"; };
-		F094B5941C7FEA7A00A2312D /* HomeCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionCell.xib; sourceTree = "<group>"; };
 		F094B5971C7FF8D600A2312D /* ZQScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQScrollPageView.h; sourceTree = "<group>"; };
 		F094B5981C7FF8D600A2312D /* ZQScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQScrollPageView.m; sourceTree = "<group>"; };
+		F094B59A1C8000E500A2312D /* HomeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionCell.h; sourceTree = "<group>"; };
+		F094B59B1C8000E500A2312D /* HomeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionCell.m; sourceTree = "<group>"; };
+		F094B59C1C8000E500A2312D /* HomeCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionCell.xib; sourceTree = "<group>"; };
 		F0EF92F61C7F00BC0082EDC0 /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -514,9 +514,9 @@
 		F094B58E1C7FE96500A2312D /* HomeViews(首页) */ = {
 			isa = PBXGroup;
 			children = (
-				F094B5921C7FEA7A00A2312D /* HomeCollectionCell.h */,
-				F094B5931C7FEA7A00A2312D /* HomeCollectionCell.m */,
-				F094B5941C7FEA7A00A2312D /* HomeCollectionCell.xib */,
+				F094B59A1C8000E500A2312D /* HomeCollectionCell.h */,
+				F094B59B1C8000E500A2312D /* HomeCollectionCell.m */,
+				F094B59C1C8000E500A2312D /* HomeCollectionCell.xib */,
 			);
 			name = "HomeViews(首页)";
 			sourceTree = "<group>";
@@ -583,6 +583,7 @@
 			files = (
 				63ADFBE71C7EAC52000D3164 /* ResultTableViewCell.xib in Resources */,
 				63C54E331C7C2F96007CE8CA /* OrderManagerCell.xib in Resources */,
+				F094B59E1C8000E500A2312D /* HomeCollectionCell.xib in Resources */,
 				F06DDBB21C7DAFE300C862A1 /* title-back.png in Resources */,
 				F019C9DC1C7C061100E73A2C /* ceshi.png in Resources */,
 				63C2FB951C7FEC9500D48B8C /* OrderInfoTableViewCell.xib in Resources */,
@@ -671,11 +672,11 @@
 				F01A61601C7D3D3E008CBBD5 /* SetUserInfoCell.m in Sources */,
 				63ADFBE11C7E8E8F000D3164 /* OrderInfoViewController.m in Sources */,
 				63ADFBE61C7EAC52000D3164 /* ResultTableViewCell.m in Sources */,
+				F094B59D1C8000E500A2312D /* HomeCollectionCell.m in Sources */,
 				63C07B9B1C7B14BB0084581F /* MHAsiNetworkHandler.m in Sources */,
 				F094B5991C7FF8D600A2312D /* ZQScrollPageView.m in Sources */,
 				F01A616D1C7D860E008CBBD5 /* LoginInputView.m in Sources */,
 				F019C9E21C7C685700E73A2C /* RegisterSucViewController.m in Sources */,
-				F094B5951C7FEA7A00A2312D /* HomeCollectionCell.m in Sources */,
 				63C07B9D1C7B14BB0084581F /* MHNetworkManager.m in Sources */,
 				F0292BE11C7B015200A810A9 /* BaseTabBarViewController.m in Sources */,
 				63ADFBEB1C7F0622000D3164 /* PellTableViewSelect.m in Sources */,
