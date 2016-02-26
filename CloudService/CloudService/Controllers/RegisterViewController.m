@@ -41,8 +41,9 @@
 // 注册
 - (IBAction)registerAction:(id)sender {
     
-    [self performSegueWithIdentifier:RegisterSuccess sender:self];
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self performSegueWithIdentifier:RegisterSuccess sender:self];
+    });
 }
 
 // 定位按钮
