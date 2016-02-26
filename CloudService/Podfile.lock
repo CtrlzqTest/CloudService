@@ -21,6 +21,9 @@ PODS:
   - MJExtension (3.0.10)
   - MJRefresh (3.1.0)
   - MOBFoundation (1.3.1)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
   - ShareSDK3 (3.2.0):
     - ShareSDK3/ShareSDK (= 3.2.0)
   - ShareSDK3/ShareSDK (3.2.0)
@@ -38,6 +41,7 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - MOBFoundation
+  - SDWebImage
   - ShareSDK3
   - ShareSDK3/ShareSDKPlatforms/QQ
   - ShareSDK3/ShareSDKPlatforms/SinaWeibo
@@ -53,6 +57,7 @@ SPEC CHECKSUMS:
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   MOBFoundation: abbf5616d1d9f758db612cf8d57a72541d1345ef
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   ShareSDK3: 2987b2c38210299d8c3259fff65740f59691a688
 
 COCOAPODS: 0.39.0

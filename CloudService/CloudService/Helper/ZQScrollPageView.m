@@ -7,9 +7,12 @@
 //
 
 #import "ZQScrollPageView.h"
+#import <UIImageView+WebCache.h>
 
 @interface ZQScrollPageView()<UIScrollViewDelegate>{
+    
     ClickBlock _clickBlock;
+    ImageType _imageType;
     NSArray *_imageArray;        //图片数组
     NSTimer *_timer;             //定时器
     NSInteger _currenIndex;      //轮播位置
@@ -38,8 +41,10 @@
 }
 
 -(UIPageControl *)pageControl {
+    
     if (!_pageControl) {
-        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, _height * 0.8, _width * 0.2, _height * 0.1)];
+        _pageControl = [[UIPageControl alloc] initWithFrame:
+                        CGRectMake(0, _height * 0.8, _width * 0.2, _height * 0.1)];
         _pageControl.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
         _pageControl.center = CGPointMake(self.center.x, _pageControl.center.y);
         _pageControl.currentPageIndicatorTintColor = [UIColor greenColor];
@@ -50,10 +55,11 @@
     return _pageControl;
 }
 
-- (void)playWithImageArray:(NSArray *)imageArray TimeInterval:(NSTimeInterval)displayTime clickImage:(ClickBlock )clickBlock {
+- (void)playWithImageArray:(NSArray *)imageArray TimeInterval:(NSTimeInterval)displayTime imageType:(ImageType )imageType clickImage:(ClickBlock )clickBlock {
     
     _imageArray = imageArray;
     _clickBlock = clickBlock;
+    _imageType = imageType;
     _currenIndex = 0;
     
     self.pageControl.numberOfPages = imageArray.count;
@@ -104,24 +110,59 @@
 
 - (void)setImages {
     
-    if (_currenIndex == 0) {
-        
-        self.frontImgView.image = [_imageArray lastObject];
-        self.lastImgView.image = _imageArray[_currenIndex + 1];
+    if (_currenIndex == 0)
+    {
+        switch (_imageType)
+        {
+            case ImageTypeNet:
+                [self.frontImgView sd_setImageWithURL:[NSURL URLWithString:[_imageArray lastObject]] placeholderImage:nil];
+                [self.lastImgView sd_setImageWithURL:[NSURL URLWithString:_imageArray[_currenIndex + 1]] placeholderImage:nil];
+                break;
+            case ImageTypeBundle:
+                break;
+            default:
+                break;
+        }
         
     }else if(_currenIndex == _imageArray.count - 1){
         
-        self.frontImgView.image = _imageArray[_currenIndex - 1];
-        self.lastImgView.image = [_imageArray firstObject];
+        switch (_imageType)
+        {
+            case ImageTypeNet:
+                [self.frontImgView sd_setImageWithURL:[NSURL URLWithString:_imageArray[_currenIndex - 1]] placeholderImage:nil];
+                [self.lastImgView sd_setImageWithURL:[NSURL URLWithString:[_imageArray firstObject]] placeholderImage:nil];
+                break;
+            case ImageTypeBundle:
+                break;
+            default:
+                break;
+        }
         
     }else{
         
-        self.frontImgView.image = _imageArray[_currenIndex - 1];
-        self.lastImgView.image = _imageArray[_currenIndex + 1];
+        switch (_imageType)
+        {
+            case ImageTypeNet:
+                [self.frontImgView sd_setImageWithURL:[NSURL URLWithString:_imageArray[_currenIndex - 1]] placeholderImage:nil];
+                [self.lastImgView sd_setImageWithURL:[NSURL URLWithString:_imageArray[_currenIndex + 1]] placeholderImage:nil];
+                break;
+            case ImageTypeBundle:
+                break;
+            default:
+                break;
+        }
         
     }
-    
-    self.midImgView.image = _imageArray[_currenIndex];
+    switch (_imageType)
+    {
+        case ImageTypeNet:
+            [self.midImgView sd_setImageWithURL:[NSURL URLWithString:_imageArray[_currenIndex]] placeholderImage:nil];
+            break;
+        case ImageTypeBundle:
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)setupScrollPageView {

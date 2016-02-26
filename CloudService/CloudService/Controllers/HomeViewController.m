@@ -65,6 +65,7 @@ static NSString *cell_id = @"menuCell";
 
 - (void)viewWillAppear:(BOOL)animated {
     
+    [super viewWillAppear:animated];
     [self setNavigationBarTitleColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.barTintColor = [HelperUtil
                                                             colorWithHexString:@"277FD9"];

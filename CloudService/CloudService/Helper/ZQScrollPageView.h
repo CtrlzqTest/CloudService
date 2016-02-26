@@ -7,6 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+
+typedef enum : NSInteger {
+    ImageTypeNet = 0,
+    ImageTypeBundle = 1,
+    ImageTypeLocalPath = 2
+} ImageType;
+
 typedef void(^ClickBlock)(NSInteger index);
 
 @interface ZQScrollPageView : UIView
@@ -15,6 +22,6 @@ typedef void(^ClickBlock)(NSInteger index);
 @property(nonatomic,strong)UIPageControl *pageControl;
 
 // 开始播放动画
-- (void)playWithImageArray:(NSArray *)imageArray TimeInterval:(NSTimeInterval)displayTime clickImage:(ClickBlock )clickBlock;
+- (void)playWithImageArray:(NSArray *)imageArray TimeInterval:(NSTimeInterval)displayTime imageType:(ImageType )imageType clickImage:(ClickBlock )clickBlock;
 
 @end
