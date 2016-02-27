@@ -62,7 +62,8 @@
 // 登录
 - (IBAction)loginAction:(id)sender {
     
-    [self performSegueWithIdentifier:@"login" sender:self];
+//    [self performSegueWithIdentifier:@"login" sender:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:LoginToMenuViewNotice object:nil];
     
 }
 

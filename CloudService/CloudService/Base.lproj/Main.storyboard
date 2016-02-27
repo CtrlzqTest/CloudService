@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="moG-sH-JKE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="moG-sH-JKE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -11,7 +11,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Od2-UD-XWg">
             <objects>
-                <navigationController id="moG-sH-JKE" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNavi" id="moG-sH-JKE" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="OcS-xo-06j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -52,9 +52,6 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <segue destination="ynK-X6-WEz" kind="modal" identifier="login" id="BW2-DM-Pu0"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rmt-vQ-TTC">
                                         <rect key="frame" x="10" y="40" width="293" height="40"/>
@@ -220,7 +217,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="gotoMenuAction:" destination="htK-Rd-sEF" eventType="touchUpInside" id="EoE-5e-dmE"/>
-                                                    <segue destination="ynK-X6-WEz" kind="modal" id="4gQ-Lt-tJF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bi-16-jhl">
@@ -325,6 +321,7 @@
                         <outlet property="inputBtn" destination="0bi-16-jhl" id="BoF-aj-L67"/>
                         <outlet property="pushMenuBtn" destination="XPu-ve-Bmg" id="ZeK-YW-97s"/>
                         <outlet property="scrollView" destination="Q2T-Fm-dfR" id="OX5-mp-PvC"/>
+                        <segue destination="ynK-X6-WEz" kind="modal" identifier="gotoMenu" id="n1c-cN-kO9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJW-vo-tnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1272,7 +1269,7 @@
         <!--首页导航条-->
         <scene sceneID="HDM-0L-Ee9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ynK-X6-WEz" userLabel="首页导航条" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MenuNavi" automaticallyAdjustsScrollViewInsets="NO" id="ynK-X6-WEz" userLabel="首页导航条" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" id="Y9X-9z-fDx"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="IjO-9i-zMK"/>
@@ -1288,7 +1285,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbz-iM-kPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241.5" y="182.5"/>
+            <point key="canvasLocation" x="279.5" y="353.5"/>
         </scene>
         <!--创建订单-->
         <scene sceneID="bQL-Ao-Mxf">
@@ -1388,7 +1385,4 @@
     <resources>
         <image name="ceshi.png" width="610" height="338"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="BW2-DM-Pu0"/>
-    </inferredMetricsTieBreakers>
 </document>

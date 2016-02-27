@@ -59,7 +59,8 @@ static NSString *cell_id = @"personalCell";
 
 - (void)logOutAction {
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:LogOutViewNotice object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -126,9 +127,10 @@ static NSString *cell_id = @"personalCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self dismissViewControllerAnimated:YES completion:nil];
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    });
+    [[NSNotificationCenter defaultCenter] postNotificationName:LogOutViewNotice object:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -49,6 +49,13 @@ static NSString *const RegisterSuccess = @"registerSuccess";
 
 static NSString *const RegisterToMenuView = @"registerToMenuView";
 
+/**
+ *  通知
+ */
+static NSString *const LoginToMenuViewNotice = @"loginToMenu";
+
+static NSString *const LogOutViewNotice = @"logOut";
+
 /**************************************************************************************/
 
 #endif

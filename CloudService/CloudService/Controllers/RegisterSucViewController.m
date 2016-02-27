@@ -24,17 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupViews];
-//    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 400, 320, 200)];
-//    scrollView.backgroundColor = [UIColor redColor];
-//    UIButton *butn = [UIButton buttonWithType:(UIButtonTypeSystem)];
-//    butn.frame = CGRectMake(50, 50, 50, 50);
-//    [butn setTitle:@"nima" forState:(UIControlStateNormal)];
-//    [butn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-//    [scrollView addSubview:butn];
-//    [self.view addSubview:scrollView];
-//    
-//    [butn addTarget:self action:@selector(ddd) forControlEvents:UIControlEventTouchUpInside];
-//    self.scrollView.contentSize = CGSizeMake(KWidth, KHeight);
 }
 
 
@@ -51,11 +40,14 @@
     
 }
 
-
-
 - (IBAction)gotoMenuAction:(id)sender {
     
-    
+//    [self performSegueWithIdentifier:@"gotoMenu" sender:self];
+//    __weak typeof(self) weakSelf = self;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [weakSelf.navigationController popToRootViewControllerAnimated:NO];
+//    });
+    [[NSNotificationCenter defaultCenter] postNotificationName:LoginToMenuViewNotice object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
