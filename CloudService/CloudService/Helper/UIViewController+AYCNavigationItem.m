@@ -166,7 +166,7 @@
                         selectBackImage:(NSString *)selectBackImage
                                  action:(void(^)(AYCButton *button))action
 {
-    AYCButton *rightButton = [AYCButton buttonWithType:UIButtonTypeCustom];
+    AYCButton *rightButton = [AYCButton buttonWithType:UIButtonTypeSystem];
     rightButton.frame = frame;
     [rightButton setTitle:titile forState:UIControlStateNormal];
     [rightButton setTitleColor:titleColor forState:UIControlStateNormal];

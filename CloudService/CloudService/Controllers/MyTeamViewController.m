@@ -55,6 +55,7 @@ static NSString *cell_id = @"myTeamCell";
     
     MyTeamTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_id forIndexPath:indexPath];
     return cell;
+    
 }
 
 - (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

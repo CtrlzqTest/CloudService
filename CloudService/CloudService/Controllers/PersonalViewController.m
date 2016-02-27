@@ -9,6 +9,7 @@
 #import "PersonalViewController.h"
 #import "PersonalViewCell.h"
 #import "ResetPhonePopView.h"
+#import "UserInfoViewController.h"
 
 @interface PersonalViewController ()<UITableViewDataSource,UITableViewDelegate> {
     NSArray *_dataArray;
@@ -56,12 +57,22 @@ static NSString *cell_id = @"personalCell";
 - (void)setupViews {
     // 注册Cell
     [self.tableView registerNib:[UINib nibWithNibName:@"PersonalViewCell" bundle:nil] forCellReuseIdentifier:cell_id];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapHeadicon)];
+    [self.headIconImg addGestureRecognizer:tap];
 }
 
+// 退出登录
 - (void)logOutAction {
     
 //    [self dismissViewControllerAnimated:YES completion:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:LogOutViewNotice object:nil];
+}
+
+- (void)tapHeadicon {
+//    UserInfoViewController *userVC = [[UserInfoViewController alloc] init];
+    [self performSegueWithIdentifier:@"userinfoVC" sender:self];
+//    [self.navigationController pushViewController:userVC animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
