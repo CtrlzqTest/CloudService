@@ -49,7 +49,47 @@
 // 定位按钮
 - (IBAction)locateAction:(id)sender {
     
+}
+
+- (IBAction)getCodeAction:(id)sender {
+    [self countDownTime:@60];
+}
+
+/**
+ *  倒计时函数
+ */
+-(void)countDownTime:(NSNumber *)sourceDate{
     
+//    self.getCodeBtn.backgroundColor = [UIColor lightGrayColor];
+    self.getCodeBtn.enabled = NO;
+    __block int timeout = sourceDate.intValue; //倒计时时间
+    dispatch_queue_t dispatchQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatchQueue);
+    dispatch_source_set_timer(_timer, dispatch_walltime(NULL, 0), 1.0*NSEC_PER_SEC, 0);//每秒执行
+    __weak typeof(self) weakSelf = self;
+    dispatch_source_set_event_handler(_timer, ^{
+        if(timeout <= 1){ //倒计时结束，关闭
+            dispatch_source_cancel(_timer);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //界面的设置
+                [weakSelf.getCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+                weakSelf.getCodeBtn.enabled = YES;
+//                weakSelf.getCodeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:88/255.0 blue:34/255.0 alpha:1];
+
+//                [MessageTool showMessage:@"验证码过期" isError:YES];
+            });
+        }else{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //界面的设置
+                NSString *numStr=[NSString stringWithFormat:@"剩余%d秒",timeout];
+                //                _button_sendAgain.titleLabel.text = numStr;
+                [weakSelf.getCodeBtn setTitle:numStr forState:UIControlStateDisabled];
+            });
+            timeout--;
+        }
+    });
+    dispatch_resume(_timer);
 }
 
 - (void)didReceiveMemoryWarning {

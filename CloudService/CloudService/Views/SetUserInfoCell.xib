@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="77.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="真实姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtY-jf-6mD">
@@ -40,6 +40,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="ljp-EF-QNi" firstAttribute="top" secondItem="bzp-ED-hhq" secondAttribute="top" id="0iW-95-rks"/>
+                    <constraint firstItem="LtY-jf-6mD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="5RR-7l-6vo"/>
+                    <constraint firstItem="LtY-jf-6mD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Cje-pc-eRD"/>
                     <constraint firstItem="LtY-jf-6mD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="K6F-0S-keU"/>
                     <constraint firstItem="ljp-EF-QNi" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="10" id="L3t-xx-PLR"/>
                     <constraint firstItem="ljp-EF-QNi" firstAttribute="bottom" secondItem="bzp-ED-hhq" secondAttribute="bottom" id="Qas-6j-vXv"/>
@@ -50,6 +52,12 @@
                     <constraint firstAttribute="bottomMargin" secondItem="LtY-jf-6mD" secondAttribute="bottom" id="gAq-qB-ThZ"/>
                     <constraint firstItem="bzp-ED-hhq" firstAttribute="bottom" secondItem="LtY-jf-6mD" secondAttribute="bottom" id="u40-mx-bqj"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Cje-pc-eRD"/>
+                        <exclude reference="TzO-g4-61e"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="imageBtn" destination="ljp-EF-QNi" id="ryW-Sm-EKr"/>

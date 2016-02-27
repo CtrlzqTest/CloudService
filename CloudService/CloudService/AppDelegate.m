@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BaseNaviViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,8 +21,23 @@
     //设置状态栏为白色
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginToMenu) name:LoginToMenuViewNotice object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logOut) name:LogOutViewNotice object:nil];
     return YES;
+}
+
+- (void)loginToMenu {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    BaseNaviViewController *menuVC = [storyBoard instantiateViewControllerWithIdentifier:@"MenuNavi"];
+//    [UIView transitionFromView:self.window.rootViewController.view toView:menuVC.view duration:0.3 options:UIViewAnimationOptionTransitionCurlUp completion:^(BOOL finished) {
+//    }];
+    self.window.rootViewController = menuVC;
+}
+
+- (void)logOut {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *loginVC = [storyBoard instantiateViewControllerWithIdentifier:@"loginNavi"];
+    self.window.rootViewController = loginVC;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

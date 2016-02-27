@@ -8,6 +8,8 @@
 
 #import "PersonalViewController.h"
 #import "PersonalViewCell.h"
+#import "ResetPhonePopView.h"
+#import "UserInfoViewController.h"
 
 @interface PersonalViewController ()<UITableViewDataSource,UITableViewDelegate> {
     NSArray *_dataArray;
@@ -55,27 +57,42 @@ static NSString *cell_id = @"personalCell";
 - (void)setupViews {
     // 注册Cell
     [self.tableView registerNib:[UINib nibWithNibName:@"PersonalViewCell" bundle:nil] forCellReuseIdentifier:cell_id];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapHeadicon)];
+    [self.headIconImg addGestureRecognizer:tap];
 }
 
+// 退出登录
 - (void)logOutAction {
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:LogOutViewNotice object:nil];
+}
+
+- (void)tapHeadicon {
+//    UserInfoViewController *userVC = [[UserInfoViewController alloc] init];
+    [self performSegueWithIdentifier:@"userinfoVC" sender:self];
+//    [self.navigationController pushViewController:userVC animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
     self.tabBarController.title = @"个人中心";
-    
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
+
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -126,9 +143,40 @@ static NSString *cell_id = @"personalCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self dismissViewControllerAnimated:YES completion:nil];
-    });
+    
+    if (indexPath.section == 3) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:LogOutViewNotice object:nil];
+        return;
+    }
+    
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 0:
+            {
+                [self performSegueWithIdentifier:@"pushMyTeam" sender:self];
+            }
+                break;
+            case 1:
+            {
+                ResetPhonePopView *popView = [[ResetPhonePopView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+                [popView showViewWithCallBack:^(NSInteger btnIndex) {
+                    
+                }];
+            }
+                break;
+            case 2:
+                
+                break;
+            case 3:
+                
+                break;
+            case 4:
+                
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {

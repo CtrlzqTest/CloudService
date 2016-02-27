@@ -59,12 +59,17 @@
 		F06DDBAA1C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBA81C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m */; };
 		F06DDBB01C7DACDE00C862A1 /* OrderManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBAF1C7DACDE00C862A1 /* OrderManagerViewController.m */; };
 		F06DDBB21C7DAFE300C862A1 /* title-back.png in Resources */ = {isa = PBXBuildFile; fileRef = F06DDBB11C7DAFE300C862A1 /* title-back.png */; };
+		F07FF9D61C81469400EB1BB1 /* ResetPhonePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F07FF9D51C81469400EB1BB1 /* ResetPhonePopView.m */; };
+		F07FF9D81C8146D800EB1BB1 /* ResetPhonePopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07FF9D71C8146D800EB1BB1 /* ResetPhonePopView.xib */; };
+		F07FF9DB1C815BF600EB1BB1 /* MyTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F07FF9DA1C815BF600EB1BB1 /* MyTeamViewController.m */; };
+		F07FF9DF1C81752D00EB1BB1 /* MyTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F07FF9DD1C81752D00EB1BB1 /* MyTeamTableViewCell.m */; };
+		F07FF9E01C81752D00EB1BB1 /* MyTeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07FF9DE1C81752D00EB1BB1 /* MyTeamTableViewCell.xib */; };
+		F07FF9E31C8189E200EB1BB1 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F07FF9E21C8189E200EB1BB1 /* UserInfoViewController.m */; };
 		F094B5991C7FF8D600A2312D /* ZQScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F094B5981C7FF8D600A2312D /* ZQScrollPageView.m */; };
 		F094B59D1C8000E500A2312D /* HomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F094B59B1C8000E500A2312D /* HomeCollectionCell.m */; };
 		F094B59E1C8000E500A2312D /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F094B59C1C8000E500A2312D /* HomeCollectionCell.xib */; };
 		F094B5A31C80223400A2312D /* PersonalViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F094B5A11C80223400A2312D /* PersonalViewCell.m */; };
 		F094B5A41C80223400A2312D /* PersonalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F094B5A21C80223400A2312D /* PersonalViewCell.xib */; };
-		F0EF92F71C7F00BC0082EDC0 /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0EF92F61C7F00BC0082EDC0 /* login.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +173,16 @@
 		F06DDBAE1C7DACDE00C862A1 /* OrderManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderManagerViewController.h; sourceTree = "<group>"; };
 		F06DDBAF1C7DACDE00C862A1 /* OrderManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderManagerViewController.m; sourceTree = "<group>"; };
 		F06DDBB11C7DAFE300C862A1 /* title-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title-back.png"; sourceTree = "<group>"; };
+		F07FF9D41C81469400EB1BB1 /* ResetPhonePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPhonePopView.h; sourceTree = "<group>"; };
+		F07FF9D51C81469400EB1BB1 /* ResetPhonePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPhonePopView.m; sourceTree = "<group>"; };
+		F07FF9D71C8146D800EB1BB1 /* ResetPhonePopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPhonePopView.xib; sourceTree = "<group>"; };
+		F07FF9D91C815BF600EB1BB1 /* MyTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTeamViewController.h; sourceTree = "<group>"; };
+		F07FF9DA1C815BF600EB1BB1 /* MyTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTeamViewController.m; sourceTree = "<group>"; };
+		F07FF9DC1C81752D00EB1BB1 /* MyTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTeamTableViewCell.h; sourceTree = "<group>"; };
+		F07FF9DD1C81752D00EB1BB1 /* MyTeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTeamTableViewCell.m; sourceTree = "<group>"; };
+		F07FF9DE1C81752D00EB1BB1 /* MyTeamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTeamTableViewCell.xib; sourceTree = "<group>"; };
+		F07FF9E11C8189E200EB1BB1 /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
+		F07FF9E21C8189E200EB1BB1 /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		F094B5971C7FF8D600A2312D /* ZQScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQScrollPageView.h; sourceTree = "<group>"; };
 		F094B5981C7FF8D600A2312D /* ZQScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQScrollPageView.m; sourceTree = "<group>"; };
 		F094B59A1C8000E500A2312D /* HomeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionCell.h; sourceTree = "<group>"; };
@@ -176,7 +191,6 @@
 		F094B5A01C80223400A2312D /* PersonalViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewCell.h; sourceTree = "<group>"; };
 		F094B5A11C80223400A2312D /* PersonalViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewCell.m; sourceTree = "<group>"; };
 		F094B5A21C80223400A2312D /* PersonalViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalViewCell.xib; sourceTree = "<group>"; };
-		F0EF92F61C7F00BC0082EDC0 /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +330,10 @@
 			children = (
 				63C54E3F1C7C35BA007CE8CA /* PersonalViewController.h */,
 				63C54E401C7C35BA007CE8CA /* PersonalViewController.m */,
+				F07FF9D91C815BF600EB1BB1 /* MyTeamViewController.h */,
+				F07FF9DA1C815BF600EB1BB1 /* MyTeamViewController.m */,
+				F07FF9E11C8189E200EB1BB1 /* UserInfoViewController.h */,
+				F07FF9E21C8189E200EB1BB1 /* UserInfoViewController.m */,
 			);
 			name = "PersonalController(个人中心)";
 			sourceTree = "<group>";
@@ -346,7 +364,6 @@
 		F019C9DA1C7C05FD00E73A2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				F0EF92F61C7F00BC0082EDC0 /* login.jpg */,
 				63C54E341C7C312F007CE8CA /* line_solid.png */,
 				F019C9DB1C7C061100E73A2C /* ceshi.png */,
 				F06DDBB11C7DAFE300C862A1 /* title-back.png */,
@@ -543,6 +560,12 @@
 				F094B5A01C80223400A2312D /* PersonalViewCell.h */,
 				F094B5A11C80223400A2312D /* PersonalViewCell.m */,
 				F094B5A21C80223400A2312D /* PersonalViewCell.xib */,
+				F07FF9D41C81469400EB1BB1 /* ResetPhonePopView.h */,
+				F07FF9D51C81469400EB1BB1 /* ResetPhonePopView.m */,
+				F07FF9D71C8146D800EB1BB1 /* ResetPhonePopView.xib */,
+				F07FF9DC1C81752D00EB1BB1 /* MyTeamTableViewCell.h */,
+				F07FF9DD1C81752D00EB1BB1 /* MyTeamTableViewCell.m */,
+				F07FF9DE1C81752D00EB1BB1 /* MyTeamTableViewCell.xib */,
 			);
 			name = "PersonalViews(个人中心)";
 			sourceTree = "<group>";
@@ -615,8 +638,9 @@
 				63C2FB951C7FEC9500D48B8C /* OrderInfoTableViewCell.xib in Resources */,
 				F0292BBD1C7B00CD00A810A9 /* LaunchScreen.storyboard in Resources */,
 				F0292BBA1C7B00CD00A810A9 /* Assets.xcassets in Resources */,
+				F07FF9E01C81752D00EB1BB1 /* MyTeamTableViewCell.xib in Resources */,
+				F07FF9D81C8146D800EB1BB1 /* ResetPhonePopView.xib in Resources */,
 				F094B5A41C80223400A2312D /* PersonalViewCell.xib in Resources */,
-				F0EF92F71C7F00BC0082EDC0 /* login.jpg in Resources */,
 				F01A61611C7D3D3E008CBBD5 /* SetUserInfoCell.xib in Resources */,
 				6383656B1C7DB8BA001A10C4 /* HZQDatePickerView.xib in Resources */,
 				F0292BB81C7B00CD00A810A9 /* Main.storyboard in Resources */,
@@ -684,10 +708,13 @@
 				F0292BE31C7B015200A810A9 /* User.m in Sources */,
 				F0292BE01C7B015200A810A9 /* BaseNaviViewController.m in Sources */,
 				63C54E321C7C2F96007CE8CA /* OrderManagerCell.m in Sources */,
+				F07FF9D61C81469400EB1BB1 /* ResetPhonePopView.m in Sources */,
 				F094B5A31C80223400A2312D /* PersonalViewCell.m in Sources */,
 				F06DDBA41C7DAAE900C862A1 /* SearchOrderViewController.m in Sources */,
+				F07FF9E31C8189E200EB1BB1 /* UserInfoViewController.m in Sources */,
 				F019C9E51C7C7BB700E73A2C /* SetUserInfoViewController.m in Sources */,
 				63C54E3B1C7C359A007CE8CA /* HomeViewController.m in Sources */,
+				F07FF9DB1C815BF600EB1BB1 /* MyTeamViewController.m in Sources */,
 				63C2FB941C7FEC9500D48B8C /* OrderInfoTableViewCell.m in Sources */,
 				63C07B9A1C7B14BB0084581F /* MBProgressHUD+Add.m in Sources */,
 				63C07BA81C7B15C10084581F /* NSArray+AYCUnicode.m in Sources */,
@@ -711,6 +738,7 @@
 				63ADFBEB1C7F0622000D3164 /* PellTableViewSelect.m in Sources */,
 				F06DDBAA1C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m in Sources */,
 				63C54E3E1C7C35AA007CE8CA /* ResultViewController.m in Sources */,
+				F07FF9DF1C81752D00EB1BB1 /* MyTeamTableViewCell.m in Sources */,
 				6383656C1C7DB8BA001A10C4 /* UIColor+HexString.m in Sources */,
 				63C07B9E1C7B14BB0084581F /* MHUploadParam.m in Sources */,
 				63C07BA91C7B15C10084581F /* NSDictionary+AYCUnicode.m in Sources */,
