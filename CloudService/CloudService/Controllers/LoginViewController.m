@@ -38,8 +38,6 @@
     
     self.inputView.layer.cornerRadius = 3;
     self.inputView.clipsToBounds = YES;
-//    self.inputView.layer.borderWidth = 0.1;
-//    self.inputView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.inputView.backgroundColor = [UIColor colorWithRed:0.918 green:0.917
                                                       blue:0.925 alpha:0.500];
     
