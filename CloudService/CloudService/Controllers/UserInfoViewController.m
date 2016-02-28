@@ -96,7 +96,7 @@
         SetUserInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"setUserInfoCell" forIndexPath:indexPath];
         cell.textFiled.hidden = YES;
         cell.label.text = @"头像";
-        cell.imageBtn.backgroundColor = [UIColor redColor];
+        [cell.imageBtn setImage:[UIImage imageNamed:@"head1"]];
         return cell;
     }else if(indexPath.section == 1) {
         static NSString *cell_ID = @"cell_Pwd";

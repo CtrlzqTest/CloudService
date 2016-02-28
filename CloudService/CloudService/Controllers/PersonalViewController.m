@@ -115,12 +115,13 @@ static NSString *cell_id = @"personalCell";
         static NSString *cell_ID = @"logOutCell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_ID];
         if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cell_ID];
-            UIButton *button = [UIButton buttonWithType:(UIButtonTypeSystem)];
-            button.frame = cell.contentView.frame;
-            [button addTarget:self action:@selector(logOutAction) forControlEvents:(UIControlEventTouchUpInside)];
-            [button setTitle:@"退出登录" forState:(UIControlStateNormal)];
-            [cell addSubview:button];
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cell_ID];
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, KWidth, KHeight / 667.0  * 44)];
+            label.textColor = [UIColor colorWithRed:0.128 green:0.496 blue:0.867 alpha:1.000];
+            label.textAlignment = NSTextAlignmentCenter;
+            label.text = @"退出登录";
+            [cell addSubview:label];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         return cell;
     }
@@ -170,10 +171,14 @@ static NSString *cell_id = @"personalCell";
                 
                 break;
             case 3:
-                
+            {
+                [self performSegueWithIdentifier:@"invateFriend_push" sender:self];
+            }
                 break;
             case 4:
-                
+            {
+                [self performSegueWithIdentifier:@"invateFriend_push" sender:self];
+            }
                 break;
             default:
                 break;

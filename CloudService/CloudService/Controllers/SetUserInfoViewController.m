@@ -143,9 +143,11 @@ static NSString *const select_CellID = @"selectCell";
     } completion:^(BOOL finished) {
        self.maskView.hidden = YES;
         _isAnimating = NO;
-        
     }];
-
+//    // 收回列表
+//    SetUserInfoCell *cell = [self.tableView cellForRowAtIndexPath:_indexPath];
+//    cell.imageBtn.image = [UIImage imageNamed:@"details-arrow2"];
+//    [cell reloadInputViews];
 }
 
 #pragma mark -- SetUserInfoCellDelegate
@@ -224,14 +226,22 @@ static NSString *const select_CellID = @"selectCell";
         [self.tableView reloadData];
         return;
     }
+    _indexPath = indexPath;
     SetUserInfoCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     CGRect tempRect = [cell.contentView convertRect:cell.textFiled.frame fromView:self.view];
     _selectCellIndex = indexPath.row;
     if (indexPath.section == 0) {
         switch (indexPath.row) {
-            case 1:     _selectArray = @[@"身份证",@"军人证"];
-                        CGRect rect1 = CGRectMake(tempRect.origin.x, CGRectGetMaxY(cell.frame) - self.tableView.contentOffset.y, 150, _selectArray.count * 30);
-                        [self showPullDownViewWithRect:rect1];
+            case 1:    {
+                _selectArray = @[@"身份证",@"军人证"];
+                CGRect rect1 = CGRectMake(tempRect.origin.x, CGRectGetMaxY(cell.frame) - self.tableView.contentOffset.y, 150, _selectArray.count * 30);
+//                [UIView animateWithDuration:0.5 animations:^{
+//                    cell.imageBtn.transform = CGAffineTransformMakeRotation(M_PI);
+//                }];
+//                [cell reloadInputViews];
+                [self showPullDownViewWithRect:rect1];
+                
+            }
                         break;
             case 3:     _selectArray = @[@"身份证",@"军人证"];
                         CGRect rect3 = CGRectMake(tempRect.origin.x, CGRectGetMaxY(cell.frame) - self.tableView.contentOffset.y, 150, _selectArray.count * 30);

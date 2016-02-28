@@ -34,14 +34,12 @@
 		63C2FB9B1C80237E00D48B8C /* AppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2FB9A1C80237E00D48B8C /* AppointmentViewController.m */; };
 		63C54E321C7C2F96007CE8CA /* OrderManagerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C54E301C7C2F96007CE8CA /* OrderManagerCell.m */; };
 		63C54E331C7C2F96007CE8CA /* OrderManagerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C54E311C7C2F96007CE8CA /* OrderManagerCell.xib */; };
-		63C54E351C7C312F007CE8CA /* line_solid.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C54E341C7C312F007CE8CA /* line_solid.png */; };
 		63C54E3B1C7C359A007CE8CA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C54E3A1C7C359A007CE8CA /* HomeViewController.m */; };
 		63C54E3E1C7C35AA007CE8CA /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C54E3D1C7C35AA007CE8CA /* ResultViewController.m */; };
 		63C54E411C7C35BA007CE8CA /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C54E401C7C35BA007CE8CA /* PersonalViewController.m */; };
 		91A97CA728DD2D371997D3F7 /* libPods-CloudService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D96943D8DC951CBCC61FF495 /* libPods-CloudService.a */; };
 		F019C9D61C7BFD7900E73A2C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F019C9D51C7BFD7900E73A2C /* LoginViewController.m */; };
 		F019C9D91C7BFD8D00E73A2C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F019C9D81C7BFD8D00E73A2C /* RegisterViewController.m */; };
-		F019C9DC1C7C061100E73A2C /* ceshi.png in Resources */ = {isa = PBXBuildFile; fileRef = F019C9DB1C7C061100E73A2C /* ceshi.png */; };
 		F019C9E21C7C685700E73A2C /* RegisterSucViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F019C9E11C7C685700E73A2C /* RegisterSucViewController.m */; };
 		F019C9E51C7C7BB700E73A2C /* SetUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F019C9E41C7C7BB700E73A2C /* SetUserInfoViewController.m */; };
 		F01A61601C7D3D3E008CBBD5 /* SetUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A615E1C7D3D3E008CBBD5 /* SetUserInfoCell.m */; };
@@ -65,7 +63,6 @@
 		F06DDBA91C7DAB7400C862A1 /* AYCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBA61C7DAB7400C862A1 /* AYCButton.m */; };
 		F06DDBAA1C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBA81C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m */; };
 		F06DDBB01C7DACDE00C862A1 /* OrderManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBAF1C7DACDE00C862A1 /* OrderManagerViewController.m */; };
-		F06DDBB21C7DAFE300C862A1 /* title-back.png in Resources */ = {isa = PBXBuildFile; fileRef = F06DDBB11C7DAFE300C862A1 /* title-back.png */; };
 		F07FF9D61C81469400EB1BB1 /* ResetPhonePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F07FF9D51C81469400EB1BB1 /* ResetPhonePopView.m */; };
 		F07FF9D81C8146D800EB1BB1 /* ResetPhonePopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07FF9D71C8146D800EB1BB1 /* ResetPhonePopView.xib */; };
 		F07FF9DB1C815BF600EB1BB1 /* MyTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F07FF9DA1C815BF600EB1BB1 /* MyTeamViewController.m */; };
@@ -79,6 +76,7 @@
 		F094B5A41C80223400A2312D /* PersonalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F094B5A21C80223400A2312D /* PersonalViewCell.xib */; };
 		F09A5F8F1A55BEDD008D4963 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F09A5F8D1A55BEDD008D4963 /* HomeHeaderView.m */; };
 		F09A5F901A55BEDD008D4963 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F09A5F8E1A55BEDD008D4963 /* HomeHeaderView.xib */; };
+		F09A5F931A55F0AA008D4963 /* InviteFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F09A5F921A55F0AA008D4963 /* InviteFriendViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,7 +131,6 @@
 		63C54E2F1C7C2F96007CE8CA /* OrderManagerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderManagerCell.h; sourceTree = SOURCE_ROOT; };
 		63C54E301C7C2F96007CE8CA /* OrderManagerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderManagerCell.m; sourceTree = SOURCE_ROOT; };
 		63C54E311C7C2F96007CE8CA /* OrderManagerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderManagerCell.xib; sourceTree = SOURCE_ROOT; };
-		63C54E341C7C312F007CE8CA /* line_solid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_solid.png; sourceTree = "<group>"; };
 		63C54E391C7C359A007CE8CA /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		63C54E3A1C7C359A007CE8CA /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		63C54E3C1C7C35AA007CE8CA /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
@@ -147,7 +144,6 @@
 		F019C9D51C7BFD7900E73A2C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F019C9D71C7BFD8D00E73A2C /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		F019C9D81C7BFD8D00E73A2C /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		F019C9DB1C7C061100E73A2C /* ceshi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ceshi.png; sourceTree = "<group>"; };
 		F019C9E01C7C685600E73A2C /* RegisterSucViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterSucViewController.h; sourceTree = "<group>"; };
 		F019C9E11C7C685700E73A2C /* RegisterSucViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterSucViewController.m; sourceTree = "<group>"; };
 		F019C9E31C7C7BB700E73A2C /* SetUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUserInfoViewController.h; sourceTree = "<group>"; };
@@ -193,7 +189,6 @@
 		F06DDBA81C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AYCNavigationItem.m"; sourceTree = "<group>"; };
 		F06DDBAE1C7DACDE00C862A1 /* OrderManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderManagerViewController.h; sourceTree = "<group>"; };
 		F06DDBAF1C7DACDE00C862A1 /* OrderManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderManagerViewController.m; sourceTree = "<group>"; };
-		F06DDBB11C7DAFE300C862A1 /* title-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title-back.png"; sourceTree = "<group>"; };
 		F07FF9D41C81469400EB1BB1 /* ResetPhonePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPhonePopView.h; sourceTree = "<group>"; };
 		F07FF9D51C81469400EB1BB1 /* ResetPhonePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPhonePopView.m; sourceTree = "<group>"; };
 		F07FF9D71C8146D800EB1BB1 /* ResetPhonePopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPhonePopView.xib; sourceTree = "<group>"; };
@@ -215,6 +210,8 @@
 		F09A5F8C1A55BEDD008D4963 /* HomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
 		F09A5F8D1A55BEDD008D4963 /* HomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		F09A5F8E1A55BEDD008D4963 /* HomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		F09A5F911A55F0AA008D4963 /* InviteFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendViewController.h; sourceTree = "<group>"; };
+		F09A5F921A55F0AA008D4963 /* InviteFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +373,8 @@
 				F059AA781A55822E0008D7BD /* VerifyCodeViewController.m */,
 				F059AA7A1A55903B0008D7BD /* SetNewPwdViewController.h */,
 				F059AA7B1A55903B0008D7BD /* SetNewPwdViewController.m */,
+				F09A5F911A55F0AA008D4963 /* InviteFriendViewController.h */,
+				F09A5F921A55F0AA008D4963 /* InviteFriendViewController.m */,
 			);
 			name = "PersonalController(个人中心)";
 			sourceTree = "<group>";
@@ -407,9 +406,6 @@
 			isa = PBXGroup;
 			children = (
 				637533AF1C83F64100A12932 /* details-icon.png */,
-				63C54E341C7C312F007CE8CA /* line_solid.png */,
-				F019C9DB1C7C061100E73A2C /* ceshi.png */,
-				F06DDBB11C7DAFE300C862A1 /* title-back.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -651,6 +647,7 @@
 				TargetAttributes = {
 					F0292BA91C7B00CD00A810A9 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = UYEXGZEG29;
 					};
 				};
 			};
@@ -681,8 +678,6 @@
 				63C54E331C7C2F96007CE8CA /* OrderManagerCell.xib in Resources */,
 				F09A5F901A55BEDD008D4963 /* HomeHeaderView.xib in Resources */,
 				F094B59E1C8000E500A2312D /* HomeCollectionCell.xib in Resources */,
-				F06DDBB21C7DAFE300C862A1 /* title-back.png in Resources */,
-				F019C9DC1C7C061100E73A2C /* ceshi.png in Resources */,
 				63C2FB951C7FEC9500D48B8C /* OrderInfoTableViewCell.xib in Resources */,
 				F0292BBD1C7B00CD00A810A9 /* LaunchScreen.storyboard in Resources */,
 				F0292BBA1C7B00CD00A810A9 /* Assets.xcassets in Resources */,
@@ -693,7 +688,6 @@
 				637533BC1C84321500A12932 /* OfferTableViewCell.xib in Resources */,
 				6383656B1C7DB8BA001A10C4 /* HZQDatePickerView.xib in Resources */,
 				F0292BB81C7B00CD00A810A9 /* Main.storyboard in Resources */,
-				63C54E351C7C312F007CE8CA /* line_solid.png in Resources */,
 				637533B01C83F64100A12932 /* details-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -792,6 +786,7 @@
 				F0292BE11C7B015200A810A9 /* BaseTabBarViewController.m in Sources */,
 				63ADFBEB1C7F0622000D3164 /* PellTableViewSelect.m in Sources */,
 				F06DDBAA1C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m in Sources */,
+				F09A5F931A55F0AA008D4963 /* InviteFriendViewController.m in Sources */,
 				63C54E3E1C7C35AA007CE8CA /* ResultViewController.m in Sources */,
 				F07FF9DF1C81752D00EB1BB1 /* MyTeamTableViewCell.m in Sources */,
 				F059AA791A55822E0008D7BD /* VerifyCodeViewController.m in Sources */,
@@ -848,7 +843,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -867,7 +863,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -891,7 +887,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -904,7 +901,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -916,12 +913,15 @@
 			baseConfigurationReference = 8080CD2CAEE01D9CB60C40F6 /* Pods-CloudService.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = CloudService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JinYeFeiLin.CloudService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -930,12 +930,15 @@
 			baseConfigurationReference = AA863A4D44EB33149F738225 /* Pods-CloudService.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = CloudService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JinYeFeiLin.CloudService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
