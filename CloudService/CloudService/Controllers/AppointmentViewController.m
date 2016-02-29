@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     __weak typeof(self) weakSelf = self;
-    [weakSelf setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 20, 20) image:@"title-back" selectImage:@"back" action:^(AYCButton *button) {
+    [weakSelf setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 35, 35) image:@"title-back" selectImage:@"back" action:^(AYCButton *button) {
         [weakSelf.navigationController popViewControllerAnimated:YES];
     }];
     [self.bgView addSubview:self.textView];

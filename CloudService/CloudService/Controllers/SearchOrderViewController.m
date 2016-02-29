@@ -27,11 +27,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     __weak typeof(self) weakSelf = self;
-    [weakSelf setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 20, 20) image:@"title-back" selectImage:@"back" action:^(AYCButton *button) {
+    [weakSelf setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 35, 35) image:@"title-back" selectImage:@"back" action:^(AYCButton *button) {
         [weakSelf.navigationController popViewControllerAnimated:YES];
     }];
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchOrder:)];
-    self.navigationItem.rightBarButtonItem = item;
+   
     _blackBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _blackBtn.backgroundColor = [UIColor blackColor];
     _blackBtn.frame = self.view.frame;
@@ -44,16 +43,18 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.title=@"订单搜索";
+
+    [self.tabBarController setRightImageBarButtonItemWithFrame:CGRectMake(0, 0, 30, 30) image:@"title-search" selectImage:@"title-search_" action:^(AYCButton *button) {
+        if (isOpen) {
+            [self upMenu];
+        }else {
+            [self downMenu];
+        }
+        
+    }];
     [self downMenu];
 }
-- (void)searchOrder:(UIButton *)sender{
-    if (isOpen) {
-        [self upMenu];
-    }else {
-        [self downMenu];
-    }
-    
-}
+
 
 /** 搜索菜单*/
 - (void)initSearchMenu {

@@ -81,6 +81,7 @@ static NSString *cell_id = @"personalCell";
     [super viewWillAppear:animated];
     self.tabBarController.title = @"个人中心";
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    self.tabBarController.navigationItem.rightBarButtonItem = nil;
 }
 
 -(void)viewDidAppear:(BOOL)animated {

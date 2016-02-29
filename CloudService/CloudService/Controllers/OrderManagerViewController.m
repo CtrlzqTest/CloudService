@@ -25,13 +25,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.tabBarController.title = @"订单管理";
     [self.navigationController setNavigationBarHidden:NO animated:NO];
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchOrder:)];
-    self.tabBarController.navigationItem.rightBarButtonItem = item;
+    
+    __weak typeof(self) weakSelf = self;
+    [self.tabBarController setRightImageBarButtonItemWithFrame:CGRectMake(0, 0, 30, 30) image:@"title-search" selectImage:@"title-search_" action:^(AYCButton *button) {
+        [weakSelf performSegueWithIdentifier:@"searchOrder" sender:weakSelf];
+    }];
 }
 
-- (void)searchOrder:(UIButton *)sender{
-    [self performSegueWithIdentifier:@"searchOrder" sender:self];
-}
+
 #pragma mark pageView
 - (void)initPageView {
     _pageView.delegate=self;
@@ -63,21 +64,21 @@
     tableView.tag = 100;
     tableView.delegate = self;
     tableView.dataSource = self;
-    [_pageView addTab:@"未支付订单" View:tableView Info:nil];
+    [_pageView addTab:@"未完成" View:tableView Info:nil];
     tableView = [[UITableView alloc] init];
     tableView.tag = 101;
     tableView.delegate = self;
     tableView.dataSource = self;
-    [_pageView addTab:@"待支付订单" View:tableView Info:nil];
+    [_pageView addTab:@"待支付" View:tableView Info:nil];
     
     tableView = [[UITableView alloc] init];
     tableView.tag = 102;
     tableView.delegate = self;
     tableView.dataSource = self;
-    [_pageView addTab:@"已支付订单" View:tableView Info:nil];
+    [_pageView addTab:@"已支付" View:tableView Info:nil];
    
-    [_pageView enableTabBottomLine:YES LineHeight:2 LineColor:[HelperUtil colorWithHexString:@"277FD9"] LineBottomGap:0 ExtraWidth:15];
-    [_pageView enableBreakLine:YES Width:2 TopMargin:0 BottomMargin:0 Color:[UIColor lightGrayColor]];
+    [_pageView enableTabBottomLine:YES LineHeight:2 LineColor:[HelperUtil colorWithHexString:@"277FD9"] LineBottomGap:0 ExtraWidth:60];
+//    [_pageView enableBreakLine:YES Width:2 TopMargin:0 BottomMargin:0 Color:[UIColor lightGrayColor]];
     [_pageView setTitleStyle:[UIFont systemFontOfSize:14] SelFont:[UIFont systemFontOfSize:16] Color:[UIColor blackColor] SelColor:[HelperUtil colorWithHexString:@"277FD9"]];
     [_pageView generate:^(UIButton *firstTitleControl, UIView *viewTitleEffect) {
         CGRect frame= firstTitleControl.frame;
@@ -119,7 +120,7 @@
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 140;
+    return 155;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
