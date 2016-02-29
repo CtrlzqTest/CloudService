@@ -20,7 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITextField *textFiled;
-@property (weak, nonatomic) IBOutlet UIButton *imageBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *imageBtn;
 @property(nonatomic,assign) id<SetUserInfoCellDelegate> delegate;
 
 - (void)isPullDown:(BOOL )pullDown;
