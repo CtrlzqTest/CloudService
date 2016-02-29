@@ -33,13 +33,13 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     _isTosetUserInfo = NO;
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     if (!_isTosetUserInfo) {
-        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        [self.navigationController setNavigationBarHidden:YES animated:animated];
     }
     
 }
@@ -63,7 +63,11 @@
         SetUserInfoViewController *setUserInfoVC = [storyBoard instantiateViewControllerWithIdentifier:@"setUserInfo"];
         _isTosetUserInfo = YES;
         [weakSelf.navigationController pushViewController:setUserInfoVC animated:YES];
+    }];    
+    [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 25, 25) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
+        [weakSelf.navigationController popViewControllerAnimated:YES];
     }];
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain    ];
     self.tableView.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
     self.tableView.tableFooterView = [[UIView alloc] init];
@@ -133,8 +137,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
-        
+    if (indexPath.section == 1) {
+        [self performSegueWithIdentifier:@"verifyCode_push" sender:self];
+        _isTosetUserInfo = YES;
     }
 }
 

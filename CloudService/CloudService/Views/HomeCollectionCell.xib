@@ -15,14 +15,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="112" height="154"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kzw-Xw-rJM">
-                        <rect key="frame" x="40" y="15" width="32" height="32"/>
-                        <color key="backgroundColor" red="0.1529411765" green="0.49803921569999998" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="41" y="15" width="30" height="30"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="30" id="Jz8-fR-JyV"/>
                             <constraint firstAttribute="width" secondItem="kzw-Xw-rJM" secondAttribute="height" id="ibh-a3-koH"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="获取数据" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vd-ef-HaC">
-                        <rect key="frame" x="0.0" y="62" width="112" height="25"/>
+                        <rect key="frame" x="0.0" y="53" width="112" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="sWg-J8-OF2"/>
                         </constraints>
@@ -30,7 +30,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="获取用户数据" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvU-Zc-hee">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="获取用户数据" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvU-Zc-hee">
                         <rect key="frame" x="0.0" y="87" width="112" height="25"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.5883443813" green="0.5883443813" blue="0.5883443813" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,13 +49,16 @@
                 <constraint firstItem="FvU-Zc-hee" firstAttribute="height" secondItem="6Vd-ef-HaC" secondAttribute="height" id="Qcm-3m-syU"/>
                 <constraint firstItem="FvU-Zc-hee" firstAttribute="trailing" secondItem="6Vd-ef-HaC" secondAttribute="trailing" id="gZp-jV-oNW"/>
                 <constraint firstAttribute="trailing" secondItem="6Vd-ef-HaC" secondAttribute="trailing" id="gsg-oR-5s9"/>
+                <constraint firstItem="kzw-Xw-rJM" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="kEf-aA-wuG"/>
                 <constraint firstItem="FvU-Zc-hee" firstAttribute="leading" secondItem="6Vd-ef-HaC" secondAttribute="leading" id="oee-wR-lRH"/>
                 <constraint firstItem="FvU-Zc-hee" firstAttribute="top" secondItem="6Vd-ef-HaC" secondAttribute="bottom" id="uUH-i0-GeJ"/>
-                <constraint firstItem="6Vd-ef-HaC" firstAttribute="top" secondItem="kzw-Xw-rJM" secondAttribute="bottom" constant="15" id="w35-My-eep"/>
+                <constraint firstItem="6Vd-ef-HaC" firstAttribute="top" secondItem="kzw-Xw-rJM" secondAttribute="bottom" constant="8" id="w35-My-eep"/>
             </constraints>
             <size key="customSize" width="112" height="154"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="GPi-Z2-eH8"/>
+                    <exclude reference="I3f-50-YU4"/>
                     <exclude reference="9We-nt-4lV"/>
                     <exclude reference="QLG-Vx-i9s"/>
                 </mask>

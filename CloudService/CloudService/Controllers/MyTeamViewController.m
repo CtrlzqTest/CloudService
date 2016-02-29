@@ -27,6 +27,11 @@ static NSString *cell_id = @"myTeamCell";
 - (void)setupViews {
     
     self.title = @"我的团队";
+    __weak typeof(self) weakSelf = self;
+    [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 25, 25) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    }];
+    
     // 注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"MyTeamTableViewCell" bundle:nil] forCellReuseIdentifier:cell_id];
     self.tableView.tableFooterView = [[UIView alloc] init];
