@@ -19,8 +19,14 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KRi-FU-Q1E">
                         <rect key="frame" x="13" y="8" width="51.5" height="51.5"/>
                         <constraints>
+                            <constraint firstAttribute="width" secondItem="KRi-FU-Q1E" secondAttribute="height" multiplier="1:1" id="CYB-vj-qW5"/>
                             <constraint firstAttribute="width" secondItem="KRi-FU-Q1E" secondAttribute="height" id="uBG-L7-CP0"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="uBG-L7-CP0"/>
+                            </mask>
+                        </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="我的团队" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wko-MS-SYK">
                         <rect key="frame" x="62" y="23" width="196" height="21"/>
