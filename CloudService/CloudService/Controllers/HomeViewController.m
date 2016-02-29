@@ -81,15 +81,9 @@ static NSString *headerView_ID = @"headerView";
     self.tabBarController.navigationItem.rightBarButtonItem = nil;
 }
 
--(void)viewWillDisappear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
-}
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return _dataKeyArray.count;
 }
-
-
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     
