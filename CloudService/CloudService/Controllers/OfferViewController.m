@@ -25,6 +25,10 @@ static CGFloat headerHeight = 30;
     // Do any additional setup after loading the view.
 }
 
+- (void)initFootView {
+    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KWidth, 50)];
+}
+
 #pragma mark tabelView
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
@@ -61,7 +65,12 @@ static CGFloat headerHeight = 30;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 0.1;
+    if (section == 0) {
+        return 0.1;
+    }else{
+        return 50;
+    }
+    
 }
 
 - (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
