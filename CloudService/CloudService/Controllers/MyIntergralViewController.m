@@ -26,10 +26,18 @@
     
     self.title = @"我的积分";
     __weak typeof(self) weakSelf = self;
-    [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 25, 25) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
+    [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 35, 35) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
         [weakSelf.navigationController popViewControllerAnimated:YES];
     }];
     self.backView.layer.cornerRadius = KWidth * 3 / 7 / 2.0;
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    __weak typeof(self) weakSelf = self;
+    [weakSelf setRightTextBarButtonItemWithFrame:CGRectMake(0, 0, 80, 30) title:@"积分明细" titleColor:[UIColor whiteColor] backImage:@"" selectBackImage:@"" action:^(AYCButton *button) {
+        [weakSelf performSegueWithIdentifier:@"integral" sender:weakSelf];
+    }];
 }
 
 
