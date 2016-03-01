@@ -14,6 +14,6 @@ typedef void(^ClickBtnBlock)(NSInteger btnIndex);
 
 @property (weak, nonatomic) IBOutlet UITextField *phoneNum;
 @property (weak, nonatomic) IBOutlet UIButton *sendBtn;
-@property (nonatomic,assign)ClickBtnBlock myBlock;
 - (void)showViewWithCallBack:(ClickBtnBlock )callBack;
+
 @end

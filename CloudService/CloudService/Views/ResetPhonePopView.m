@@ -8,35 +8,28 @@
 
 #import "ResetPhonePopView.h"
 
-@implementation ResetPhonePopView
-
--(instancetype)initWithFrame:(CGRect)frame {
-//    self = [super initWithFrame:frame];
-    self = [[[NSBundle mainBundle] loadNibNamed:@"ResetPhonePopView" owner:self options:nil] firstObject];
-    self.frame = [UIScreen mainScreen].bounds;
-    if (self) {
-        self.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.430];
-    }
-    return self;
+@implementation ResetPhonePopView{
+    ClickBtnBlock _myBlock;
 }
 
 - (IBAction)cancleAction:(id)sender {
-    self.myBlock(0);
+    _myBlock(0);
     [self removeFromSuperview];
 }
 
 - (IBAction)ensureAction:(id)sender {
-    self.myBlock(1);
+    _myBlock(1);
     [self removeFromSuperview];
 }
 
 - (IBAction)sendAction:(id)sender {
-    self.myBlock(2);
+    _myBlock(2);
 }
 
 - (void)showViewWithCallBack:(ClickBtnBlock )callBack {
     
-    self.myBlock = callBack;
+    self.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.430];
+    _myBlock = callBack;
     UIWindow *window = [[UIApplication sharedApplication] keyWindow];
     [window addSubview:self];
 }

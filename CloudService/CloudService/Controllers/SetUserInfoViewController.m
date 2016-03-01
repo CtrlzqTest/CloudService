@@ -57,6 +57,11 @@ static NSString *const select_CellID = @"selectCell";
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 // 设置tableView样式
 - (void)setupTableView {
     

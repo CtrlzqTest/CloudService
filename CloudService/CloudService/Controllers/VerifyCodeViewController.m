@@ -18,7 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.pwdTextWord.rightView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login-line"]];
+    self.pwdTextWord.rightViewMode = UITextFieldViewModeAlways;
+    
     self.title = @"验证原始密码";
+    __weak typeof(self) weakSelf = self;
+    [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 25, 25) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    }];
 }
 
 -(void)viewWillAppear:(BOOL)animated {

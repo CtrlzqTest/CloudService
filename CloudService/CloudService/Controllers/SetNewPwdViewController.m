@@ -20,6 +20,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"设置新密码";
+    self.pwdTextFiled.rightView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login-line"]];
+    self.pwdTextFiled.rightViewMode = UITextFieldViewModeAlways;
+    
+    self.enSurePwdTextFiled.rightView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login-line"]];
+    self.enSurePwdTextFiled.rightViewMode = UITextFieldViewModeAlways;
+    
+    __weak typeof(self) weakSelf = self;
+    [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 25, 25) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    }];
+    
 }
 
 - (IBAction)resetPwdAction:(id)sender {
