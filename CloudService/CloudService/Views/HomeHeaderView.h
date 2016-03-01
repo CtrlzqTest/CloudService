@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^ClickBlock)(NSInteger index);
+
 @interface HomeHeaderView : UICollectionReusableView
 
 @property (weak, nonatomic) IBOutlet UIView *pageScrBackView;
@@ -15,5 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *sginBtn;
 @property (weak, nonatomic) IBOutlet UILabel *integralLabel;
+
+- (void)playWithImageArray:(NSArray *)imgStrArray clickAtIndex:(ClickBlock )tapIndex;
 
 @end

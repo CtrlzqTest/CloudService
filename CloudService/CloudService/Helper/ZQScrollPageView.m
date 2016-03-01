@@ -44,13 +44,15 @@
     
     if (!_pageControl) {
         _pageControl = [[UIPageControl alloc] initWithFrame:
-                        CGRectMake(0, _height * 0.8, _width * 0.2, _height * 0.1)];
-        _pageControl.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
+                        CGRectMake(0, _height * 0.8 + 20, _width * 0.2, _height * 0.1)];
+        _pageControl.backgroundColor = [UIColor clearColor];
         _pageControl.center = CGPointMake(self.center.x, _pageControl.center.y);
         _pageControl.currentPageIndicatorTintColor = [UIColor greenColor];
+        _pageControl.pageIndicatorTintColor = [UIColor grayColor];
         _pageControl.hidesForSinglePage = NO;
         _pageControl.enabled = NO;
         [self addSubview:_pageControl];
+        [self bringSubviewToFront:_pageControl];
     }
     return _pageControl;
 }
@@ -89,7 +91,6 @@
     if (scrollView.contentOffset.x > _width * 2) {
         [self setScollViewMid];
     }
-    
 }
 
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
@@ -119,6 +120,8 @@
                 [self.lastImgView sd_setImageWithURL:[NSURL URLWithString:_imageArray[_currenIndex + 1]] placeholderImage:nil];
                 break;
             case ImageTypeBundle:
+                self.frontImgView.image = [UIImage imageNamed:[_imageArray lastObject]];
+                self.lastImgView.image = [UIImage imageNamed:_imageArray[_currenIndex + 1]];
                 break;
             default:
                 break;
@@ -133,6 +136,8 @@
                 [self.lastImgView sd_setImageWithURL:[NSURL URLWithString:[_imageArray firstObject]] placeholderImage:nil];
                 break;
             case ImageTypeBundle:
+                self.frontImgView.image = [UIImage imageNamed:_imageArray[_currenIndex - 1]];
+                self.lastImgView.image = [UIImage imageNamed:[_imageArray firstObject]];
                 break;
             default:
                 break;
@@ -147,6 +152,8 @@
                 [self.lastImgView sd_setImageWithURL:[NSURL URLWithString:_imageArray[_currenIndex + 1]] placeholderImage:nil];
                 break;
             case ImageTypeBundle:
+                self.frontImgView.image = [UIImage imageNamed:_imageArray[_currenIndex - 1]];
+                self.lastImgView.image = [UIImage imageNamed:_imageArray[_currenIndex + 1]];
                 break;
             default:
                 break;
@@ -159,6 +166,7 @@
             [self.midImgView sd_setImageWithURL:[NSURL URLWithString:_imageArray[_currenIndex]] placeholderImage:nil];
             break;
         case ImageTypeBundle:
+            self.midImgView.image = [UIImage imageNamed:_imageArray[_currenIndex]];
             break;
         default:
             break;
@@ -166,6 +174,8 @@
 }
 
 - (void)setupScrollPageView {
+    
+    
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
     self.scrollView.pagingEnabled = YES;
@@ -193,6 +203,9 @@
         }
     }
     
+    UIImageView *bottomImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, _height - 40, _width, 40)];
+    bottomImg.image = [UIImage imageNamed:@"banner－bg"];
+    [self addSubview:bottomImg];
 }
 
 - (void)setScollViewMid {
@@ -204,7 +217,7 @@
     }else{
         return;
     }
-    _currenIndex = (_currenIndex + 5) % 5;
+    _currenIndex = (_currenIndex + _imageArray.count) % _imageArray.count;
     self.pageControl.currentPage = _currenIndex;
     self.scrollView.contentOffset = CGPointMake(_width, 0);
     [self setImages];
@@ -212,7 +225,9 @@
 }
 
 - (void)tapImageView:(UIGestureRecognizer *)gesture {
-    _clickBlock(_currenIndex);
+    if (_clickBlock) {
+        _clickBlock(_currenIndex);
+    }
 }
 
 /*

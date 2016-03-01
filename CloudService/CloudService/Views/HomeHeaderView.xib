@@ -24,7 +24,7 @@
                     <rect key="frame" x="0.0" y="137" width="320" height="63"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张三" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjf-id-eE3">
-                            <rect key="frame" x="88" y="8" width="80" height="21"/>
+                            <rect key="frame" x="88" y="10" width="80" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="KrK-dE-NKz"/>
                                 <constraint firstAttribute="height" constant="21" id="T38-8t-d6T"/>
@@ -41,17 +41,17 @@
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎你！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waJ-bX-2QI">
-                            <rect key="frame" x="168" y="8" width="80" height="21"/>
+                            <rect key="frame" x="168" y="10" width="80" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="5Qi-iV-GDS"/>
                                 <constraint firstAttribute="height" constant="21" id="fB4-Lh-3N5"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" red="0.5883443813" green="0.5883443813" blue="0.5883443813" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.2239188762626263" green="0.2239188762626263" blue="0.2239188762626263" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的积分：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DF-dH-dHA">
-                            <rect key="frame" x="88" y="37" width="70" height="21"/>
+                            <rect key="frame" x="88" y="39" width="70" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="70" id="3Jk-f8-bYx"/>
                                 <constraint firstAttribute="width" constant="80" id="7J4-CU-iaM"/>
@@ -60,7 +60,7 @@
                                 <constraint firstAttribute="width" constant="80" id="gzW-gc-gYu"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.50639204545454541" green="0.50639204545454541" blue="0.50639204545454541" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
                                 <mask key="constraints">
@@ -71,7 +71,7 @@
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKQ-wc-bsR">
-                            <rect key="frame" x="158" y="37" width="90" height="21"/>
+                            <rect key="frame" x="158" y="39" width="90" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="42" id="X9g-86-SaQ"/>
                             </constraints>
@@ -119,7 +119,7 @@
                         <constraint firstItem="0DF-dH-dHA" firstAttribute="leading" secondItem="Tjf-id-eE3" secondAttribute="leading" id="X8F-4H-yi3"/>
                         <constraint firstItem="rBZ-u0-D07" firstAttribute="leading" secondItem="2cp-iw-sPn" secondAttribute="leading" constant="30" id="XdI-cG-vZu"/>
                         <constraint firstItem="AKQ-wc-bsR" firstAttribute="height" secondItem="0DF-dH-dHA" secondAttribute="height" id="coy-cM-Ob5"/>
-                        <constraint firstItem="Tjf-id-eE3" firstAttribute="top" secondItem="2cp-iw-sPn" secondAttribute="top" constant="8" id="eQo-bg-rae"/>
+                        <constraint firstItem="Tjf-id-eE3" firstAttribute="top" secondItem="2cp-iw-sPn" secondAttribute="top" constant="10" id="eQo-bg-rae"/>
                         <constraint firstAttribute="bottom" secondItem="rBZ-u0-D07" secondAttribute="bottom" constant="10" id="fIc-DW-WZY"/>
                         <constraint firstItem="rBZ-u0-D07" firstAttribute="top" secondItem="2cp-iw-sPn" secondAttribute="top" constant="10" id="pm0-TY-QID"/>
                         <constraint firstItem="waJ-bX-2QI" firstAttribute="height" secondItem="Tjf-id-eE3" secondAttribute="height" id="z4l-WB-Xoo"/>

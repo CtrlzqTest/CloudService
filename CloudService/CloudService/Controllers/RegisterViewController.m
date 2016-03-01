@@ -25,10 +25,15 @@
 
 - (void)setupViews {
     
+    __weak typeof(self) weakSelf = self;
+    [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 25, 25) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    }];
+    
     self.getCodeBtn.layer.cornerRadius = 5;
     self.getCodeBtn.layer.borderWidth = 0.2;
     self.getCodeBtn.layer.borderColor = [UIColor redColor].CGColor;
-    
+    self.getCodeBtn.highlighted = NO;
     self.registerBtn.layer.cornerRadius = 2;
     
 }
@@ -75,16 +80,13 @@
                 //界面的设置
                 [weakSelf.getCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
                 weakSelf.getCodeBtn.enabled = YES;
-//                weakSelf.getCodeBtn.backgroundColor = [UIColor colorWithRed:255/255.0 green:88/255.0 blue:34/255.0 alpha:1];
-
-//                [MessageTool showMessage:@"验证码过期" isError:YES];
             });
         }else{
             dispatch_async(dispatch_get_main_queue(), ^{
                 //界面的设置
                 NSString *numStr=[NSString stringWithFormat:@"剩余%d秒",timeout];
-                //                _button_sendAgain.titleLabel.text = numStr;
-                [weakSelf.getCodeBtn setTitle:numStr forState:UIControlStateDisabled];
+//                [weakSelf.getCodeBtn setTitleColor:[UIColor colorWithWhite:0.573 alpha:1.000] forState:UIControlStateNormal];
+                [weakSelf.getCodeBtn setTitle:numStr forState:UIControlStateNormal];
             });
             timeout--;
         }

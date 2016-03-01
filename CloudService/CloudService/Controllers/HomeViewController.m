@@ -15,6 +15,7 @@
     NSMutableDictionary *_dataDict;
     NSArray *_dataKeyArray;
     NSArray *_imageArray;
+    NSArray *_scrollImgArray;
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -45,6 +46,8 @@ static NSString *headerView_ID = @"headerView";
     [_dataDict setValue:@"商城自选内容" forKey:_dataKeyArray[3]];
     [_dataDict setValue:@"业绩查询" forKey:_dataKeyArray[4]];
     [_dataDict setValue:@"积分明细查询" forKey:_dataKeyArray[5]];
+    
+    _scrollImgArray = @[@"head-bg.png",@"head-bg.png",@"head-bg.png"];
 
 }
 - (IBAction)my:(id)sender {
@@ -89,6 +92,10 @@ static NSString *headerView_ID = @"headerView";
     
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         HomeHeaderView *headerView = (HomeHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerView_ID forIndexPath:indexPath];
+        // 轮播图开始轮播
+        [headerView playWithImageArray:_scrollImgArray clickAtIndex:^(NSInteger index) {
+            NSLog(@"%ld",index);
+        }];
         return headerView;
     }else {
         return [[UICollectionReusableView alloc] init];
