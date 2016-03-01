@@ -67,6 +67,8 @@
 		F0292BE21C7B015200A810A9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BD01C7B015200A810A9 /* BaseViewController.m */; };
 		F0292BE31C7B015200A810A9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BD61C7B015200A810A9 /* User.m */; };
 		F0292BE41C7B015200A810A9 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BDB1C7B015200A810A9 /* Utility.m */; };
+		F05731FF1C8541E600D88B78 /* MyIntergralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F05731FE1C8541E600D88B78 /* MyIntergralViewController.m */; };
+		F05732021C85651A00D88B78 /* IntergralChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F05732011C85651A00D88B78 /* IntergralChangeViewController.m */; };
 		F059AA791A55822E0008D7BD /* VerifyCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F059AA781A55822E0008D7BD /* VerifyCodeViewController.m */; };
 		F059AA7C1A55903B0008D7BD /* SetNewPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F059AA7B1A55903B0008D7BD /* SetNewPwdViewController.m */; };
 		F06DDBA21C7DAAE900C862A1 /* CreatOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDB9D1C7DAAE900C862A1 /* CreatOrderViewController.m */; };
@@ -204,6 +206,10 @@
 		F0292BD71C7B015200A810A9 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F0292BDA1C7B015200A810A9 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		F0292BDB1C7B015200A810A9 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		F05731FD1C8541E600D88B78 /* MyIntergralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIntergralViewController.h; sourceTree = "<group>"; };
+		F05731FE1C8541E600D88B78 /* MyIntergralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyIntergralViewController.m; sourceTree = "<group>"; };
+		F05732001C85651A00D88B78 /* IntergralChangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntergralChangeViewController.h; sourceTree = "<group>"; };
+		F05732011C85651A00D88B78 /* IntergralChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntergralChangeViewController.m; sourceTree = "<group>"; };
 		F059AA771A55822E0008D7BD /* VerifyCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyCodeViewController.h; sourceTree = "<group>"; };
 		F059AA781A55822E0008D7BD /* VerifyCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyCodeViewController.m; sourceTree = "<group>"; };
 		F059AA7A1A55903B0008D7BD /* SetNewPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNewPwdViewController.h; sourceTree = "<group>"; };
@@ -803,6 +809,7 @@
 				F0292BE41C7B015200A810A9 /* Utility.m in Sources */,
 				630EF1931C8567400059CB34 /* IntegralViewController.m in Sources */,
 				F0292BE31C7B015200A810A9 /* User.m in Sources */,
+				F05731FF1C8541E600D88B78 /* MyIntergralViewController.m in Sources */,
 				F0292BE01C7B015200A810A9 /* BaseNaviViewController.m in Sources */,
 				63C54E321C7C2F96007CE8CA /* OrderManagerCell.m in Sources */,
 				F07FF9D61C81469400EB1BB1 /* ResetPhonePopView.m in Sources */,
@@ -843,7 +850,7 @@
 				F09A5F931A55F0AA008D4963 /* InviteFriendViewController.m in Sources */,
 				63C54E3E1C7C35AA007CE8CA /* ResultViewController.m in Sources */,
 				F07FF9DF1C81752D00EB1BB1 /* MyTeamTableViewCell.m in Sources */,
-				630EF18A1C8530940059CB34 /* MyClientTableViewCell.m in Sources */,
+				F05732021C85651A00D88B78 /* IntergralChangeViewController.m in Sources */,
 				F059AA791A55822E0008D7BD /* VerifyCodeViewController.m in Sources */,
 				6383656C1C7DB8BA001A10C4 /* UIColor+HexString.m in Sources */,
 				635C2AC91C8527D10051708D /* CreatClientViewController.m in Sources */,
