@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "HomeCollectionCell.h"
 #import "HomeHeaderView.h"
+#import "IntergralCityViewController.h"
 
 @interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 {
@@ -127,7 +128,10 @@ static NSString *headerView_ID = @"headerView";
             [self performSegueWithIdentifier:@"creatOrder" sender:self];
             break;
         case 3:
-            
+        {
+            IntergralCityViewController *intergCityVC = [[IntergralCityViewController alloc] init];
+            [self.navigationController pushViewController:intergCityVC animated:YES];
+        }
             break;
         case 4:
             

@@ -15,7 +15,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    _scrollPageView = [[ZQScrollPageView alloc] initWithFrame:CGRectMake(0, 0, KWidth, KWidth * 3 / 7.0)];
+    _scrollPageView = [[ZQScrollPageView alloc] initWithFrame:CGRectMake(0, 0, KWidth, 240 * KHeight / 667.0 - 75)];
     [self.pageScrBackView addSubview:_scrollPageView];
 }
 
