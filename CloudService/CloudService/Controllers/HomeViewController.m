@@ -105,6 +105,31 @@ static NSString *headerView_ID = @"headerView";
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case 0:
+            
+            break;
+        case 1:
+            [self performSegueWithIdentifier:@"myClient" sender:self];
+            break;
+        case 2:
+            [self performSegueWithIdentifier:@"creatOrder" sender:self];
+            break;
+        case 3:
+            
+            break;
+        case 4:
+            
+            break;
+        case 5:
+            
+            break;
+            
+        default:
+            break;
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

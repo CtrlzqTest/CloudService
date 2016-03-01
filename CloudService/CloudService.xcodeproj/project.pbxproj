@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		635C2AC91C8527D10051708D /* CreatClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635C2AC81C8527D10051708D /* CreatClientViewController.m */; };
 		637533B01C83F64100A12932 /* details-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 637533AF1C83F64100A12932 /* details-icon.png */; };
 		637533B31C8411C800A12932 /* MyClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637533B21C8411C800A12932 /* MyClientViewController.m */; };
 		637533B61C842E2000A12932 /* OfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637533B51C842E2000A12932 /* OfferViewController.m */; };
@@ -82,6 +83,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		635C2AC71C8527D10051708D /* CreatClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatClientViewController.h; sourceTree = "<group>"; };
+		635C2AC81C8527D10051708D /* CreatClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatClientViewController.m; sourceTree = "<group>"; };
 		637533AF1C83F64100A12932 /* details-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "details-icon.png"; sourceTree = "<group>"; };
 		637533B11C8411C800A12932 /* MyClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClientViewController.h; sourceTree = "<group>"; };
 		637533B21C8411C800A12932 /* MyClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClientViewController.m; sourceTree = "<group>"; };
@@ -350,6 +353,8 @@
 				637533B21C8411C800A12932 /* MyClientViewController.m */,
 				637533B41C842E2000A12932 /* OfferViewController.h */,
 				637533B51C842E2000A12932 /* OfferViewController.m */,
+				635C2AC71C8527D10051708D /* CreatClientViewController.h */,
+				635C2AC81C8527D10051708D /* CreatClientViewController.m */,
 			);
 			name = "HomeController(首页)";
 			sourceTree = "<group>";
@@ -796,6 +801,7 @@
 				F07FF9DF1C81752D00EB1BB1 /* MyTeamTableViewCell.m in Sources */,
 				F059AA791A55822E0008D7BD /* VerifyCodeViewController.m in Sources */,
 				6383656C1C7DB8BA001A10C4 /* UIColor+HexString.m in Sources */,
+				635C2AC91C8527D10051708D /* CreatClientViewController.m in Sources */,
 				63C07B9E1C7B14BB0084581F /* MHUploadParam.m in Sources */,
 				63C07BA91C7B15C10084581F /* NSDictionary+AYCUnicode.m in Sources */,
 				F019C9D61C7BFD7900E73A2C /* LoginViewController.m in Sources */,
