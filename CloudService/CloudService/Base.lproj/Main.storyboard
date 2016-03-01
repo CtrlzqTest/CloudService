@@ -1208,7 +1208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5iS-I2-iuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1932.5" y="-517.5"/>
+            <point key="canvasLocation" x="1920.5" y="-352.5"/>
         </scene>
         <!--我的客户-->
         <scene sceneID="cw4-cx-GMB">
@@ -1229,6 +1229,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8V5-JM-VpR">
                                 <rect key="frame" x="0.0" y="44" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pp4-nm-jZd" id="feG-uJ-pfN"/>
+                                    <outlet property="delegate" destination="Pp4-nm-jZd" id="njk-nb-aGX"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1236,6 +1240,7 @@
                     <navigationItem key="navigationItem" id="tUt-Qw-OdF"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="tabelView" destination="8V5-JM-VpR" id="ipi-G4-42d"/>
                         <segue destination="azA-T9-zXt" kind="push" identifier="creatClient" id="ZgM-Ik-4vH"/>
                     </connections>
                 </viewController>
@@ -1374,13 +1379,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="share-pix" translatesAutoresizingMaskIntoConstraints="NO" id="rNB-5N-iK2">
-                                <rect key="frame" x="0.0" y="20" width="375" height="187.5"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="188"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rNB-5N-iK2" secondAttribute="height" multiplier="2:1" id="iNh-te-PpI"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9z-G5-nNA">
-                                <rect key="frame" x="0.0" y="620" width="375" height="42.5"/>
+                                <rect key="frame" x="0.0" y="620" width="375" height="43"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.43036067318456256" blue="0.45177634339512518" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="分享">
@@ -1388,14 +1393,14 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bmO-QB-zPa">
-                                <rect key="frame" x="93" y="252" width="187.5" height="187.5"/>
+                                <rect key="frame" x="93" y="252" width="188" height="188"/>
                                 <color key="backgroundColor" red="1" green="0.26188047339999998" blue="0.28042493629999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bmO-QB-zPa" secondAttribute="height" id="dq7-v2-Q4k"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="无论你在哪里，只要你有空闲时间，就可以拿出手机赚钱，非常棒！" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yh-O9-n4r">
-                                <rect key="frame" x="93" y="448" width="187.5" height="50"/>
+                                <rect key="frame" x="93" y="448" width="188" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0z4-W7-1GS"/>
                                 </constraints>
@@ -1745,20 +1750,11 @@
                     <view key="view" contentMode="scaleToFill" id="umf-qm-gnh">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIh-Jw-xGi" customClass="LazyPageScrollView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="业绩查询" id="Up9-H6-Fb5"/>
                     <navigationItem key="navigationItem" title="业绩查询" id="i4f-qx-mWQ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="pageView" destination="gIh-Jw-xGi" id="p5W-Sx-cVI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8og-qv-kWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1889,7 +1885,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="save:" destination="T6I-5O-g6L" eventType="touchUpInside" id="4Ar-32-JEF"/>
-                                    <segue destination="RT6-86-P7R" kind="push" id="nMs-kY-evH"/>
+                                    <segue destination="RT6-86-P7R" kind="push" identifier="" id="nMs-kY-evH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1933,7 +1929,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMY-0K-Qh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2982.5" y="-1172.5"/>
+            <point key="canvasLocation" x="3008.5" y="-1225.5"/>
         </scene>
         <!--创建订单-->
         <scene sceneID="qkb-HP-VGb">

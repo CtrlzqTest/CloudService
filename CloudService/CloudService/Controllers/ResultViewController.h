@@ -7,8 +7,8 @@
 //
 
 #import "BaseViewController.h"
-#import <LazyPageScrollView.h>
+
 
 @interface ResultViewController : BaseViewController
-@property (strong, nonatomic) IBOutlet LazyPageScrollView *pageView;
+
 @end
