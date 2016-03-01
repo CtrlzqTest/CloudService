@@ -130,7 +130,7 @@ static NSString *headerView_ID = @"headerView";
             
             break;
         case 5:
-            
+            [self performSegueWithIdentifier:@"myIntergralVC_push" sender:self];
             break;
             
         default:
