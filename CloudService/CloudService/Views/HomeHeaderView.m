@@ -7,11 +7,21 @@
 //
 
 #import "HomeHeaderView.h"
+#import "ZQScrollPageView.h"
 
-@implementation HomeHeaderView
+@implementation HomeHeaderView {
+    ZQScrollPageView *_scrollPageView;
+}
 
 - (void)awakeFromNib {
     // Initialization code
+    _scrollPageView = [[ZQScrollPageView alloc] initWithFrame:CGRectMake(0, 0, KWidth, KWidth * 3 / 7.0)];
+    [self.pageScrBackView addSubview:_scrollPageView];
+}
+
+- (void)playWithImageArray:(NSArray *)imgStrArray clickAtIndex:(ClickBlock )tapIndex {
+    
+    [_scrollPageView playWithImageArray:imgStrArray TimeInterval:5 imageType:ImageTypeBundle clickImage:tapIndex];
 }
 
 @end
