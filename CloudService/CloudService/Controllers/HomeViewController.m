@@ -78,8 +78,11 @@ static NSString *headerView_ID = @"headerView";
     [super viewWillAppear:animated];
     [self setNavigationBarTitleColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.barTintColor = [HelperUtil
-                                                            colorWithHexString:@"277FD9"];
-    self.tabBarController.title = @"首页";
+                                                            colorWithHexString:@"1FAAF2"];
+    //隐藏导航栏黑线
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
+    self.tabBarController.title = @"云客服";
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     self.tabBarController.navigationItem.rightBarButtonItem = nil;
 }
