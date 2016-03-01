@@ -44,7 +44,7 @@
     
     if (!_pageControl) {
         _pageControl = [[UIPageControl alloc] initWithFrame:
-                        CGRectMake(0, _height * 0.8 + 20, _width * 0.2, _height * 0.1)];
+                        CGRectMake(0, _height * 0.9, _width * 0.2, _height * 0.1)];
         _pageControl.backgroundColor = [UIColor clearColor];
         _pageControl.center = CGPointMake(self.center.x, _pageControl.center.y);
         _pageControl.currentPageIndicatorTintColor = [UIColor greenColor];
