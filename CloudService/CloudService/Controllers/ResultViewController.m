@@ -8,16 +8,20 @@
 
 #import "ResultViewController.h"
 #import "ResultTableViewCell.h"
+#import "PersonResultCell.h"
+#import <LazyPageScrollView.h>
 
 @interface ResultViewController ()<LazyPageScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
-
+@property (strong, nonatomic) LazyPageScrollView *pageView;
+@property (strong, nonatomic) UITableView *tableView;
 @end
 
 @implementation ResultViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initPageView];
+//    [self initPageView];
+    [self initTableView];
     // Do any additional setup after loading the view.
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -25,36 +29,45 @@
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     self.tabBarController.navigationItem.rightBarButtonItem = nil;
 }
+- (void)initTableView {
+    [self.view addSubview:self.tableView];
+}
 
 #pragma mark pageView
 - (void)initPageView {
+    [self.view addSubview:self.pageView];
     _pageView.delegate=self;
     [_pageView initTab:YES Gap:38 TabHeight:38 VerticalDistance:0 BkColor:[UIColor whiteColor]];
     UITableView *tableView = [[UITableView alloc] init];
     tableView.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
+    tableView.showsHorizontalScrollIndicator = NO;
     tableView.tag = 100;
     tableView.delegate = self;
     tableView.dataSource = self;
     [_pageView addTab:@"当日业绩" View:tableView Info:nil];
     tableView = [[UITableView alloc] init];
+    tableView.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
+    tableView.showsHorizontalScrollIndicator = NO;
     tableView.tag = 101;
     tableView.delegate = self;
     tableView.dataSource = self;
     [_pageView addTab:@"本周业绩" View:tableView Info:nil];
     
     tableView = [[UITableView alloc] init];
+    tableView.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
+    tableView.showsHorizontalScrollIndicator = NO;
     tableView.tag = 102;
     tableView.delegate = self;
     tableView.dataSource = self;
     [_pageView addTab:@"本月业绩" View:tableView Info:nil];
     
-    [_pageView enableTabBottomLine:YES LineHeight:2 LineColor:[HelperUtil colorWithHexString:@"277FD9"] LineBottomGap:0 ExtraWidth:15];
-    [_pageView enableBreakLine:YES Width:2 TopMargin:0 BottomMargin:0 Color:[UIColor lightGrayColor]];
-    [_pageView setTitleStyle:[UIFont systemFontOfSize:14] SelFont:[UIFont systemFontOfSize:16] Color:[UIColor blackColor] SelColor:[HelperUtil colorWithHexString:@"277FD9"]];
-    [_pageView generate:^(UIButton *firstTitleControl, UIView *viewTitleEffect) {
-        
+    [_pageView enableTabBottomLine:YES LineHeight:2 LineColor:[HelperUtil colorWithHexString:@"277FD9"] LineBottomGap:0 ExtraWidth:50];
+    [_pageView setTitleStyle:[UIFont systemFontOfSize:14] SelFont:[UIFont systemFontOfSize:16] Color:[UIColor blackColor] SelColor:[HelperUtil colorWithHexString:@"277FD9"]];    [_pageView generate:^(UIButton *firstTitleControl, UIView *viewTitleEffect) {
+        CGRect frame= firstTitleControl.frame;
+        frame.size.height-=5;
+        frame.size.width-=6;
+        viewTitleEffect.frame=frame;
+        viewTitleEffect.center=firstTitleControl.center;
     }];
 }
 
@@ -75,23 +88,58 @@
 }
 #pragma mark tableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    
+    return 3;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *cellId=@"cell";
-    
-    ResultTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil) {
-        NSArray *array = [[NSBundle mainBundle] loadNibNamed:@"ResultTableViewCell" owner:self options:nil];
-        cell = [array objectAtIndex:1];
+    if (tableView.tag == 103) {
+        PersonResultCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+        if (cell == nil) {
+            NSArray *array = [[NSBundle mainBundle] loadNibNamed:@"PersonResultCell" owner:self options:nil];
+            cell = [array objectAtIndex:0];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }else{
+        ResultTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+        if (cell == nil) {
+            NSArray *array = [[NSBundle mainBundle] loadNibNamed:@"ResultTableViewCell" owner:self options:nil];
+            cell = [array objectAtIndex:0];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    return cell;
+    
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 89;
+    if (tableView.tag == 103) {
+        return 145;
+    }else {
+        return 81;
+    }
+    
 }
-
+//懒加载
+- (LazyPageScrollView *)pageView {
+    if (!_pageView) {
+        _pageView = [[LazyPageScrollView alloc] initWithFrame:CGRectMake(0, 0, KWidth, KHeight-64)];
+        
+    }
+    return _pageView;
+}
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, KWidth, KHeight-64)];
+        _tableView.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
+        _tableView.showsHorizontalScrollIndicator = NO;
+        _tableView.scrollEnabled = NO;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.tag = 103;
+    }
+    return _tableView;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

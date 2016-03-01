@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630EF18A1C8530940059CB34 /* MyClientTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EF1881C8530940059CB34 /* MyClientTableViewCell.m */; };
+		630EF18B1C8530940059CB34 /* MyClientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630EF1891C8530940059CB34 /* MyClientTableViewCell.xib */; };
+		630EF18F1C8543900059CB34 /* PersonResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EF18D1C8543900059CB34 /* PersonResultCell.m */; };
+		630EF1901C8543900059CB34 /* PersonResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630EF18E1C8543900059CB34 /* PersonResultCell.xib */; };
 		635C2AC91C8527D10051708D /* CreatClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635C2AC81C8527D10051708D /* CreatClientViewController.m */; };
 		637533B01C83F64100A12932 /* details-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 637533AF1C83F64100A12932 /* details-icon.png */; };
 		637533B31C8411C800A12932 /* MyClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637533B21C8411C800A12932 /* MyClientViewController.m */; };
@@ -81,6 +85,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630EF1871C8530940059CB34 /* MyClientTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClientTableViewCell.h; sourceTree = "<group>"; };
+		630EF1881C8530940059CB34 /* MyClientTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClientTableViewCell.m; sourceTree = "<group>"; };
+		630EF1891C8530940059CB34 /* MyClientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyClientTableViewCell.xib; sourceTree = "<group>"; };
+		630EF18C1C8543900059CB34 /* PersonResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonResultCell.h; sourceTree = "<group>"; };
+		630EF18D1C8543900059CB34 /* PersonResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonResultCell.m; sourceTree = "<group>"; };
+		630EF18E1C8543900059CB34 /* PersonResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonResultCell.xib; sourceTree = "<group>"; };
 		635C2AC71C8527D10051708D /* CreatClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatClientViewController.h; sourceTree = "<group>"; };
 		635C2AC81C8527D10051708D /* CreatClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatClientViewController.m; sourceTree = "<group>"; };
 		637533AF1C83F64100A12932 /* details-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "details-icon.png"; sourceTree = "<group>"; };
@@ -260,14 +270,17 @@
 			path = HZQDatePickerView;
 			sourceTree = "<group>";
 		};
-		63ADFBE21C7EAA88000D3164 /* ResultCell */ = {
+		63ADFBE21C7EAA88000D3164 /* ResultCell(业绩查询) */ = {
 			isa = PBXGroup;
 			children = (
 				63ADFBE31C7EAC52000D3164 /* ResultTableViewCell.h */,
 				63ADFBE41C7EAC52000D3164 /* ResultTableViewCell.m */,
 				63ADFBE51C7EAC52000D3164 /* ResultTableViewCell.xib */,
+				630EF18C1C8543900059CB34 /* PersonResultCell.h */,
+				630EF18D1C8543900059CB34 /* PersonResultCell.m */,
+				630EF18E1C8543900059CB34 /* PersonResultCell.xib */,
 			);
-			name = ResultCell;
+			name = "ResultCell(业绩查询)";
 			sourceTree = "<group>";
 		};
 		63ADFBE81C7F0622000D3164 /* lib1 */ = {
@@ -582,7 +595,7 @@
 				637533B71C8431F800A12932 /* OfferCell */,
 				F094B59F1C8021EB00A2312D /* PersonalViews(个人中心) */,
 				F094B58E1C7FE96500A2312D /* HomeViews(首页) */,
-				63ADFBE21C7EAA88000D3164 /* ResultCell */,
+				63ADFBE21C7EAA88000D3164 /* ResultCell(业绩查询) */,
 				F01A61651C7D45A6008CBBD5 /* SetUserInfoViews(填写用户信息) */,
 				63C54E2E1C7C2F2F007CE8CA /* OrderManagerCell（订单管理） */,
 			);
@@ -598,6 +611,9 @@
 				F09A5F8C1A55BEDD008D4963 /* HomeHeaderView.h */,
 				F09A5F8D1A55BEDD008D4963 /* HomeHeaderView.m */,
 				F09A5F8E1A55BEDD008D4963 /* HomeHeaderView.xib */,
+				630EF1871C8530940059CB34 /* MyClientTableViewCell.h */,
+				630EF1881C8530940059CB34 /* MyClientTableViewCell.m */,
+				630EF1891C8530940059CB34 /* MyClientTableViewCell.xib */,
 			);
 			name = "HomeViews(首页)";
 			sourceTree = "<group>";
@@ -681,6 +697,7 @@
 			files = (
 				63ADFBE71C7EAC52000D3164 /* ResultTableViewCell.xib in Resources */,
 				63C54E331C7C2F96007CE8CA /* OrderManagerCell.xib in Resources */,
+				630EF18B1C8530940059CB34 /* MyClientTableViewCell.xib in Resources */,
 				F09A5F901A55BEDD008D4963 /* HomeHeaderView.xib in Resources */,
 				F094B59E1C8000E500A2312D /* HomeCollectionCell.xib in Resources */,
 				63C2FB951C7FEC9500D48B8C /* OrderInfoTableViewCell.xib in Resources */,
@@ -693,6 +710,7 @@
 				637533BC1C84321500A12932 /* OfferTableViewCell.xib in Resources */,
 				6383656B1C7DB8BA001A10C4 /* HZQDatePickerView.xib in Resources */,
 				F0292BB81C7B00CD00A810A9 /* Main.storyboard in Resources */,
+				630EF1901C8543900059CB34 /* PersonResultCell.xib in Resources */,
 				637533B01C83F64100A12932 /* details-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,6 +812,7 @@
 				F09A5F931A55F0AA008D4963 /* InviteFriendViewController.m in Sources */,
 				63C54E3E1C7C35AA007CE8CA /* ResultViewController.m in Sources */,
 				F07FF9DF1C81752D00EB1BB1 /* MyTeamTableViewCell.m in Sources */,
+				630EF18A1C8530940059CB34 /* MyClientTableViewCell.m in Sources */,
 				F059AA791A55822E0008D7BD /* VerifyCodeViewController.m in Sources */,
 				6383656C1C7DB8BA001A10C4 /* UIColor+HexString.m in Sources */,
 				635C2AC91C8527D10051708D /* CreatClientViewController.m in Sources */,
@@ -805,6 +824,7 @@
 				F0292BAF1C7B00CD00A810A9 /* main.m in Sources */,
 				F06DDBA21C7DAAE900C862A1 /* CreatOrderViewController.m in Sources */,
 				F01A61641C7D456B008CBBD5 /* SetUserInfoHeaderView.m in Sources */,
+				630EF18F1C8543900059CB34 /* PersonResultCell.m in Sources */,
 				63C2FB981C8022D900D48B8C /* PlaceholderTextView.m in Sources */,
 				F06DDBA91C7DAB7400C862A1 /* AYCButton.m in Sources */,
 			);

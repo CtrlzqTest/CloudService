@@ -89,7 +89,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="line_solid.png" width="640" height="2"/>
+        <image name="line_solid.png" width="18" height="18"/>
         <image name="lise-box" width="44" height="21"/>
     </resources>
 </document>
