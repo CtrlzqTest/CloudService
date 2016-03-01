@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="moG-sH-JKE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="moG-sH-JKE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -54,7 +54,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rmt-vQ-TTC">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rmt-vQ-TTC">
                                         <rect key="frame" x="10" y="52" width="293" height="53"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -826,6 +826,8 @@
                     <navigationItem key="navigationItem" title="首页" id="nfR-qK-uD8"/>
                     <connections>
                         <outlet property="collectionView" destination="2q4-X0-cIi" id="OWj-5z-Pg5"/>
+                        <segue destination="Pp4-nm-jZd" kind="push" identifier="myClient" id="uYU-v3-lX2"/>
+                        <segue destination="mLJ-ea-dRs" kind="push" identifier="creatOrder" id="oSp-8n-QRR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQW-HY-y8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1018,7 +1020,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cmw-7s-PYS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xxq-AO-HD1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="请输入关键词进行搜索" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35M-mE-y8y">
@@ -1040,7 +1042,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5H-dG-SrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1892.5" y="-1184.5"/>
+            <point key="canvasLocation" x="1896.5" y="-1091.5"/>
         </scene>
         <!--个人中心-->
         <scene sceneID="kog-Di-h4W">
@@ -1606,16 +1608,16 @@
             </objects>
             <point key="canvasLocation" x="250.5" y="319.5"/>
         </scene>
-        <!--创建订单-->
+        <!--创建客户-->
         <scene sceneID="bQL-Ao-Mxf">
             <objects>
-                <viewController id="azA-T9-zXt" userLabel="创建订单" customClass="CreatOrderViewController" sceneMemberID="viewController">
+                <viewController title="创建客户" id="azA-T9-zXt" customClass="CreatClientViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ns9-5P-Egg"/>
                         <viewControllerLayoutGuide type="bottom" id="iWa-vD-Vt3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bNe-uV-F4y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeK-uh-QZb">
@@ -1699,7 +1701,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAN-tt-IbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2329.5" y="-1874.5"/>
+            <point key="canvasLocation" x="2456.5" y="-1219.5"/>
         </scene>
         <!--立即报价-->
         <scene sceneID="iak-uT-QYf">
@@ -1710,7 +1712,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HIl-jL-MCg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aTg-UI-xCC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Iug-ao-o50">
@@ -1732,7 +1734,101 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMY-0K-Qh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2891" y="-1887"/>
+            <point key="canvasLocation" x="2982.5" y="-1172.5"/>
+        </scene>
+        <!--创建订单-->
+        <scene sceneID="qkb-HP-VGb">
+            <objects>
+                <viewController title="创建订单" id="mLJ-ea-dRs" customClass="CreatOrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1cu-UL-Wqv"/>
+                        <viewControllerLayoutGuide type="bottom" id="tei-oC-m7U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7m3-kc-714">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKz-BS-Ut0">
+                                <rect key="frame" x="-1" y="20" width="375" height="169"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KiL-uE-8u6" userLabel="lineView1">
+                                        <rect key="frame" x="15" y="54" width="360" height="1"/>
+                                        <color key="backgroundColor" red="0.85284485480000005" green="0.85284485480000005" blue="0.85284485480000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0nh-G2-L88" userLabel="lineView1">
+                                        <rect key="frame" x="15" y="111" width="360" height="1"/>
+                                        <color key="backgroundColor" red="0.85284485480000005" green="0.85284485480000005" blue="0.85284485480000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sbT-F8-NHf" userLabel="lineView1">
+                                        <rect key="frame" x="0.0" y="168" width="375" height="1"/>
+                                        <color key="backgroundColor" red="0.85284485480000005" green="0.85284485480000005" blue="0.85284485480000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhH-bM-EXq">
+                                        <rect key="frame" x="17" y="16" width="103" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzr-8N-GXa">
+                                        <rect key="frame" x="17" y="71" width="103" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSM-9j-wAJ" userLabel="lineView1">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                        <color key="backgroundColor" red="0.85284485480000005" green="0.85284485480000005" blue="0.85284485480000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="张三" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeC-8K-kQc">
+                                        <rect key="frame" x="128" y="16" width="171" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1568123443" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rep-vW-oXT">
+                                        <rect key="frame" x="128" y="71" width="225" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="车牌号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZF-Zj-WnP">
+                                        <rect key="frame" x="17" y="128" width="103" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="京A12534" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBQ-1v-FjB">
+                                        <rect key="frame" x="128" y="128" width="225" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyb-jp-NGS">
+                                <rect key="frame" x="29" y="221" width="316" height="38"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.28627450980000002" blue="0.29803921570000003" alpha="0.82299977840000005" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="下一步"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="save:" destination="T6I-5O-g6L" eventType="touchUpInside" id="NkB-2T-r9n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="创建订单" id="DEM-Y6-04s"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPb-PF-oag" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2039.5" y="-1790.5"/>
         </scene>
     </scenes>
     <resources>

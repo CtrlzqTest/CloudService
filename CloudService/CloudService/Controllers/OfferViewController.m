@@ -12,7 +12,9 @@
 static NSString *const header_id = @"setUserInfoHeader";
 static CGFloat headerHeight = 30;
 @interface OfferViewController ()<UITableViewDelegate,UITableViewDataSource>
-
+{
+    UIView *_footView;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -21,12 +23,53 @@ static CGFloat headerHeight = 30;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initFootView];
     [self.tableView registerClass:[SetUserInfoHeaderView class] forHeaderFooterViewReuseIdentifier:header_id];
     // Do any additional setup after loading the view.
 }
 
 - (void)initFootView {
-    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KWidth, 50)];
+    _footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, KWidth, 60)];
+    _footView.backgroundColor = [UIColor colorWithWhite:0.919 alpha:1.000];
+    
+    UIButton *btnSave = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnSave setTitle:@"保存" forState:UIControlStateNormal];
+    btnSave.titleLabel.font = [UIFont systemFontOfSize:14];
+    [btnSave setBackgroundImage:[UIImage imageNamed:@"btn8"] forState:UIControlStateNormal];
+    
+    UIButton *btnOffer = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnOffer setTitle:@"报价" forState:UIControlStateNormal];
+    btnOffer.titleLabel.font = [UIFont systemFontOfSize:14];
+    [btnOffer setBackgroundImage:[UIImage imageNamed:@"btn4"] forState:UIControlStateNormal];
+    // 给左边视图添加约束
+    [btnSave mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        //添加上边距约束
+        make.top.mas_equalTo(10);
+        // 添加左边距约束（距离当前主视图左边的距离）
+        make.left.equalTo(self.view.mas_left).with.offset(20);
+        // 添加右边距约束（距离第二个按键左边的距离）
+        make.right.equalTo(btnOffer.mas_left).with.offset(-20);
+        // 添加当前按钮的高度
+        make.height.mas_equalTo(40);
+        // 添加宽度（宽度跟右边按键一样）
+        make.width.equalTo(btnOffer);
+    }];
+    
+    // 给右边视图添加约束
+    [btnOffer mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        //添加上边距约束
+        make.top.mas_equalTo(10);
+        // 添加左边距约束（距离左边按键的距离）
+        make.left.equalTo(btnSave.mas_right).with.offset(20);
+        // 添加右边距约束（距离当前主视图右边的距离）
+        make.right.equalTo(self.view.mas_right).with.offset(-20);
+        // 添加当前按钮的高度
+        make.height.mas_equalTo(40);
+        // 添加宽度（宽度跟左边按键一样）
+        make.width.equalTo(btnSave);
+    }];
 }
 
 #pragma mark tabelView
@@ -63,12 +106,19 @@ static CGFloat headerHeight = 30;
     headerView.titleLabel.text = section == 0 ? @"个人信息" : @"银行信息";
     return headerView;
 }
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    if (section == 0) {
+        return nil;
+    }else {
+        return _footView;
+    }
+}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     if (section == 0) {
         return 0.1;
     }else{
-        return 50;
+        return 60;
     }
     
 }
