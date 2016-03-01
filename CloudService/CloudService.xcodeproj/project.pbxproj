@@ -11,6 +11,14 @@
 		630EF18B1C8530940059CB34 /* MyClientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630EF1891C8530940059CB34 /* MyClientTableViewCell.xib */; };
 		630EF18F1C8543900059CB34 /* PersonResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EF18D1C8543900059CB34 /* PersonResultCell.m */; };
 		630EF1901C8543900059CB34 /* PersonResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630EF18E1C8543900059CB34 /* PersonResultCell.xib */; };
+		630EF1931C8567400059CB34 /* IntegralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EF1921C8567400059CB34 /* IntegralViewController.m */; };
+		630EF1971C8567960059CB34 /* IntegralTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EF1951C8567960059CB34 /* IntegralTableViewCell.m */; };
+		630EF1981C8567960059CB34 /* IntegralTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630EF1961C8567960059CB34 /* IntegralTableViewCell.xib */; };
+		630EF19B1C856CD00059CB34 /* CouponsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EF19A1C856CD00059CB34 /* CouponsViewController.m */; };
+		630EF19F1C856CFD0059CB34 /* CouponsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EF19D1C856CFD0059CB34 /* CouponsTableViewCell.m */; };
+		630EF1A01C856CFD0059CB34 /* CouponsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630EF19E1C856CFD0059CB34 /* CouponsTableViewCell.xib */; };
+		630EF1A51C8579630059CB34 /* IntergralChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EF1A21C8579630059CB34 /* IntergralChangeViewController.m */; };
+		630EF1A61C8579630059CB34 /* MyIntergralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EF1A41C8579630059CB34 /* MyIntergralViewController.m */; };
 		635C2AC91C8527D10051708D /* CreatClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635C2AC81C8527D10051708D /* CreatClientViewController.m */; };
 		637533B01C83F64100A12932 /* details-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 637533AF1C83F64100A12932 /* details-icon.png */; };
 		637533B31C8411C800A12932 /* MyClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637533B21C8411C800A12932 /* MyClientViewController.m */; };
@@ -91,6 +99,20 @@
 		630EF18C1C8543900059CB34 /* PersonResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonResultCell.h; sourceTree = "<group>"; };
 		630EF18D1C8543900059CB34 /* PersonResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonResultCell.m; sourceTree = "<group>"; };
 		630EF18E1C8543900059CB34 /* PersonResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonResultCell.xib; sourceTree = "<group>"; };
+		630EF1911C8567400059CB34 /* IntegralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralViewController.h; sourceTree = "<group>"; };
+		630EF1921C8567400059CB34 /* IntegralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralViewController.m; sourceTree = "<group>"; };
+		630EF1941C8567960059CB34 /* IntegralTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegralTableViewCell.h; sourceTree = "<group>"; };
+		630EF1951C8567960059CB34 /* IntegralTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegralTableViewCell.m; sourceTree = "<group>"; };
+		630EF1961C8567960059CB34 /* IntegralTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegralTableViewCell.xib; sourceTree = "<group>"; };
+		630EF1991C856CD00059CB34 /* CouponsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponsViewController.h; sourceTree = "<group>"; };
+		630EF19A1C856CD00059CB34 /* CouponsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponsViewController.m; sourceTree = "<group>"; };
+		630EF19C1C856CFD0059CB34 /* CouponsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponsTableViewCell.h; sourceTree = "<group>"; };
+		630EF19D1C856CFD0059CB34 /* CouponsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponsTableViewCell.m; sourceTree = "<group>"; };
+		630EF19E1C856CFD0059CB34 /* CouponsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponsTableViewCell.xib; sourceTree = "<group>"; };
+		630EF1A11C8579630059CB34 /* IntergralChangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntergralChangeViewController.h; sourceTree = "<group>"; };
+		630EF1A21C8579630059CB34 /* IntergralChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntergralChangeViewController.m; sourceTree = "<group>"; };
+		630EF1A31C8579630059CB34 /* MyIntergralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIntergralViewController.h; sourceTree = "<group>"; };
+		630EF1A41C8579630059CB34 /* MyIntergralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyIntergralViewController.m; sourceTree = "<group>"; };
 		635C2AC71C8527D10051708D /* CreatClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatClientViewController.h; sourceTree = "<group>"; };
 		635C2AC81C8527D10051708D /* CreatClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatClientViewController.m; sourceTree = "<group>"; };
 		637533AF1C83F64100A12932 /* details-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "details-icon.png"; sourceTree = "<group>"; };
@@ -365,6 +387,12 @@
 				637533B51C842E2000A12932 /* OfferViewController.m */,
 				635C2AC71C8527D10051708D /* CreatClientViewController.h */,
 				635C2AC81C8527D10051708D /* CreatClientViewController.m */,
+				630EF1911C8567400059CB34 /* IntegralViewController.h */,
+				630EF1921C8567400059CB34 /* IntegralViewController.m */,
+				630EF1A11C8579630059CB34 /* IntergralChangeViewController.h */,
+				630EF1A21C8579630059CB34 /* IntergralChangeViewController.m */,
+				630EF1A31C8579630059CB34 /* MyIntergralViewController.h */,
+				630EF1A41C8579630059CB34 /* MyIntergralViewController.m */,
 			);
 			name = "HomeController(首页)";
 			sourceTree = "<group>";
@@ -393,6 +421,8 @@
 				F059AA7B1A55903B0008D7BD /* SetNewPwdViewController.m */,
 				F09A5F911A55F0AA008D4963 /* InviteFriendViewController.h */,
 				F09A5F921A55F0AA008D4963 /* InviteFriendViewController.m */,
+				630EF1991C856CD00059CB34 /* CouponsViewController.h */,
+				630EF19A1C856CD00059CB34 /* CouponsViewController.m */,
 			);
 			name = "PersonalController(个人中心)";
 			sourceTree = "<group>";
@@ -614,6 +644,9 @@
 				630EF1871C8530940059CB34 /* MyClientTableViewCell.h */,
 				630EF1881C8530940059CB34 /* MyClientTableViewCell.m */,
 				630EF1891C8530940059CB34 /* MyClientTableViewCell.xib */,
+				630EF1941C8567960059CB34 /* IntegralTableViewCell.h */,
+				630EF1951C8567960059CB34 /* IntegralTableViewCell.m */,
+				630EF1961C8567960059CB34 /* IntegralTableViewCell.xib */,
 			);
 			name = "HomeViews(首页)";
 			sourceTree = "<group>";
@@ -630,6 +663,9 @@
 				F07FF9DC1C81752D00EB1BB1 /* MyTeamTableViewCell.h */,
 				F07FF9DD1C81752D00EB1BB1 /* MyTeamTableViewCell.m */,
 				F07FF9DE1C81752D00EB1BB1 /* MyTeamTableViewCell.xib */,
+				630EF19C1C856CFD0059CB34 /* CouponsTableViewCell.h */,
+				630EF19D1C856CFD0059CB34 /* CouponsTableViewCell.m */,
+				630EF19E1C856CFD0059CB34 /* CouponsTableViewCell.xib */,
 			);
 			name = "PersonalViews(个人中心)";
 			sourceTree = "<group>";
@@ -702,6 +738,8 @@
 				F094B59E1C8000E500A2312D /* HomeCollectionCell.xib in Resources */,
 				63C2FB951C7FEC9500D48B8C /* OrderInfoTableViewCell.xib in Resources */,
 				F0292BBD1C7B00CD00A810A9 /* LaunchScreen.storyboard in Resources */,
+				630EF1981C8567960059CB34 /* IntegralTableViewCell.xib in Resources */,
+				630EF1A01C856CFD0059CB34 /* CouponsTableViewCell.xib in Resources */,
 				F0292BBA1C7B00CD00A810A9 /* Assets.xcassets in Resources */,
 				F07FF9E01C81752D00EB1BB1 /* MyTeamTableViewCell.xib in Resources */,
 				F07FF9D81C8146D800EB1BB1 /* ResetPhonePopView.xib in Resources */,
@@ -770,8 +808,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630EF19B1C856CD00059CB34 /* CouponsViewController.m in Sources */,
 				F0292BE21C7B015200A810A9 /* BaseViewController.m in Sources */,
 				F0292BE41C7B015200A810A9 /* Utility.m in Sources */,
+				630EF1931C8567400059CB34 /* IntegralViewController.m in Sources */,
 				F0292BE31C7B015200A810A9 /* User.m in Sources */,
 				F0292BE01C7B015200A810A9 /* BaseNaviViewController.m in Sources */,
 				63C54E321C7C2F96007CE8CA /* OrderManagerCell.m in Sources */,
@@ -781,6 +821,7 @@
 				F07FF9E31C8189E200EB1BB1 /* UserInfoViewController.m in Sources */,
 				F019C9E51C7C7BB700E73A2C /* SetUserInfoViewController.m in Sources */,
 				63C54E3B1C7C359A007CE8CA /* HomeViewController.m in Sources */,
+				630EF19F1C856CFD0059CB34 /* CouponsTableViewCell.m in Sources */,
 				F07FF9DB1C815BF600EB1BB1 /* MyTeamViewController.m in Sources */,
 				637533BB1C84321500A12932 /* OfferTableViewCell.m in Sources */,
 				63C2FB941C7FEC9500D48B8C /* OrderInfoTableViewCell.m in Sources */,
@@ -804,6 +845,7 @@
 				F094B5991C7FF8D600A2312D /* ZQScrollPageView.m in Sources */,
 				F09A5F8F1A55BEDD008D4963 /* HomeHeaderView.m in Sources */,
 				F01A616D1C7D860E008CBBD5 /* LoginInputView.m in Sources */,
+				630EF1A51C8579630059CB34 /* IntergralChangeViewController.m in Sources */,
 				F019C9E21C7C685700E73A2C /* RegisterSucViewController.m in Sources */,
 				63C07B9D1C7B14BB0084581F /* MHNetworkManager.m in Sources */,
 				F0292BE11C7B015200A810A9 /* BaseTabBarViewController.m in Sources */,
@@ -811,6 +853,7 @@
 				F06DDBAA1C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m in Sources */,
 				F09A5F931A55F0AA008D4963 /* InviteFriendViewController.m in Sources */,
 				63C54E3E1C7C35AA007CE8CA /* ResultViewController.m in Sources */,
+				630EF1A61C8579630059CB34 /* MyIntergralViewController.m in Sources */,
 				F07FF9DF1C81752D00EB1BB1 /* MyTeamTableViewCell.m in Sources */,
 				630EF18A1C8530940059CB34 /* MyClientTableViewCell.m in Sources */,
 				F059AA791A55822E0008D7BD /* VerifyCodeViewController.m in Sources */,
@@ -820,6 +863,7 @@
 				63C07BA91C7B15C10084581F /* NSDictionary+AYCUnicode.m in Sources */,
 				F019C9D61C7BFD7900E73A2C /* LoginViewController.m in Sources */,
 				F0292BB21C7B00CD00A810A9 /* AppDelegate.m in Sources */,
+				630EF1971C8567960059CB34 /* IntegralTableViewCell.m in Sources */,
 				63C07B9C1C7B14BB0084581F /* MHAsiNetworkItem.m in Sources */,
 				F0292BAF1C7B00CD00A810A9 /* main.m in Sources */,
 				F06DDBA21C7DAAE900C862A1 /* CreatOrderViewController.m in Sources */,
