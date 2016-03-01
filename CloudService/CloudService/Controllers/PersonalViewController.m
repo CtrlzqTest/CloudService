@@ -182,6 +182,9 @@ static NSString *cell_id = @"personalCell";
                 break;
         }
     }
+    if (indexPath.section == 1) {
+        [self performSegueWithIdentifier:@"coupons" sender:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
