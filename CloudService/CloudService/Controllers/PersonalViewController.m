@@ -8,7 +8,7 @@
 
 #import "PersonalViewController.h"
 #import "PersonalViewCell.h"
-#import "ResetPhonePopView.h"
+
 #import "UserInfoViewController.h"
 
 @interface PersonalViewController ()<UITableViewDataSource,UITableViewDelegate> {
@@ -76,6 +76,7 @@ static NSString *cell_id = @"personalCell";
 
 - (void)viewWillAppear:(BOOL)animated {
     
+    self.view.frame = [UIScreen mainScreen].bounds;
     [super viewWillAppear:animated];
     self.tabBarController.title = @"个人中心";
     [self.navigationController setNavigationBarHidden:YES animated:animated];
@@ -161,10 +162,7 @@ static NSString *cell_id = @"personalCell";
                 break;
             case 1:
             {
-                ResetPhonePopView *popView = [[ResetPhonePopView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-                [popView showViewWithCallBack:^(NSInteger btnIndex) {
-                    
-                }];
+    
             }
                 break;
             case 2:

@@ -57,7 +57,7 @@ static NSString *headerView_ID = @"headerView";
 
 - (void)setupViews {
     
-    self.view.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
+    self.view.backgroundColor = [UIColor redColor];
     self.collectionView.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"HomeCollectionCell" bundle:nil] forCellWithReuseIdentifier:cell_id];
     [self.collectionView registerNib:[UINib nibWithNibName:@"HomeHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerView_ID];
@@ -77,6 +77,8 @@ static NSString *headerView_ID = @"headerView";
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
     [self setNavigationBarTitleColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.barTintColor = [HelperUtil
                                                             colorWithHexString:@"1FAAF2"];
@@ -84,8 +86,9 @@ static NSString *headerView_ID = @"headerView";
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
     self.tabBarController.title = @"云客服";
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
     self.tabBarController.navigationItem.rightBarButtonItem = nil;
+    
+    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
