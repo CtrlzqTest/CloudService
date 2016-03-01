@@ -24,7 +24,6 @@
     if (pullDown) {
         self.textFiled.enabled = NO;
         self.imageBtn.hidden = NO;
-        [self.imageBtn setImage:[UIImage imageNamed:@"title-back"]];
     }else {
         self.textFiled.enabled = YES;
         self.imageBtn.hidden = YES;

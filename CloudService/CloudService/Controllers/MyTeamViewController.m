@@ -64,7 +64,7 @@ static NSString *cell_id = @"myTeamCell";
 }
 
 - (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return (70.0 / 667) * KHeight;
+    return (70.0 / 375) * KWidth;
 }
 
 - (void)didReceiveMemoryWarning {
