@@ -30,6 +30,12 @@
 
 - (void)setupViews {
     
+    self.title = @"注册成功";
+    __weak typeof(self) weakSelf = self;
+    [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 25, 25) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    }];
+
     self.inputBtn.layer.cornerRadius = 3;
     self.inputBtn.layer.borderWidth = 0.6;
     self.inputBtn.layer.borderColor = [UIColor grayColor].CGColor;

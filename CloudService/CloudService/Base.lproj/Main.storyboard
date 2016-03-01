@@ -231,7 +231,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="603"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPu-ve-Bmg">
-                                                <rect key="frame" x="50" y="403" width="243" height="50"/>
+                                                <rect key="frame" x="10" y="408" width="323" height="35"/>
                                                 <state key="normal" title="直接进入应用首页">
                                                     <color key="titleColor" red="0.5883443813" green="0.5883443813" blue="0.5883443813" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -240,10 +240,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bi-16-jhl">
-                                                <rect key="frame" x="50" y="323" width="243" height="50"/>
+                                                <rect key="frame" x="10" y="353" width="323" height="35"/>
                                                 <color key="backgroundColor" red="0.1529411765" green="0.49019607840000001" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="chk-PA-JZ1"/>
+                                                    <constraint firstAttribute="height" constant="35" id="chk-PA-JZ1"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="vyn-Jb-7UT"/>
                                                 </constraints>
                                                 <state key="normal" title="填写个人信息，马上成为会员">
@@ -256,15 +256,19 @@
                                                     <segue destination="9IL-JY-7wm" kind="push" id="OrN-33-9Qy"/>
                                                 </connections>
                                             </button>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1yc-Qu-rq1">
-                                                <rect key="frame" x="15" y="223" width="313" height="80"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yc-Qu-rq1">
+                                                <rect key="frame" x="15" y="223" width="313" height="110"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="dkk-sK-WVp"/>
-                                                    <constraint firstAttribute="height" constant="80" id="vVV-BQ-KNH"/>
+                                                    <constraint firstAttribute="height" constant="110" id="vVV-BQ-KNH"/>
                                                 </constraints>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <string key="text">1. 单次旅程投保
+本公司对各被保险人的保险责任的开始时间以下列情况中最迟发生的时间为准:
+1) 保险单所载的生效日期；
+2) 该被保险人在本合同有效期内离开其境内日常居住地或日常工作地直接前往境外旅行目的地。</string>
+                                                <color key="textColor" red="0.54509803921568623" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册成功" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPS-pz-WnY">
@@ -277,7 +281,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LgB-HX-yof">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pix" translatesAutoresizingMaskIntoConstraints="NO" id="LgB-HX-yof">
                                                 <rect key="frame" x="111" y="20" width="120" height="120"/>
                                                 <color key="backgroundColor" red="1" green="0.17007582060000001" blue="0.18900344620000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -290,14 +294,16 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="qYC-6g-4D7"/>
                                                 </constraints>
-                                                <state key="normal" title="点击查看会员条款"/>
+                                                <state key="normal" title="会员条款">
+                                                    <color key="titleColor" red="0.42342148507130128" green="0.42342148507130128" blue="0.42342148507130128" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Emu-fm-orG" firstAttribute="trailing" secondItem="xPS-pz-WnY" secondAttribute="trailing" id="19Q-6y-hAO"/>
                                             <constraint firstItem="LgB-HX-yof" firstAttribute="top" secondItem="YbK-pI-z03" secondAttribute="top" constant="20" id="3bF-E9-0wf"/>
-                                            <constraint firstItem="XPu-ve-Bmg" firstAttribute="top" secondItem="0bi-16-jhl" secondAttribute="bottom" constant="30" id="4kY-da-hMm"/>
+                                            <constraint firstItem="XPu-ve-Bmg" firstAttribute="top" secondItem="0bi-16-jhl" secondAttribute="bottom" constant="20" id="4kY-da-hMm"/>
                                             <constraint firstItem="LgB-HX-yof" firstAttribute="centerX" secondItem="YbK-pI-z03" secondAttribute="centerX" id="8CF-yY-keb"/>
                                             <constraint firstItem="XPu-ve-Bmg" firstAttribute="height" secondItem="0bi-16-jhl" secondAttribute="height" id="96j-BS-kYa"/>
                                             <constraint firstItem="1yc-Qu-rq1" firstAttribute="top" secondItem="Emu-fm-orG" secondAttribute="bottom" constant="3" id="9rr-z3-aKo"/>
@@ -306,9 +312,9 @@
                                             <constraint firstAttribute="trailing" secondItem="1yc-Qu-rq1" secondAttribute="trailing" constant="15" id="ITp-bh-aVA"/>
                                             <constraint firstItem="XPu-ve-Bmg" firstAttribute="leading" secondItem="0bi-16-jhl" secondAttribute="leading" id="M2t-KZ-0Gj"/>
                                             <constraint firstAttribute="trailing" secondItem="xPS-pz-WnY" secondAttribute="trailing" constant="15" id="ar2-yk-pMB"/>
-                                            <constraint firstItem="0bi-16-jhl" firstAttribute="leading" secondItem="YbK-pI-z03" secondAttribute="leading" constant="50" id="cLk-zq-jud"/>
+                                            <constraint firstItem="0bi-16-jhl" firstAttribute="leading" secondItem="YbK-pI-z03" secondAttribute="leading" constant="10" id="cLk-zq-jud"/>
                                             <constraint firstItem="1yc-Qu-rq1" firstAttribute="leading" secondItem="YbK-pI-z03" secondAttribute="leading" constant="15" id="cPk-Az-GuT"/>
-                                            <constraint firstAttribute="trailing" secondItem="0bi-16-jhl" secondAttribute="trailing" constant="50" id="fyX-YU-AR1"/>
+                                            <constraint firstAttribute="trailing" secondItem="0bi-16-jhl" secondAttribute="trailing" constant="10" id="fyX-YU-AR1"/>
                                             <constraint firstItem="xPS-pz-WnY" firstAttribute="leading" secondItem="YbK-pI-z03" secondAttribute="leading" constant="15" id="mV2-Gd-qWx"/>
                                             <constraint firstItem="0bi-16-jhl" firstAttribute="top" secondItem="1yc-Qu-rq1" secondAttribute="bottom" constant="20" id="oOT-XG-lXc"/>
                                             <constraint firstAttribute="height" constant="603" id="pFm-Xs-Q59"/>
@@ -348,7 +354,7 @@
             </objects>
             <point key="canvasLocation" x="-224.5" y="1191.5"/>
         </scene>
-        <!--填写个人资料-->
+        <!--Set User Info View Controller-->
         <scene sceneID="4ao-lA-r92">
             <objects>
                 <viewController storyboardIdentifier="setUserInfo" id="9IL-JY-7wm" customClass="SetUserInfoViewController" sceneMemberID="viewController">
@@ -385,7 +391,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="填写个人资料" id="nMu-kQ-1fd">
+                    <navigationItem key="navigationItem" id="nMu-kQ-1fd">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="bp1-gY-3cF">
                             <view key="customView" contentMode="scaleToFill" id="EJz-4T-L7D">
                                 <rect key="frame" x="276" y="5" width="83" height="33"/>
@@ -550,7 +556,7 @@
                                             <action selector="locateAction:" destination="gtl-LE-24z" eventType="touchUpInside" id="v3P-q2-cfk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N79-0B-8Dr">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N79-0B-8Dr">
                                         <rect key="frame" x="270" y="60" width="80" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="8eC-e3-6wF"/>
@@ -1738,6 +1744,7 @@
         <image name="login-bg" width="360" height="640"/>
         <image name="login-choose" width="25" height="25"/>
         <image name="login-logo" width="109" height="115"/>
+        <image name="pix" width="152" height="132"/>
         <image name="share-pix" width="360" height="183"/>
     </resources>
 </document>

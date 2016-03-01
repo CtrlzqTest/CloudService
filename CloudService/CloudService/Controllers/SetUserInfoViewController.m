@@ -60,6 +60,7 @@ static NSString *const select_CellID = @"selectCell";
 // 设置tableView样式
 - (void)setupTableView {
     
+    self.title = @"填写个人资料";
     __weak typeof(self) weakSelf = self;
     [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 25, 25) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
         [weakSelf.navigationController popViewControllerAnimated:YES];
