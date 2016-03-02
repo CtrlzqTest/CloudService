@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A2301" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="moG-sH-JKE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="moG-sH-JKE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -1335,7 +1335,7 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P43-PT-guf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P43-PT-guf">
                                 <rect key="frame" x="25" y="15" width="325" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.64830121534338281" blue="0.17105532706574389" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1381,7 +1381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1F-8l-uTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1882.5" y="978.5"/>
+            <point key="canvasLocation" x="2080.5" y="926.5"/>
         </scene>
         <!--积分明细-->
         <scene sceneID="Sr0-Ig-ifG">
@@ -2026,8 +2026,8 @@
                                         <color key="textColor" red="0.25047348479999998" green="0.25047348479999998" blue="0.25047348479999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVU-fd-sqr">
-                                        <rect key="frame" x="51" y="0.0" width="57" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVU-fd-sqr">
+                                        <rect key="frame" x="50" y="0.0" width="57" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2099,14 +2099,20 @@
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFW-AN-sJw">
-                                <rect key="frame" x="10" y="419" width="355" height="40"/>
+                                <rect key="frame" x="15" y="414" width="345" height="42.5"/>
                                 <color key="backgroundColor" red="0.18903846029999999" green="0.57135155289999995" blue="0.90195660649999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="礼品商城">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="intergralCityAction:" destination="N7k-gj-kdi" eventType="touchUpInside" id="NSC-Ux-fkR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPh-yf-eZ2">
-                                <rect key="frame" x="10" y="474" width="355" height="40"/>
+                                <rect key="frame" x="15" y="471" width="345" height="42.5"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.43497647569999998" blue="0.4451366169" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FIo-zl-2Iy"/>
@@ -2114,6 +2120,14 @@
                                 <state key="normal" title="现金兑换">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FIo-zl-2Iy"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="LbM-Pr-T9T" kind="push" id="8dM-kQ-L1G"/>
                                 </connections>
@@ -2130,10 +2144,11 @@
                             <constraint firstItem="SPh-yf-eZ2" firstAttribute="height" secondItem="cFW-AN-sJw" secondAttribute="height" id="Q0h-B4-fef"/>
                             <constraint firstItem="tEI-e1-eG5" firstAttribute="top" secondItem="nNB-37-X5N" secondAttribute="top" id="S0h-XL-I9D"/>
                             <constraint firstItem="nNB-37-X5N" firstAttribute="top" secondItem="4Cp-xC-AiM" secondAttribute="bottom" constant="50" id="Vtl-Yb-UcV"/>
-                            <constraint firstItem="SPh-yf-eZ2" firstAttribute="leading" secondItem="iMo-q0-kws" secondAttribute="leading" constant="10" id="dX3-fp-1Jw"/>
+                            <constraint firstItem="SPh-yf-eZ2" firstAttribute="height" secondItem="iMo-q0-kws" secondAttribute="height" multiplier="45 / 640" id="dTc-XH-0b5"/>
+                            <constraint firstItem="SPh-yf-eZ2" firstAttribute="leading" secondItem="iMo-q0-kws" secondAttribute="leading" constant="15" id="dX3-fp-1Jw"/>
                             <constraint firstItem="4Cp-xC-AiM" firstAttribute="width" secondItem="iMo-q0-kws" secondAttribute="width" multiplier="3:7" id="gZU-ep-vDP"/>
                             <constraint firstItem="SPh-yf-eZ2" firstAttribute="leading" secondItem="cFW-AN-sJw" secondAttribute="leading" id="mt6-Fm-sku"/>
-                            <constraint firstAttribute="trailing" secondItem="SPh-yf-eZ2" secondAttribute="trailing" constant="10" id="oig-RG-fsB"/>
+                            <constraint firstAttribute="trailing" secondItem="SPh-yf-eZ2" secondAttribute="trailing" constant="15" id="oig-RG-fsB"/>
                             <constraint firstItem="4Cp-xC-AiM" firstAttribute="centerX" secondItem="iMo-q0-kws" secondAttribute="centerX" id="oqx-CN-z1r"/>
                             <constraint firstItem="SPh-yf-eZ2" firstAttribute="width" secondItem="cFW-AN-sJw" secondAttribute="width" id="u8t-AO-Lr9"/>
                             <constraint firstItem="tEI-e1-eG5" firstAttribute="leading" secondItem="nNB-37-X5N" secondAttribute="trailing" constant="30" id="vRt-hf-qgz"/>
@@ -2144,6 +2159,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="backView" destination="4Cp-xC-AiM" id="vj1-q9-5KE"/>
+                        <outlet property="btnBottom" destination="7FK-qq-xT3" id="kqE-8P-I1v"/>
+                        <outlet property="inset" destination="Vtl-Yb-UcV" id="GsS-tc-1WI"/>
+                        <outlet property="intergTop" destination="OU1-sL-QZy" id="YYo-Md-Id8"/>
                         <outlet property="intergTotalLabel" destination="y9A-Xy-mFA" id="VEI-hC-btP"/>
                         <outlet property="intergUnuseLabel" destination="ivn-d0-XlP" id="LfV-Kd-Obh"/>
                         <outlet property="intergUseLabel" destination="zVU-fd-sqr" id="CsY-7H-iwi"/>
@@ -2209,6 +2227,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeIntergralAction:" destination="LbM-Pr-T9T" eventType="touchUpInside" id="Inw-g3-yVr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="最多可兑换12元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eU5-Gu-w6x">
                                 <rect key="frame" x="10" y="240" width="355" height="21"/>

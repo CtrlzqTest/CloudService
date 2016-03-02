@@ -91,6 +91,7 @@
         [_maskView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideCityPickerView:)]];
         [self.view addSubview:_maskView];
         self.cityPickerView = [[YWBCityPickerView alloc] init];
+        self.cityPickerView.backgroundColor = [UIColor whiteColor];
         self.cityPickerView.frame = CGRectMake(0, self.view.frame.size.height, KWidth, 300);
         
     }

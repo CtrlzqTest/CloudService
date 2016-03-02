@@ -32,6 +32,10 @@
     self.backView.layer.cornerRadius = KWidth * 3 / 7 / 2.0;
 }
 
+- (IBAction)changeIntergralAction:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

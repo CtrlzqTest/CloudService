@@ -60,8 +60,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
     __weak typeof(self) weakSelf = self;
     [self setRightTextBarButtonItemWithFrame:CGRectMake(0, 0, 40, 30) title:@"编辑" titleColor:[UIColor whiteColor] backImage:nil selectBackImage:nil action:^(AYCButton *button) {
+        
         ResetPhonePopView *popView = [[[NSBundle mainBundle] loadNibNamed:@"ResetPhonePopView" owner:weakSelf options:nil] firstObject];
         popView.frame = [UIScreen mainScreen].bounds;
+        
         [popView showViewWithCallBack:^(NSInteger btnIndex) {
             if (btnIndex == 1) {
                 UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

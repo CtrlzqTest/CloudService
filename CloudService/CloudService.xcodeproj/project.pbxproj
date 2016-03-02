@@ -593,6 +593,8 @@
 				63C2FB971C8022D900D48B8C /* PlaceholderTextView.m */,
 				F094B5971C7FF8D600A2312D /* ZQScrollPageView.h */,
 				F094B5981C7FF8D600A2312D /* ZQScrollPageView.m */,
+				F07532001C86D3E400E71796 /* YWBCityPickerView.h */,
+				F07532011C86D3E400E71796 /* YWBCityPickerView.m */,
 				63ADFBE81C7F0622000D3164 /* lib1 */,
 				F06DDBA51C7DAB7400C862A1 /* AYCButton.h */,
 				F06DDBA61C7DAB7400C862A1 /* AYCButton.m */,
@@ -728,6 +730,7 @@
 				TargetAttributes = {
 					F0292BA91C7B00CD00A810A9 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = UYEXGZEG29;
 					};
 				};
 			};

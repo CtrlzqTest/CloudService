@@ -86,7 +86,7 @@ static NSString *const select_CellID = @"selectCell";
 
 - (void)initData {
     
-    _keyArray_User = @[@"真是姓名",@"证件类型",
+    _keyArray_User = @[@"真实姓名",@"证件类型",
                        @"证件号码",@"用户类型",
                        @"原离职公司",@"原职位",
                        @"从业时间",@"工作类型",
