@@ -25,7 +25,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.tabBarController.title = @"订单管理";
     [self.navigationController setNavigationBarHidden:NO animated:NO];
-    
+    self.view.frame = CGRectMake(0, 0, KWidth, KHeight - 64);
     __weak typeof(self) weakSelf = self;
     [self.tabBarController setRightImageBarButtonItemWithFrame:CGRectMake(0, 0, 30, 30) image:@"title-search" selectImage:@"title-search_" action:^(AYCButton *button) {
         [weakSelf performSegueWithIdentifier:@"searchOrder" sender:weakSelf];
