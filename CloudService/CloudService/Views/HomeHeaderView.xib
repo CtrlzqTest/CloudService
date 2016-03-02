@@ -88,13 +88,13 @@
                                 </mask>
                             </variation>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuD-9f-8p3">
-                            <rect key="frame" x="235" y="16" width="80" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuD-9f-8p3">
+                            <rect key="frame" x="225" y="22.5" width="80" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="fSc-jx-H1n"/>
                                 <constraint firstAttribute="height" constant="30" id="u3l-mn-tSK"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="签到" backgroundImage="home-icon7"/>
                             <state key="selected" title="已签到" backgroundImage="home-icon7_"/>
@@ -115,7 +115,7 @@
                         <constraint firstItem="Tjf-id-eE3" firstAttribute="leading" secondItem="rBZ-u0-D07" secondAttribute="trailing" constant="15" id="BIt-Mo-j18"/>
                         <constraint firstItem="waJ-bX-2QI" firstAttribute="trailing" secondItem="AKQ-wc-bsR" secondAttribute="trailing" id="HYC-ou-3X6"/>
                         <constraint firstItem="0DF-dH-dHA" firstAttribute="leading" secondItem="rBZ-u0-D07" secondAttribute="trailing" constant="8" id="JDJ-zZ-iL9"/>
-                        <constraint firstAttribute="trailing" secondItem="NuD-9f-8p3" secondAttribute="trailing" constant="5" id="JTp-0H-AM4"/>
+                        <constraint firstAttribute="trailing" secondItem="NuD-9f-8p3" secondAttribute="trailing" constant="15" id="JTp-0H-AM4"/>
                         <constraint firstItem="waJ-bX-2QI" firstAttribute="top" secondItem="Tjf-id-eE3" secondAttribute="top" id="KyS-4A-1BA"/>
                         <constraint firstAttribute="height" constant="75" id="Ojs-NB-8j5"/>
                         <constraint firstItem="waJ-bX-2QI" firstAttribute="leading" secondItem="Tjf-id-eE3" secondAttribute="trailing" id="W62-eh-rWj"/>

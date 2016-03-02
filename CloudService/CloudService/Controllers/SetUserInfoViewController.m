@@ -22,10 +22,10 @@ static NSString *const select_CellID = @"selectCell";
     NSMutableArray *_valueArray_Bank;
     
     NSIndexPath *_indexPath;
-    NSInteger _selectCellIndex;
     BOOL _isAnimating;
 }
 
+@property (weak, nonatomic) IBOutlet UIButton *rightBtn;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong) UITableView *selectTableView;
 @property(nonatomic,strong) NSArray *selectArray;
@@ -36,9 +36,15 @@ static NSString *const select_CellID = @"selectCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     [self setupTableView];
     [self initData];
     [self setupSelectTableView];
+    if (self.rightBtnTitle) {
+        [self.rightBtn setTitle:self.rightBtnTitle forState:(UIControlStateNormal)];
+    }else {
+        [self.rightBtn setTitle:@"保存" forState:(UIControlStateNormal)];
+    }
 }
 
 -(void)setSelectArray:(NSArray *)selectArray {
@@ -60,6 +66,7 @@ static NSString *const select_CellID = @"selectCell";
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+
 }
 
 // 设置tableView样式
@@ -74,6 +81,8 @@ static NSString *const select_CellID = @"selectCell";
     [self.tableView registerNib:[UINib nibWithNibName:@"SetUserInfoCell" bundle:nil] forCellReuseIdentifier:cell_id];
     [self.tableView registerClass:[SetUserInfoHeaderView class] forHeaderFooterViewReuseIdentifier:header_id];
 }
+
+
 
 - (void)initData {
     
@@ -107,9 +116,15 @@ static NSString *const select_CellID = @"selectCell";
     self.selectTableView = [[UITableView alloc] initWithFrame:CGRectZero style:(UITableViewStylePlain)];
     self.selectTableView.dataSource = self;
     self.selectTableView.delegate = self;
+    self.selectTableView.backgroundColor = [UIColor grayColor];
     [self.selectTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:select_CellID];
-    self.selectTableView.layer.borderWidth = 0.6;
-    self.selectTableView.layer.borderColor = [UIColor grayColor].CGColor;
+//    self.selectTableView.layer.borderWidth = 0.6;
+//    self.selectTableView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.selectTableView.layer.shadowOpacity = 1;
+    self.selectTableView.layer.shadowColor = [UIColor grayColor].CGColor;
+//    self.selectTableView.layer.shadowRadius = 3;
+    self.tableView.clipsToBounds = NO;
+    self.selectTableView.layer.shadowOffset = CGSizeMake(3, 1);
     [self.maskView addSubview:self.selectTableView];
 }
 
@@ -159,7 +174,9 @@ static NSString *const select_CellID = @"selectCell";
 #pragma mark -- SetUserInfoCellDelegate
 // 确定编辑在哪个cell上
 -(void)textFiledShouldBeginEditAtCell:(SetUserInfoCell *)cell {
+    
     _indexPath = [self.tableView indexPathForCell:cell];
+    
 }
 
 -(void)textFiledDidEndEdit:(NSString *)text {
@@ -208,6 +225,7 @@ static NSString *const select_CellID = @"selectCell";
         
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:select_CellID];
         cell.textLabel.text = _selectArray[indexPath.row];
+        cell.backgroundColor = [UIColor grayColor];
         return cell;
     }
     
@@ -226,16 +244,22 @@ static NSString *const select_CellID = @"selectCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    
     if ([tableView isEqual:self.selectTableView]) {
         [self hidePullDownView];
-        _valueArray_User[_selectCellIndex] = _selectArray[indexPath.row];
+        _valueArray_User[_indexPath.row] = _selectArray[indexPath.row];
         [self.tableView reloadData];
         return;
     }
+    
+    if (_indexPath) {
+        SetUserInfoCell *cell = [self.tableView cellForRowAtIndexPath:_indexPath];
+        [cell.textFiled resignFirstResponder];
+    }
+    
     _indexPath = indexPath;
     SetUserInfoCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     CGRect tempRect = [cell.contentView convertRect:cell.textFiled.frame fromView:self.view];
-    _selectCellIndex = indexPath.row;
     if (indexPath.section == 0) {
         switch (indexPath.row) {
             case 1:    {
@@ -316,6 +340,9 @@ static NSString *const select_CellID = @"selectCell";
     }
     
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

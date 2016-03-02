@@ -24,6 +24,7 @@
     
     // 注册通知
     [self registerNotifications];
+    
     return YES;
 }
 
