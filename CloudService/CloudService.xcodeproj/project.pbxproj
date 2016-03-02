@@ -236,7 +236,6 @@
 		F06DDBAE1C7DACDE00C862A1 /* OrderManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderManagerViewController.h; sourceTree = "<group>"; };
 		F06DDBAF1C7DACDE00C862A1 /* OrderManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderManagerViewController.m; sourceTree = "<group>"; };
 		F07531D11C8687BB00E71796 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
-		F07531D41C8687F500E71796 /* YWBCityPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWBCityPickerView.h; sourceTree = "<group>"; };
 		F07531D51C8687F500E71796 /* YWBCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWBCityPickerView.m; sourceTree = "<group>"; };
 		F07FF9D41C81469400EB1BB1 /* ResetPhonePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPhonePopView.h; sourceTree = "<group>"; };
 		F07FF9D51C81469400EB1BB1 /* ResetPhonePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPhonePopView.m; sourceTree = "<group>"; };
@@ -651,15 +650,6 @@
 				63C54E2E1C7C2F2F007CE8CA /* OrderManagerCell（订单管理） */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		F07531D31C8687D500E71796 /* CityPikerView */ = {
-			isa = PBXGroup;
-			children = (
-				F07531D41C8687F500E71796 /* YWBCityPickerView.h */,
-				F07531D51C8687F500E71796 /* YWBCityPickerView.m */,
-			);
-			name = CityPikerView;
 			sourceTree = "<group>";
 		};
 		F094B58E1C7FE96500A2312D /* HomeViews(首页) */ = {
