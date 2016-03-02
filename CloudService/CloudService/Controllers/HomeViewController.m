@@ -120,6 +120,7 @@ static NSString *headerView_ID = @"headerView";
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         HomeHeaderView *headerView = (HomeHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerView_ID forIndexPath:indexPath];
         [headerView.sginBtn addTarget:self action:@selector(signAction:) forControlEvents:(UIControlEventTouchUpInside)];
+        [headerView setDataWithDictionary:@{@"userName":@"李小米2"}];
         // 轮播图开始轮播
         [headerView playWithImageArray:_scrollImgArray clickAtIndex:^(NSInteger index) {
             NSLog(@"%ld",index);

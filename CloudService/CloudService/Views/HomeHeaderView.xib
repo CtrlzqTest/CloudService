@@ -44,7 +44,7 @@
                                 </mask>
                             </variation>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="欢迎你！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waJ-bX-2QI">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="欢迎你！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waJ-bX-2QI">
                             <rect key="frame" x="168" y="10" width="80" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="5Qi-iV-GDS"/>
@@ -89,7 +89,7 @@
                             </variation>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuD-9f-8p3">
-                            <rect key="frame" x="225" y="22.5" width="80" height="30"/>
+                            <rect key="frame" x="225" y="22" width="80" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="fSc-jx-H1n"/>
                                 <constraint firstAttribute="height" constant="30" id="u3l-mn-tSK"/>
@@ -100,8 +100,8 @@
                             <state key="selected" title="已签到" backgroundImage="home-icon7_"/>
                             <state key="highlighted" backgroundImage="home-icon7_"/>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="head1" translatesAutoresizingMaskIntoConstraints="NO" id="rBZ-u0-D07">
-                            <rect key="frame" x="30" y="10" width="43" height="43"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head1" translatesAutoresizingMaskIntoConstraints="NO" id="rBZ-u0-D07">
+                            <rect key="frame" x="20" y="10" width="55" height="55"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="rBZ-u0-D07" secondAttribute="height" id="lfS-ux-kxU"/>
                             </constraints>
@@ -122,7 +122,7 @@
                         <constraint firstItem="waJ-bX-2QI" firstAttribute="width" secondItem="Tjf-id-eE3" secondAttribute="width" id="WV5-rL-JcP"/>
                         <constraint firstItem="NuD-9f-8p3" firstAttribute="centerY" secondItem="2cp-iw-sPn" secondAttribute="centerY" id="Wfn-b5-IyR"/>
                         <constraint firstItem="0DF-dH-dHA" firstAttribute="leading" secondItem="Tjf-id-eE3" secondAttribute="leading" id="X8F-4H-yi3"/>
-                        <constraint firstItem="rBZ-u0-D07" firstAttribute="leading" secondItem="2cp-iw-sPn" secondAttribute="leading" constant="30" id="XdI-cG-vZu"/>
+                        <constraint firstItem="rBZ-u0-D07" firstAttribute="leading" secondItem="2cp-iw-sPn" secondAttribute="leading" constant="20" id="XdI-cG-vZu"/>
                         <constraint firstItem="AKQ-wc-bsR" firstAttribute="height" secondItem="0DF-dH-dHA" secondAttribute="height" id="coy-cM-Ob5"/>
                         <constraint firstItem="Tjf-id-eE3" firstAttribute="top" secondItem="2cp-iw-sPn" secondAttribute="top" constant="10" id="eQo-bg-rae"/>
                         <constraint firstAttribute="bottom" secondItem="rBZ-u0-D07" secondAttribute="bottom" constant="10" id="fIc-DW-WZY"/>
@@ -160,9 +160,10 @@
                 <outlet property="integralLabel" destination="AKQ-wc-bsR" id="yiq-Cv-jEJ"/>
                 <outlet property="pageScrBackView" destination="PJC-bM-IIT" id="QWN-G6-6xa"/>
                 <outlet property="sginBtn" destination="NuD-9f-8p3" id="95P-DR-FuE"/>
+                <outlet property="userLabelWidth" destination="ePy-JA-j5R" id="3dh-MB-HNm"/>
                 <outlet property="userNameLabel" destination="Tjf-id-eE3" id="XS3-Br-Sft"/>
             </connections>
-            <point key="canvasLocation" x="378" y="354"/>
+            <point key="canvasLocation" x="303" y="364"/>
         </collectionReusableView>
     </objects>
     <resources>

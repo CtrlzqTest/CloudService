@@ -19,5 +19,6 @@ typedef void(^ClickBlock)(NSInteger index);
 @property (weak, nonatomic) IBOutlet UILabel *integralLabel;
 
 - (void)playWithImageArray:(NSArray *)imgStrArray clickAtIndex:(ClickBlock )tapIndex;
+- (void)setDataWithDictionary:(NSDictionary *)dict;
 
 @end
