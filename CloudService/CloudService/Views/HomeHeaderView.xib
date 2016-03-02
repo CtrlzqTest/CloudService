@@ -163,7 +163,7 @@
                 <outlet property="userLabelWidth" destination="ePy-JA-j5R" id="3dh-MB-HNm"/>
                 <outlet property="userNameLabel" destination="Tjf-id-eE3" id="XS3-Br-Sft"/>
             </connections>
-            <point key="canvasLocation" x="303" y="364"/>
+            <point key="canvasLocation" x="395" y="365"/>
         </collectionReusableView>
     </objects>
     <resources>
