@@ -325,13 +325,13 @@
 }
 /** 结束码下拉*/
 -  (void)codeClick:(UITapGestureRecognizer *)tap {
-    
+    NSArray *array = @[@"未报价",@"已报价",@"已完成"];
     [PellTableViewSelect addPellTableViewSelectWithWindowFrame:CGRectMake(80, 260, 200, 200) selectData:
      
-     @[@"筛选1",@"筛选2",@"筛选3",@"筛选4",@"筛选5"]
+     array
                                                         action:^(NSInteger index) {
                                                             
-                                                            NSLog(@"选择了 %ld",index);
+                                                            _lbCode.text = [array objectAtIndex:index];
                                                         } animated:YES];
 
 }

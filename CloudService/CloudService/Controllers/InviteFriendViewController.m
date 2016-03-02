@@ -7,7 +7,7 @@
 //
 
 #import "InviteFriendViewController.h"
-//#import "LBXScanWrapper.h"
+#import "LBXScanWrapper.h"
 
 @interface InviteFriendViewController ()
 @property (weak, nonatomic)IBOutlet UIImageView *qrImgView;
@@ -20,18 +20,18 @@
     self.title = @"邀请队员";
     [self createQR1];
     __weak typeof(self) weakSelf = self;
-    [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 25, 25) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
+    [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 35, 35) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
         [weakSelf.navigationController popViewControllerAnimated:YES];
     }];
     
 }
 - (void)createQR1
 {
-//    //可以把你要使用的信息加进去生成二维码
-//    UIImage *qrImg = [LBXScanWrapper createQRWithString:@"www.baidu.com" size:_qrImgView.bounds.size];
-//    UIImage *newImage= [LBXScanWrapper addImageLogo:qrImg centerLogoImage:[UIImage imageNamed:@"pix"] logoSize:CGSizeMake(50, 50)];
-//    
-//    _qrImgView.image = newImage;
+    //可以把你要使用的信息加进去生成二维码
+    UIImage *qrImg = [LBXScanWrapper createQRWithString:@"www.baidu.com" size:_qrImgView.bounds.size];
+    UIImage *newImage= [LBXScanWrapper addImageLogo:qrImg centerLogoImage:[UIImage imageNamed:@"pix"] logoSize:CGSizeMake(50, 50)];
+    
+    _qrImgView.image = newImage;
     
     
     

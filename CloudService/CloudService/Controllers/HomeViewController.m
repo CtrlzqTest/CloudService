@@ -78,7 +78,8 @@ static NSString *headerView_ID = @"headerView";
 
 
 - (void)viewWillAppear:(BOOL)animated {
-    
+    //导航条滑动返回
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
     [super viewWillAppear:animated];
     
     self.view.frame = CGRectMake(0, 0, KWidth, KHeight - 64);

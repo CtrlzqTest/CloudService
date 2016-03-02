@@ -31,6 +31,8 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    //导航条滑动返回
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setBarTintColor:[HelperUtil colorWithHexString:@"277FD9"]];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
