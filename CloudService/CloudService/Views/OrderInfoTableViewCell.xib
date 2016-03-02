@@ -259,6 +259,13 @@
             </connections>
             <point key="canvasLocation" x="251.5" y="481"/>
         </tableViewCell>
+        <view contentMode="scaleToFill" id="MQe-2j-jdM">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="493" y="680"/>
+        </view>
     </objects>
     <resources>
         <image name="details-icon1" width="18" height="18"/>
