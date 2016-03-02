@@ -144,7 +144,7 @@ static NSString *headerView_ID = @"headerView";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
         case 0:
-            
+            [self performSegueWithIdentifier:@"getData" sender:self];
             break;
         case 1:
             [self performSegueWithIdentifier:@"myClient" sender:self];

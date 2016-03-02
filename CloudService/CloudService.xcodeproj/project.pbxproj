@@ -593,8 +593,6 @@
 				63C2FB971C8022D900D48B8C /* PlaceholderTextView.m */,
 				F094B5971C7FF8D600A2312D /* ZQScrollPageView.h */,
 				F094B5981C7FF8D600A2312D /* ZQScrollPageView.m */,
-				F07532001C86D3E400E71796 /* YWBCityPickerView.h */,
-				F07532011C86D3E400E71796 /* YWBCityPickerView.m */,
 				63ADFBE81C7F0622000D3164 /* lib1 */,
 				F06DDBA51C7DAB7400C862A1 /* AYCButton.h */,
 				F06DDBA61C7DAB7400C862A1 /* AYCButton.m */,
@@ -730,7 +728,7 @@
 				TargetAttributes = {
 					F0292BA91C7B00CD00A810A9 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = UYEXGZEG29;
+						DevelopmentTeam = 7PS2AH4H79;
 					};
 				};
 			};
@@ -1017,15 +1015,15 @@
 			baseConfigurationReference = 8080CD2CAEE01D9CB60C40F6 /* Pods-CloudService.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Thinkyun Technology Co., Ltd. (7PS2AH4H79)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Thinkyun Technology Co., Ltd. (7PS2AH4H79)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = CloudService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.CloudService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4d5da414-b78c-41dc-a7ea-5cfee1c6ce77";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1034,15 +1032,15 @@
 			baseConfigurationReference = AA863A4D44EB33149F738225 /* Pods-CloudService.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Thinkyun Technology Co., Ltd. (7PS2AH4H79)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Thinkyun Technology Co., Ltd. (7PS2AH4H79)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = CloudService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.CloudService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4d5da414-b78c-41dc-a7ea-5cfee1c6ce77";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
