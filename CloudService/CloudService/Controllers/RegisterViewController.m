@@ -85,6 +85,7 @@
 // 定位按钮
 - (IBAction)locateAction:(id)sender {
     
+    [self resignKeyBoardInView:self.view];
     if (!self.cityPickerView) {
         _maskView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         _maskView.backgroundColor = [UIColor colorWithRed:0.363 green:0.380 blue:0.373 alpha:0.500];
@@ -93,7 +94,6 @@
         self.cityPickerView = [[YWBCityPickerView alloc] init];
         self.cityPickerView.backgroundColor = [UIColor whiteColor];
         self.cityPickerView.frame = CGRectMake(0, self.view.frame.size.height, KWidth, 300);
-        
     }
     [self showCityPickerView];
     
@@ -177,6 +177,28 @@
     [self.locateManager stopUpdatingLocation];
 }
 
+/** 消失键盘*/
+- (void)resignKeyBoardInView:(UIView *)view
+
+{
+    
+    for (UIView *v in view.subviews) {
+        
+        if ([v.subviews count] > 0) {
+            
+            [self resignKeyBoardInView:v];
+            
+        }
+        
+        if ([v isKindOfClass:[UITextView class]] || [v isKindOfClass:[UITextField class]]) {
+            
+            [v resignFirstResponder];
+            
+        }
+        
+    }
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

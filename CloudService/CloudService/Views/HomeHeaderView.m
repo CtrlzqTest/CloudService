@@ -9,19 +9,38 @@
 #import "HomeHeaderView.h"
 #import "ZQScrollPageView.h"
 
+@interface HomeHeaderView()
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *userLabelWidth;
+
+@end
+
 @implementation HomeHeaderView {
     ZQScrollPageView *_scrollPageView;
 }
 
 - (void)awakeFromNib {
     // Initialization code
+    
     _scrollPageView = [[ZQScrollPageView alloc] initWithFrame:CGRectMake(0, 0, KWidth, 240 * KHeight / 667.0 - 75)];
     [self.pageScrBackView addSubview:_scrollPageView];
+}
+
+- (void)setDataWithDictionary:(NSDictionary *)dict {
+    self.userNameLabel.text = dict[@"userName"];
+    CGSize size = [self.userNameLabel.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:19]}];
+    self.userLabelWidth.constant = size.width;
+    [self setNeedsDisplay];
 }
 
 - (void)playWithImageArray:(NSArray *)imgStrArray clickAtIndex:(ClickBlock )tapIndex {
     
     [_scrollPageView playWithImageArray:imgStrArray TimeInterval:5 imageType:ImageTypeBundle clickImage:tapIndex];
+}
+
+-(void)layoutSubviews {
+    
+    
 }
 
 @end
