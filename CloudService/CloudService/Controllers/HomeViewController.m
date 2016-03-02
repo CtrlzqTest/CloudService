@@ -80,6 +80,9 @@ static NSString *headerView_ID = @"headerView";
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+    
+    self.view.frame = CGRectMake(0, 0, KWidth, KHeight - 64);
+    
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     [self setNavigationBarTitleColor:[UIColor whiteColor]];
@@ -93,6 +96,11 @@ static NSString *headerView_ID = @"headerView";
     
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+}
+
 - (void)signAction:(UIButton *)sender {
     [sender setBackgroundImage:[UIImage imageNamed:@"home-icon7_"] forState:(UIControlStateNormal)];
     [sender setTitle:@"已签到" forState:(UIControlStateNormal)];
@@ -100,7 +108,6 @@ static NSString *headerView_ID = @"headerView";
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [[SingleHandle shareSingleHandle] setIsHidden:nil];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

@@ -741,7 +741,7 @@
         <!--首页-->
         <scene sceneID="HYx-ge-Xgu">
             <objects>
-                <viewController title="首页" id="jcF-5w-02F" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController title="首页" automaticallyAdjustsScrollViewInsets="NO" id="jcF-5w-02F" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QwF-Ro-dNO"/>
                         <viewControllerLayoutGuide type="bottom" id="yva-ez-i3o"/>
@@ -778,11 +778,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NW0-QG-yW4" firstAttribute="top" secondItem="QwF-Ro-dNO" secondAttribute="bottom" id="13c-W1-oXo"/>
+                            <constraint firstItem="NW0-QG-yW4" firstAttribute="leading" secondItem="dgd-TK-K9v" secondAttribute="leading" id="1kS-ds-26w"/>
                             <constraint firstItem="yva-ez-i3o" firstAttribute="top" secondItem="NW0-QG-yW4" secondAttribute="bottom" id="3tY-tt-rUl"/>
                             <constraint firstItem="NW0-QG-yW4" firstAttribute="leading" secondItem="dgd-TK-K9v" secondAttribute="leading" id="AZv-wz-gcF"/>
                             <constraint firstAttribute="trailing" secondItem="NW0-QG-yW4" secondAttribute="trailing" id="TSn-wW-7A9"/>
+                            <constraint firstAttribute="trailing" secondItem="NW0-QG-yW4" secondAttribute="trailing" id="W6f-FI-IYL"/>
                             <constraint firstItem="NW0-QG-yW4" firstAttribute="top" secondItem="QwF-Ro-dNO" secondAttribute="bottom" id="f9p-0S-hg0"/>
+                            <constraint firstItem="yva-ez-i3o" firstAttribute="top" secondItem="NW0-QG-yW4" secondAttribute="bottom" id="gOr-mn-F57"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AZv-wz-gcF"/>
+                                <exclude reference="TSn-wW-7A9"/>
+                                <exclude reference="f9p-0S-hg0"/>
+                                <exclude reference="3tY-tt-rUl"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" id="DRu-8S-KMC"/>
                     <navigationItem key="navigationItem" title="首页" id="nfR-qK-uD8"/>
@@ -1724,7 +1736,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5l-B0-GOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789.5" y="86.5"/>
+            <point key="canvasLocation" x="681.5" y="44.5"/>
         </scene>
         <!--首页导航条-->
         <scene sceneID="HDM-0L-Ee9">
@@ -1745,7 +1757,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbz-iM-kPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="250.5" y="319.5"/>
+            <point key="canvasLocation" x="152.5" y="315.5"/>
         </scene>
         <!--创建客户-->
         <scene sceneID="bQL-Ao-Mxf">
