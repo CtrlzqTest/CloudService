@@ -19,6 +19,7 @@
 		630EF1A01C856CFD0059CB34 /* CouponsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630EF19E1C856CFD0059CB34 /* CouponsTableViewCell.xib */; };
 		630EF1A51C8579630059CB34 /* IntergralChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EF1A21C8579630059CB34 /* IntergralChangeViewController.m */; };
 		630EF1A61C8579630059CB34 /* MyIntergralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630EF1A41C8579630059CB34 /* MyIntergralViewController.m */; };
+		635089341C8698AC00505F08 /* FloatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 635089331C8698AC00505F08 /* FloatButton.m */; };
 		635C2AC91C8527D10051708D /* CreatClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635C2AC81C8527D10051708D /* CreatClientViewController.m */; };
 		637533B01C83F64100A12932 /* details-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 637533AF1C83F64100A12932 /* details-icon.png */; };
 		637533B31C8411C800A12932 /* MyClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637533B21C8411C800A12932 /* MyClientViewController.m */; };
@@ -115,6 +116,8 @@
 		630EF1A21C8579630059CB34 /* IntergralChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntergralChangeViewController.m; sourceTree = "<group>"; };
 		630EF1A31C8579630059CB34 /* MyIntergralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIntergralViewController.h; sourceTree = "<group>"; };
 		630EF1A41C8579630059CB34 /* MyIntergralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyIntergralViewController.m; sourceTree = "<group>"; };
+		635089321C8698AC00505F08 /* FloatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatButton.h; sourceTree = "<group>"; };
+		635089331C8698AC00505F08 /* FloatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatButton.m; sourceTree = "<group>"; };
 		635C2AC71C8527D10051708D /* CreatClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatClientViewController.h; sourceTree = "<group>"; };
 		635C2AC81C8527D10051708D /* CreatClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatClientViewController.m; sourceTree = "<group>"; };
 		637533AF1C83F64100A12932 /* details-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "details-icon.png"; sourceTree = "<group>"; };
@@ -575,6 +578,8 @@
 		F0292BD31C7B015200A810A9 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				635089321C8698AC00505F08 /* FloatButton.h */,
+				635089331C8698AC00505F08 /* FloatButton.m */,
 				63C2FB961C8022D900D48B8C /* PlaceholderTextView.h */,
 				63C2FB971C8022D900D48B8C /* PlaceholderTextView.m */,
 				F094B5971C7FF8D600A2312D /* ZQScrollPageView.h */,
@@ -714,7 +719,6 @@
 				TargetAttributes = {
 					F0292BA91C7B00CD00A810A9 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 73S3T3HP8Y;
 					};
 				};
 			};
@@ -876,6 +880,7 @@
 				F057320B1C859D2400D88B78 /* SingleHandle.m in Sources */,
 				630EF1971C8567960059CB34 /* IntegralTableViewCell.m in Sources */,
 				F05732051C8584F300D88B78 /* IntergralCityViewController.m in Sources */,
+				635089341C8698AC00505F08 /* FloatButton.m in Sources */,
 				63C07B9C1C7B14BB0084581F /* MHAsiNetworkItem.m in Sources */,
 				F0292BAF1C7B00CD00A810A9 /* main.m in Sources */,
 				F06DDBA21C7DAAE900C862A1 /* CreatOrderViewController.m in Sources */,

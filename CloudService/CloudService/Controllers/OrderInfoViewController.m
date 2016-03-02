@@ -8,6 +8,7 @@
 
 #import "OrderInfoViewController.h"
 #import "OrderInfoTableViewCell.h"
+#import "FloatButton.h"
 
 @interface OrderInfoViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -18,24 +19,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [FloatButton showFloatButton:@"18637092233"];
     self.tableView.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
     __weak typeof(self) weakSelf = self;
     [weakSelf setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 35, 35) image:@"title-back" selectImage:@"back" action:^(AYCButton *button) {
+        [FloatButton hiddenFloatButton];
         [weakSelf.navigationController popViewControllerAnimated:YES];
     }];
     // Do any additional setup after loading the view.
 }
 - (void)viewWillAppear:(BOOL)animated {
     self.title=@"订单详情";
+    
 }
 
-- (void)initFootView {
-   
-    
-}
-- (void)orderClick:(UIButton *)sender {
-    
-}
+
 #pragma mark tableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
