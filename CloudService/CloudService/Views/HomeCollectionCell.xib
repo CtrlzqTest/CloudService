@@ -65,8 +65,10 @@
             </variation>
             <connections>
                 <outlet property="detailTitleLabel" destination="FvU-Zc-hee" id="pii-D6-E9t"/>
+                <outlet property="imgWidth" destination="Jz8-fR-JyV" id="jCP-JJ-8lO"/>
                 <outlet property="titleImg" destination="kzw-Xw-rJM" id="m8N-eD-J7g"/>
                 <outlet property="titleLabel" destination="6Vd-ef-HaC" id="T1w-82-m7r"/>
+                <outlet property="topCanstraint" destination="Auv-8m-AYb" id="GbQ-sf-MdT"/>
             </connections>
             <point key="canvasLocation" x="281" y="345"/>
         </collectionViewCell>
