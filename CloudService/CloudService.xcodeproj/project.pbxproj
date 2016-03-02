@@ -79,6 +79,8 @@
 		F06DDBA91C7DAB7400C862A1 /* AYCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBA61C7DAB7400C862A1 /* AYCButton.m */; };
 		F06DDBAA1C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBA81C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m */; };
 		F06DDBB01C7DACDE00C862A1 /* OrderManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDBAF1C7DACDE00C862A1 /* OrderManagerViewController.m */; };
+		F07531D21C8687BB00E71796 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = F07531D11C8687BB00E71796 /* area.plist */; };
+		F07531D61C8687F500E71796 /* YWBCityPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F07531D51C8687F500E71796 /* YWBCityPickerView.m */; };
 		F07FF9D61C81469400EB1BB1 /* ResetPhonePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F07FF9D51C81469400EB1BB1 /* ResetPhonePopView.m */; };
 		F07FF9D81C8146D800EB1BB1 /* ResetPhonePopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07FF9D71C8146D800EB1BB1 /* ResetPhonePopView.xib */; };
 		F07FF9DB1C815BF600EB1BB1 /* MyTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F07FF9DA1C815BF600EB1BB1 /* MyTeamViewController.m */; };
@@ -233,6 +235,9 @@
 		F06DDBA81C7DAB7400C862A1 /* UIViewController+AYCNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AYCNavigationItem.m"; sourceTree = "<group>"; };
 		F06DDBAE1C7DACDE00C862A1 /* OrderManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderManagerViewController.h; sourceTree = "<group>"; };
 		F06DDBAF1C7DACDE00C862A1 /* OrderManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderManagerViewController.m; sourceTree = "<group>"; };
+		F07531D11C8687BB00E71796 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
+		F07531D41C8687F500E71796 /* YWBCityPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWBCityPickerView.h; sourceTree = "<group>"; };
+		F07531D51C8687F500E71796 /* YWBCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWBCityPickerView.m; sourceTree = "<group>"; };
 		F07FF9D41C81469400EB1BB1 /* ResetPhonePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPhonePopView.h; sourceTree = "<group>"; };
 		F07FF9D51C81469400EB1BB1 /* ResetPhonePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPhonePopView.m; sourceTree = "<group>"; };
 		F07FF9D71C8146D800EB1BB1 /* ResetPhonePopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPhonePopView.xib; sourceTree = "<group>"; };
@@ -528,6 +533,7 @@
 		F0292BAD1C7B00CD00A810A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F07531D11C8687BB00E71796 /* area.plist */,
 				F0292BD71C7B015200A810A9 /* PrefixHeader.pch */,
 				F0292BAE1C7B00CD00A810A9 /* main.m */,
 			);
@@ -647,6 +653,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F07531D31C8687D500E71796 /* CityPikerView */ = {
+			isa = PBXGroup;
+			children = (
+				F07531D41C8687F500E71796 /* YWBCityPickerView.h */,
+				F07531D51C8687F500E71796 /* YWBCityPickerView.m */,
+			);
+			name = CityPikerView;
+			sourceTree = "<group>";
+		};
 		F094B58E1C7FE96500A2312D /* HomeViews(首页) */ = {
 			isa = PBXGroup;
 			children = (
@@ -746,6 +761,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63ADFBE71C7EAC52000D3164 /* ResultTableViewCell.xib in Resources */,
+				F07531D21C8687BB00E71796 /* area.plist in Resources */,
 				63C54E331C7C2F96007CE8CA /* OrderManagerCell.xib in Resources */,
 				630EF18B1C8530940059CB34 /* MyClientTableViewCell.xib in Resources */,
 				F09A5F901A55BEDD008D4963 /* HomeHeaderView.xib in Resources */,
@@ -830,6 +846,7 @@
 				F0292BE01C7B015200A810A9 /* BaseNaviViewController.m in Sources */,
 				63C54E321C7C2F96007CE8CA /* OrderManagerCell.m in Sources */,
 				F07FF9D61C81469400EB1BB1 /* ResetPhonePopView.m in Sources */,
+				F07531D61C8687F500E71796 /* YWBCityPickerView.m in Sources */,
 				F094B5A31C80223400A2312D /* PersonalViewCell.m in Sources */,
 				F06DDBA41C7DAAE900C862A1 /* SearchOrderViewController.m in Sources */,
 				F07FF9E31C8189E200EB1BB1 /* UserInfoViewController.m in Sources */,

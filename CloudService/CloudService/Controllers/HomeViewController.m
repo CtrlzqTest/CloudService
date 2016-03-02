@@ -93,6 +93,11 @@ static NSString *headerView_ID = @"headerView";
     
 }
 
+- (void)signAction:(UIButton *)sender {
+    [sender setBackgroundImage:[UIImage imageNamed:@"home-icon7_"] forState:(UIControlStateNormal)];
+    [sender setTitle:@"已签到" forState:(UIControlStateNormal)];
+}
+
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [[SingleHandle shareSingleHandle] setIsHidden:nil];
@@ -106,6 +111,7 @@ static NSString *headerView_ID = @"headerView";
     
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         HomeHeaderView *headerView = (HomeHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerView_ID forIndexPath:indexPath];
+        [headerView.sginBtn addTarget:self action:@selector(signAction:) forControlEvents:(UIControlEventTouchUpInside)];
         // 轮播图开始轮播
         [headerView playWithImageArray:_scrollImgArray clickAtIndex:^(NSInteger index) {
             NSLog(@"%ld",index);

@@ -10,4 +10,6 @@
 
 @interface SetUserInfoViewController : BaseViewController
 
+@property(nonatomic,strong)NSString *rightBtnTitle;
+
 @end

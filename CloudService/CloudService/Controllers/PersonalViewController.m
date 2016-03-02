@@ -10,6 +10,7 @@
 #import "PersonalViewCell.h"
 #import "SingleHandle.h"
 #import "UserInfoViewController.h"
+#import "SetUserInfoViewController.h"
 
 @interface PersonalViewController ()<UITableViewDataSource,UITableViewDelegate> {
     NSArray *_dataArray;
@@ -175,7 +176,8 @@ static NSString *cell_id = @"personalCell";
             case 2:
             {
                 UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-                UIViewController *setUserInfoVC = [storyBoard instantiateViewControllerWithIdentifier:@"setUserInfo"];
+                SetUserInfoViewController *setUserInfoVC = [storyBoard instantiateViewControllerWithIdentifier:@"setUserInfo"];
+                setUserInfoVC.rightBtnTitle = @"提交";
                 [self.navigationController pushViewController:setUserInfoVC animated:YES];
             }
                 break;
