@@ -60,19 +60,18 @@
     self.view.backgroundColor = [UIColor whiteColor];
     __weak typeof(self) weakSelf = self;
     [self setRightTextBarButtonItemWithFrame:CGRectMake(0, 0, 40, 30) title:@"编辑" titleColor:[UIColor whiteColor] backImage:nil selectBackImage:nil action:^(AYCButton *button) {
-        
-        
+        ResetPhonePopView *popView = [[[NSBundle mainBundle] loadNibNamed:@"ResetPhonePopView" owner:weakSelf options:nil] firstObject];
+        popView.frame = [UIScreen mainScreen].bounds;
+        [popView showViewWithCallBack:^(NSInteger btnIndex) {
+            if (btnIndex == 1) {
+                UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                SetUserInfoViewController *setUserInfoVC = [storyBoard instantiateViewControllerWithIdentifier:@"setUserInfo"];
+                _isTosetUserInfo = YES;
+                [weakSelf.navigationController pushViewController:setUserInfoVC animated:YES];
+            }
+        }];
     }];
-    
-    ResetPhonePopView *popView = [[ResetPhonePopView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [popView showViewWithCallBack:^(NSInteger btnIndex) {
-//        if (btnIndex == 1) {
-//            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//            SetUserInfoViewController *setUserInfoVC = [storyBoard instantiateViewControllerWithIdentifier:@"setUserInfo"];
-//            _isTosetUserInfo = YES;
-//            [weakSelf.navigationController pushViewController:setUserInfoVC animated:YES];
-//        }
-    }];
+
     [self setLeftImageBarButtonItemWithFrame:CGRectMake(0, 0, 25, 25) image:@"title-back" selectImage:@"" action:^(AYCButton *button) {
         [weakSelf.navigationController popViewControllerAnimated:YES];
     }];

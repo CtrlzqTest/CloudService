@@ -70,6 +70,7 @@
 		F0292BE31C7B015200A810A9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BD61C7B015200A810A9 /* User.m */; };
 		F0292BE41C7B015200A810A9 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = F0292BDB1C7B015200A810A9 /* Utility.m */; };
 		F05732051C8584F300D88B78 /* IntergralCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F05732041C8584F300D88B78 /* IntergralCityViewController.m */; };
+		F057320B1C859D2400D88B78 /* SingleHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = F057320A1C859D2400D88B78 /* SingleHandle.m */; };
 		F059AA791A55822E0008D7BD /* VerifyCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F059AA781A55822E0008D7BD /* VerifyCodeViewController.m */; };
 		F059AA7C1A55903B0008D7BD /* SetNewPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F059AA7B1A55903B0008D7BD /* SetNewPwdViewController.m */; };
 		F06DDBA21C7DAAE900C862A1 /* CreatOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06DDB9D1C7DAAE900C862A1 /* CreatOrderViewController.m */; };
@@ -213,6 +214,8 @@
 		F0292BDB1C7B015200A810A9 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		F05732031C8584F300D88B78 /* IntergralCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntergralCityViewController.h; sourceTree = "<group>"; };
 		F05732041C8584F300D88B78 /* IntergralCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntergralCityViewController.m; sourceTree = "<group>"; };
+		F05732091C859D2400D88B78 /* SingleHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleHandle.h; sourceTree = "<group>"; };
+		F057320A1C859D2400D88B78 /* SingleHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleHandle.m; sourceTree = "<group>"; };
 		F059AA771A55822E0008D7BD /* VerifyCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerifyCodeViewController.h; sourceTree = "<group>"; };
 		F059AA781A55822E0008D7BD /* VerifyCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerifyCodeViewController.m; sourceTree = "<group>"; };
 		F059AA7A1A55903B0008D7BD /* SetNewPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNewPwdViewController.h; sourceTree = "<group>"; };
@@ -613,6 +616,8 @@
 				63C07B9F1C7B15C00084581F /* AYCUnicode */,
 				63C07BA61C7B15C10084581F /* HelperUtil.h */,
 				63C07BA71C7B15C10084581F /* HelperUtil.m */,
+				F05732091C859D2400D88B78 /* SingleHandle.h */,
+				F057320A1C859D2400D88B78 /* SingleHandle.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -868,6 +873,7 @@
 				63C07BA91C7B15C10084581F /* NSDictionary+AYCUnicode.m in Sources */,
 				F019C9D61C7BFD7900E73A2C /* LoginViewController.m in Sources */,
 				F0292BB21C7B00CD00A810A9 /* AppDelegate.m in Sources */,
+				F057320B1C859D2400D88B78 /* SingleHandle.m in Sources */,
 				630EF1971C8567960059CB34 /* IntegralTableViewCell.m in Sources */,
 				F05732051C8584F300D88B78 /* IntergralCityViewController.m in Sources */,
 				63C07B9C1C7B14BB0084581F /* MHAsiNetworkItem.m in Sources */,

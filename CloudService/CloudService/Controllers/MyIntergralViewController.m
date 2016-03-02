@@ -31,13 +31,16 @@
     }];
     self.backView.layer.cornerRadius = KWidth * 3 / 7 / 2.0;
     
-}
 
-- (void)viewWillAppear:(BOOL)animated {
-    __weak typeof(self) weakSelf = self;
     [weakSelf setRightTextBarButtonItemWithFrame:CGRectMake(0, 0, 80, 30) title:@"积分明细" titleColor:[UIColor whiteColor] backImage:@"" selectBackImage:@"" action:^(AYCButton *button) {
         [weakSelf performSegueWithIdentifier:@"integral" sender:weakSelf];
     }];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 

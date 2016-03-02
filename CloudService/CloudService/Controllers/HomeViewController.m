@@ -10,6 +10,7 @@
 #import "HomeCollectionCell.h"
 #import "HomeHeaderView.h"
 #import "IntergralCityViewController.h"
+#import "SingleHandle.h"
 
 @interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 {
@@ -17,6 +18,8 @@
     NSArray *_dataKeyArray;
     NSArray *_imageArray;
     NSArray *_scrollImgArray;
+    
+    BOOL _isHide;
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -57,7 +60,7 @@ static NSString *headerView_ID = @"headerView";
 
 - (void)setupViews {
     
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.collectionView.backgroundColor = [HelperUtil colorWithHexString:@"F4F4F4"];
     [self.collectionView registerNib:[UINib nibWithNibName:@"HomeCollectionCell" bundle:nil] forCellWithReuseIdentifier:cell_id];
     [self.collectionView registerNib:[UINib nibWithNibName:@"HomeHeaderView" bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerView_ID];
@@ -77,7 +80,7 @@ static NSString *headerView_ID = @"headerView";
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     [self setNavigationBarTitleColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.barTintColor = [HelperUtil
@@ -88,7 +91,11 @@ static NSString *headerView_ID = @"headerView";
     self.tabBarController.title = @"云客服";
     self.tabBarController.navigationItem.rightBarButtonItem = nil;
     
-    
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[SingleHandle shareSingleHandle] setIsHidden:nil];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -137,7 +144,11 @@ static NSString *headerView_ID = @"headerView";
         }
             break;
         case 4:
-            
+        {
+            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UIViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"InviteFriendsVC"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
             break;
         case 5:
             [self performSegueWithIdentifier:@"myIntergralVC_push" sender:self];

@@ -52,6 +52,7 @@ static NSString *cell_id = @"myTeamCell";
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 5;
 }
@@ -65,6 +66,11 @@ static NSString *cell_id = @"myTeamCell";
 
 - (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return (70.0 / 375) * KWidth;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

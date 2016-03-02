@@ -8,7 +8,7 @@
 
 #import "PersonalViewController.h"
 #import "PersonalViewCell.h"
-
+#import "SingleHandle.h"
 #import "UserInfoViewController.h"
 
 @interface PersonalViewController ()<UITableViewDataSource,UITableViewDelegate> {
@@ -32,6 +32,8 @@ static NSString *cell_id = @"personalCell";
     
     [self initData];
     [self setupViews];
+    
+    
 }
 
 - (void)initData {
@@ -76,15 +78,16 @@ static NSString *cell_id = @"personalCell";
 
 - (void)viewWillAppear:(BOOL)animated {
     
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     self.view.frame = [UIScreen mainScreen].bounds;
     [super viewWillAppear:animated];
     self.tabBarController.title = @"个人中心";
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -162,11 +165,19 @@ static NSString *cell_id = @"personalCell";
                 break;
             case 1:
             {
-    
+                
+                UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                UIViewController *setUserInfoVC = [storyBoard instantiateViewControllerWithIdentifier:@"MyIntergVC"];
+                [self.navigationController pushViewController:setUserInfoVC animated:YES];
+                
             }
                 break;
             case 2:
-                
+            {
+                UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                UIViewController *setUserInfoVC = [storyBoard instantiateViewControllerWithIdentifier:@"setUserInfo"];
+                [self.navigationController pushViewController:setUserInfoVC animated:YES];
+            }
                 break;
             case 3:
             {
