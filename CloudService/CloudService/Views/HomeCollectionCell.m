@@ -11,7 +11,6 @@
 @interface HomeCollectionCell()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topCanstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imgWidth;
-
 @end
 
 @implementation HomeCollectionCell
@@ -19,7 +18,7 @@
 - (void)awakeFromNib {
     
     self.backgroundColor = [UIColor whiteColor];
-    self.topCanstraint.constant = 20.0 / 667 * KHeight;
+    self.topCanstraint.constant = 15.0 / 417 * KWidth;
     self.imgWidth.constant = 40.0 / 417 * KWidth;
     
 }
