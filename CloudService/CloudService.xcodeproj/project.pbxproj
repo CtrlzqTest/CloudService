@@ -96,6 +96,7 @@
 		F09A5F8F1A55BEDD008D4963 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F09A5F8D1A55BEDD008D4963 /* HomeHeaderView.m */; };
 		F09A5F901A55BEDD008D4963 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F09A5F8E1A55BEDD008D4963 /* HomeHeaderView.xib */; };
 		F09A5F931A55F0AA008D4963 /* InviteFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F09A5F921A55F0AA008D4963 /* InviteFriendViewController.m */; };
+		F0DF32121C87E612008D098F /* ResetUserPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DF32111C87E612008D098F /* ResetUserPwdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -262,6 +263,8 @@
 		F09A5F8E1A55BEDD008D4963 /* HomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		F09A5F911A55F0AA008D4963 /* InviteFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendViewController.h; sourceTree = "<group>"; };
 		F09A5F921A55F0AA008D4963 /* InviteFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendViewController.m; sourceTree = "<group>"; };
+		F0DF32101C87E612008D098F /* ResetUserPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetUserPwdViewController.h; sourceTree = "<group>"; };
+		F0DF32111C87E612008D098F /* ResetUserPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetUserPwdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -463,6 +466,8 @@
 				F019C9E11C7C685700E73A2C /* RegisterSucViewController.m */,
 				F019C9E31C7C7BB700E73A2C /* SetUserInfoViewController.h */,
 				F019C9E41C7C7BB700E73A2C /* SetUserInfoViewController.m */,
+				F0DF32101C87E612008D098F /* ResetUserPwdViewController.h */,
+				F0DF32111C87E612008D098F /* ResetUserPwdViewController.m */,
 			);
 			name = "LoginRegisterControllers(登录注册)";
 			sourceTree = "<group>";
@@ -893,6 +898,7 @@
 				630EF1971C8567960059CB34 /* IntegralTableViewCell.m in Sources */,
 				F05732051C8584F300D88B78 /* IntergralCityViewController.m in Sources */,
 				635089341C8698AC00505F08 /* FloatButton.m in Sources */,
+				F0DF32121C87E612008D098F /* ResetUserPwdViewController.m in Sources */,
 				63C07B9C1C7B14BB0084581F /* MHAsiNetworkItem.m in Sources */,
 				F0292BAF1C7B00CD00A810A9 /* main.m in Sources */,
 				F06DDBA21C7DAAE900C862A1 /* CreatOrderViewController.m in Sources */,

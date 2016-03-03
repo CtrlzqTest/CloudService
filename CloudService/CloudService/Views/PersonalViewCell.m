@@ -8,10 +8,19 @@
 
 #import "PersonalViewCell.h"
 
+@interface PersonalViewCell()
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *top;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottom;
+
+@end
+
 @implementation PersonalViewCell
 
 - (void)awakeFromNib {
     // Initialization code
+    self.top.constant = 5 * KHeight / 667;
+    self.bottom.constant = 5 * KHeight / 667;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
