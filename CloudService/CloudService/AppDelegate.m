@@ -8,7 +8,13 @@
 
 #import "AppDelegate.h"
 #import "BaseNaviViewController.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+#import "WXApi.h"
 
+#define MObAppKey  @"100082c56c5c0"
+#define WXAppID   @"wx125bcc153468cc36"
+#define WXAppSecret   @"5d792862f07b6ff0b27eaced2ffbd01d"
 @interface AppDelegate ()
 
 @end
@@ -18,6 +24,37 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [ShareSDK registerApp:MObAppKey
+     
+          activePlatforms:@[
+                            @(SSDKPlatformTypeWechat)]
+                 onImport:^(SSDKPlatformType platformType)
+     {
+         switch (platformType)
+         {
+             case SSDKPlatformTypeWechat:
+                 [ShareSDKConnector connectWeChat:[WXApi class]];
+                 break;
+                          default:
+                 break;
+         }
+     }
+          onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
+     {
+         
+         switch (platformType)
+         {
+
+             case SSDKPlatformTypeWechat:
+                 [appInfo SSDKSetupWeChatByAppId:@"wx125bcc153468cc36"
+                                       appSecret:@"5d792862f07b6ff0b27eaced2ffbd01d"];
+                 break;
+            default:
+                 break;
+         }
+     }];
+    
     //设置状态栏为白色
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
