@@ -23,6 +23,9 @@ UILabel *_lbMute;//静音
 UIButton *_btnSpeaker;//扬声器按钮
 UIButton *_btnMute;//静音按钮
 NSString *_telNumStr;
+BOOL isSpeaker;//是否开启扬声器
+BOOL isMute;//是否静音
+BOOL isCall;//是否拨号
 @implementation FloatButton
 
 + (void)showFloatButton:(NSString *)telNum{
@@ -53,7 +56,7 @@ NSString *_telNumStr;
     /** 扬声器按钮*/
     _btnSpeaker = [UIButton buttonWithType:UIButtonTypeCustom];
     _btnSpeaker.frame = CGRectMake(80, 3, 90, 35);
-    
+    [_btnSpeaker addTarget:self action:@selector(speaker) forControlEvents:UIControlEventTouchUpInside];
     
     /** 扬声器icon*/
     _imgSpeaker = [[UIImageView alloc] initWithFrame:CGRectMake(85, 7, 27, 27)];
@@ -73,7 +76,7 @@ NSString *_telNumStr;
     /** 静音按钮*/
     _btnMute = [UIButton buttonWithType:UIButtonTypeCustom];
     _btnMute.frame = CGRectMake(80, 43, 90, 35);
-
+    [_btnMute addTarget:self action:@selector(mute) forControlEvents:UIControlEventTouchUpInside];
     
     
     /** 静音icon*/
@@ -119,9 +122,41 @@ NSString *_telNumStr;
     [_window resignKeyWindow];
     _window = nil;
 }
-
+//拨号挂断
 + (void)callNum:(UIButton *)sender {
+    if (isCall) {
+        [_btnCall setBackgroundImage:[UIImage imageNamed:@"pop2-btn1"] forState:UIControlStateNormal];
+        _imgCall.hidden = NO;
+        _lbCall.text = @"拨号";
+    }else {
+        [_btnCall setBackgroundImage:[UIImage imageNamed:@"pop2-btn1_"] forState:UIControlStateNormal];
+        _imgCall.hidden = NO;
+        _lbCall.text = @"挂断";
+    }
+    isCall = !isCall;
     NSLog(@"faf");
+}
+//扬声器
++ (void)speaker {
+    if (isSpeaker) {
+        _imgSpeaker.image = [UIImage imageNamed:@"pop2-icon2"];
+        _lbSpeaker.textColor = [UIColor whiteColor];
+    }else {
+        _imgSpeaker.image = [UIImage imageNamed:@"pop2-icon2_"];
+        _lbSpeaker.textColor = [HelperUtil colorWithHexString:@"1FAAF2"];
+    }
+    isSpeaker = !isSpeaker;
+}
+//静音
++ (void)mute {
+    if (isMute) {
+        _imgMute.image = [UIImage imageNamed:@"pop2-icon3"];
+        _lbMute.textColor = [UIColor whiteColor];
+    }else {
+        _imgMute.image = [UIImage imageNamed:@"pop2-icon3_"];
+        _lbMute.textColor = [HelperUtil colorWithHexString:@"1FAAF2"];
+    }
+    isMute = !isMute;
 }
 + (void)oneFingerSwipeUp:(UIPanGestureRecognizer *)recognizer{
     CGPoint translatedPoint = [recognizer translationInView:_window];
