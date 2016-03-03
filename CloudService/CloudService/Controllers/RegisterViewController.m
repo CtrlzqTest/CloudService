@@ -18,6 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 @property(nonatomic,strong)CLLocationManager *locateManager;
 @property (weak, nonatomic) IBOutlet UIButton *locateBtn;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNum;
+@property (weak, nonatomic) IBOutlet UITextField *codeText;
+@property (weak, nonatomic) IBOutlet UITextField *pwdText;
+@property (weak, nonatomic) IBOutlet UITextField *ensurePwd;
+
 @property (nonatomic, strong) YWBCityPickerView *cityPickerView;
 @property (nonatomic,strong)UIView *maskView;
 @end
@@ -77,9 +82,10 @@
 // 注册
 - (IBAction)registerAction:(id)sender {
     
-    dispatch_async(dispatch_get_main_queue(), ^{
+    [self resignKeyBoardInView:self.view];
+    if ([self checkInputMode]) {
         [self performSegueWithIdentifier:RegisterSuccess sender:self];
-    });
+    }
 }
 
 // 定位按钮
@@ -181,24 +187,46 @@
 - (void)resignKeyBoardInView:(UIView *)view
 
 {
-    
     for (UIView *v in view.subviews) {
-        
         if ([v.subviews count] > 0) {
-            
             [self resignKeyBoardInView:v];
-            
         }
-        
         if ([v isKindOfClass:[UITextView class]] || [v isKindOfClass:[UITextField class]]) {
-            
             [v resignFirstResponder];
-            
         }
-        
     }
-    
 }
+
+/**
+ *  检查输入状态
+ */
+- (BOOL)checkInputMode
+{
+    NSString * regexPhoneNum = @"^1[0-9]{10}$";
+    NSPredicate *predicatePhoneNum = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexPhoneNum];
+    NSString * regexPasswordNum = @"[^\n]{6,16}$";
+    NSPredicate *predicatePasswordNum = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexPasswordNum];
+    BOOL isPhoneMatch = [predicatePhoneNum evaluateWithObject:self.phoneNum.text];
+    BOOL isPasswordMatch = [predicatePasswordNum evaluateWithObject: self.pwdText.text];
+    BOOL ensurePwd = [self.pwdText.text isEqualToString:self.ensurePwd.text];
+    if (!isPhoneMatch)
+    {
+        [MBProgressHUD showError:@"手机号输入错误" toView:self.view];
+        return false;
+    }
+    if (!isPasswordMatch)
+    {
+        [MBProgressHUD showError:@"密码格式错误,请输入6到16位密码" toView:self.view];
+        return false;
+    }
+    if (!ensurePwd)
+    {
+        [MBProgressHUD showError:@"两次输入密码不一致" toView:self.view];
+        return false;
+    }
+    return true;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

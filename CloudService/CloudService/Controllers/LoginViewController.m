@@ -86,10 +86,21 @@
 // 登录
 - (IBAction)loginAction:(id)sender {
     
-//    [self performSegueWithIdentifier:@"login" sender:self];
-    [[NSNotificationCenter defaultCenter] postNotificationName:LoginToMenuViewNotice object:nil];
+    if (self.UserTextFiled.text.length <= 0) {
+        [MBProgressHUD showError:@"用户名不能为空" toView:self.view];
+        return;
+    }else if (self.pwdTextFiled.text.length <= 0){
+
+        [MBProgressHUD showError:@"请输入密码" toView:self.view];
+        return;
+    }
     
+//    [self performSegueWithIdentifier:@"login" sender:self];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:LoginToMenuViewNotice object:nil];
 }
+
+
 
 
 - (void)didReceiveMemoryWarning {
