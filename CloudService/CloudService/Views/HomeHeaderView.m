@@ -10,6 +10,9 @@
 #import "ZQScrollPageView.h"
 
 @interface HomeHeaderView()
+{
+    NSString *str;
+}
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *userLabelWidth;
 
@@ -20,7 +23,6 @@
 }
 
 - (void)awakeFromNib {
-    // Initialization code
     
     _scrollPageView = [[ZQScrollPageView alloc] initWithFrame:CGRectMake(0, 0, KWidth, 240 * KHeight / 667.0 - 75)];
     [self.pageScrBackView addSubview:_scrollPageView];
@@ -35,7 +37,10 @@
 
 - (void)playWithImageArray:(NSArray *)imgStrArray clickAtIndex:(ClickBlock )tapIndex {
     
-    [_scrollPageView playWithImageArray:imgStrArray TimeInterval:5 imageType:ImageTypeBundle clickImage:tapIndex];
+    if (!str) {
+        [_scrollPageView playWithImageArray:imgStrArray TimeInterval:5 imageType:ImageTypeBundle clickImage:tapIndex];
+    }
+    str = @"执行";
 }
 
 -(void)layoutSubviews {

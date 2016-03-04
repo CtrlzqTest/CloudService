@@ -123,7 +123,7 @@ static NSString *headerView_ID = @"headerView";
         [headerView setDataWithDictionary:@{@"userName":@"李小米2"}];
         // 轮播图开始轮播
         [headerView playWithImageArray:_scrollImgArray clickAtIndex:^(NSInteger index) {
-
+            
         }];
         return headerView;
     }else {
